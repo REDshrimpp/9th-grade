@@ -39,4 +39,4 @@ drawLine(500, 500, 250, 250, 'blue')
 
 drawLine(0,500,250,250, 'red')
 
-drawLine(500,0,width,height, 'green')
+drawLine(0,500,width,height, 'green')
