@@ -35,8 +35,8 @@
  *
  */
 
-drawLine(500, 500, 250, 250, 'blue')
+drawLine(500, 500, 250, 250, 'red')
 
 drawLine(0,500,250,250, 'red')
 
-drawLine(0,500,700,500, 'green')
+drawLine(0,500,700,500, 'red')
