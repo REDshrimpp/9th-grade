@@ -41,4 +41,6 @@ drawLine(0,500,250,250, 'red')
 
 drawLine(0,500,700,500, 'red')
 
-drawLine(250,250,500,50)
+drawLine(250,250,500,50, 'red')
+
+drawLine(250,250,o,50, 'red')
