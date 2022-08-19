@@ -44,3 +44,5 @@ drawLine(250,350,300,500)
 drawCircle(250,100,50,50)
 
 drawLine(200,200,300,200)
+
+drawCircle(235,50,5,5)
