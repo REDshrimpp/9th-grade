@@ -58,5 +58,10 @@
     "name": "Area of a trapezoid",
     "answer": "1/2*(b2+b1)*h",
     "correct": true
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "Math.PI*(r**2)",
+    "correct": true
   }
 ]
