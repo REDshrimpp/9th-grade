@@ -58,5 +58,11 @@
     "answer": "o",
     "correct": false,
     "timestamp": 1661466261765
+  },
+  {
+    "name": "More indexing",
+    "answer": "\"o\"",
+    "correct": true,
+    "timestamp": 1661466269085
   }
 ]
