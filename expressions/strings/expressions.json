@@ -94,5 +94,11 @@
     "answer": "'string'[0]",
     "correct": false,
     "timestamp": 1661466494242
+  },
+  {
+    "name": "First character",
+    "answer": "'s'[0]",
+    "correct": false,
+    "timestamp": 1661466513604
   }
 ]
