@@ -76,5 +76,11 @@
     "answer": "'foo'",
     "correct": true,
     "timestamp": 1661466304534
+  },
+  {
+    "name": "First character",
+    "answer": "'s'(0)",
+    "correct": false,
+    "timestamp": 1661466353791
   }
 ]
