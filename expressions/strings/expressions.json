@@ -82,5 +82,11 @@
     "answer": "'s'(0)",
     "correct": false,
     "timestamp": 1661466353791
+  },
+  {
+    "name": "First character",
+    "answer": "'s'[0]",
+    "correct": false,
+    "timestamp": 1661466386824
   }
 ]
