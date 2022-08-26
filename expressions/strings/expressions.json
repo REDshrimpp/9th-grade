@@ -154,5 +154,11 @@
     "answer": "s['1']",
     "correct": false,
     "timestamp": 1661550226388
+  },
+  {
+    "name": "First three",
+    "answer": "s[0,1,2]",
+    "correct": false,
+    "timestamp": 1661550250444
   }
 ]
