@@ -142,5 +142,11 @@
     "answer": "s.substring(s.length-3,s.length)",
     "correct": true,
     "timestamp": 1661552081906
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "answer": "s1 + s2",
+    "correct": true,
+    "timestamp": 1661552284397
   }
 ]
