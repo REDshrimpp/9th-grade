@@ -94,5 +94,11 @@
     "answer": "FOO",
     "correct": false,
     "timestamp": 1661551920134
+  },
+  {
+    "name": "UPPER CASE",
+    "answer": "'FOO'",
+    "correct": true,
+    "timestamp": 1661551924318
   }
 ]
