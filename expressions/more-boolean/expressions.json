@@ -12,5 +12,12 @@
     "answer": "!LinesTooLong||storeOpen",
     "correct": false,
     "timestamp": 1661810483474
+  },
+  {
+    "name": "Will we skip our trip to the store?",
+    "canonical": "!storeOpen || linesTooLong",
+    "answer": "storeOpen&&!linesTooLong",
+    "correct": false,
+    "timestamp": 1661810740267
   }
 ]
