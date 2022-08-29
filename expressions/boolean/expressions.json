@@ -33,5 +33,12 @@
     "answer": "isSenior||invitedBySenior",
     "correct": true,
     "timestamp": 1661810352583
+  },
+  {
+    "name": "Having fun?",
+    "canonical": "done || !fun",
+    "answer": "!fun&&done",
+    "correct": false,
+    "timestamp": 1661810372655
   }
 ]
