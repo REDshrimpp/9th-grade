@@ -47,5 +47,12 @@
     "answer": "o",
     "correct": false,
     "timestamp": 1661811582670
+  },
+  {
+    "name": "More indexing",
+    "canonical": "'o'",
+    "answer": "'o'",
+    "correct": true,
+    "timestamp": 1661811587790
   }
 ]
