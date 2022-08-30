@@ -47,5 +47,12 @@
     "answer": "s[0].toUpperCase()+s.substring(1,s.length)",
     "correct": false,
     "timestamp": 1661896690190
+  },
+  {
+    "name": "Capitalize",
+    "canonical": "s[0].toUpperCase() + s.substring(1).toLowerCase()",
+    "answer": "s[0].toUpperCase()+s.substring(1,s.length).toLowerCase()",
+    "correct": true,
+    "timestamp": 1661896709102
   }
 ]
