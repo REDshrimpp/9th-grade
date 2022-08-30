@@ -96,5 +96,12 @@
     "answer": "enoughSleep&&keepingUp",
     "correct": true,
     "timestamp": 1661896224999
+  },
+  {
+    "name": "Not feeling it?",
+    "canonical": "!fun || tired",
+    "answer": "!fun||tired",
+    "correct": true,
+    "timestamp": 1661896233823
   }
 ]
