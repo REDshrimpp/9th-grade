@@ -131,5 +131,12 @@
     "answer": "s.substring(0,3).toUpperCase()+s.substring(3,s.length).toLowerCase()",
     "correct": true,
     "timestamp": 1661897309450
+  },
+  {
+    "name": "UPPER CASE",
+    "canonical": "s.toUpperCase()",
+    "answer": "s.substring(0,s.length).toUpperCase()",
+    "correct": true,
+    "timestamp": 1661897335192
   }
 ]
