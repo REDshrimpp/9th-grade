@@ -82,5 +82,12 @@
     "answer": "s1+s2",
     "correct": true,
     "timestamp": 1661896776352
+  },
+  {
+    "name": "Last character",
+    "canonical": "s[s.length - 1]",
+    "answer": "s[s.length]",
+    "correct": false,
+    "timestamp": 1661896789992
   }
 ]
