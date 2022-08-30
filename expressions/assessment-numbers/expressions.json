@@ -61,5 +61,12 @@
     "answer": "Math.abs(x1-x2)+Math.abs(y1-y2)",
     "correct": true,
     "timestamp": 1661895938888
+  },
+  {
+    "name": "Remainder",
+    "canonical": "a % b",
+    "answer": "a%b",
+    "correct": true,
+    "timestamp": 1661895951616
   }
 ]
