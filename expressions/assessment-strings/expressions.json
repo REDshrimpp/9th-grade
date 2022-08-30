@@ -75,5 +75,12 @@
     "answer": "s[0]",
     "correct": true,
     "timestamp": 1661896767624
+  },
+  {
+    "name": "Concatenate (smoosh) strings",
+    "canonical": "s1 + s2",
+    "answer": "s1+s2",
+    "correct": true,
+    "timestamp": 1661896776352
   }
 ]
