@@ -40,5 +40,12 @@
     "answer": "fireLit||!haveMatches",
     "correct": true,
     "timestamp": 1662069932260
+  },
+  {
+    "name": "Energetic?",
+    "canonical": "enoughSleep && !justWorkedOut",
+    "answer": "enoughSleep&&!justWorkedOut",
+    "correct": true,
+    "timestamp": 1662069940460
   }
 ]
