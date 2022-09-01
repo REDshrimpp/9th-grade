@@ -40,5 +40,12 @@
     "answer": "s.toUpperCase()",
     "correct": true,
     "timestamp": 1662070413799
+  },
+  {
+    "name": "First three",
+    "canonical": "s.substring(0,3)",
+    "answer": "s.substring(3,s.length)",
+    "correct": false,
+    "timestamp": 1662070428504
   }
 ]
