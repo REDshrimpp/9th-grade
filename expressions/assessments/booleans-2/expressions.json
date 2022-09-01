@@ -89,5 +89,12 @@
     "answer": "member&&!outSick",
     "correct": true,
     "timestamp": 1662070007526
+  },
+  {
+    "name": "Can pay attention?",
+    "canonical": "!hungry && interested",
+    "answer": "!hungry&&interested",
+    "correct": true,
+    "timestamp": 1662070014646
   }
 ]
