@@ -26,5 +26,12 @@
     "answer": "!storeOpen||!isASale",
     "correct": true,
     "timestamp": 1662069905131
+  },
+  {
+    "name": "Dragging?",
+    "canonical": "!enoughSleep && lotsOfWork",
+    "answer": "lotsOfWork&&!enoughSleep",
+    "correct": true,
+    "timestamp": 1662069920268
   }
 ]
