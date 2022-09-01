@@ -5,5 +5,12 @@
     "answer": "s.substring(s.length,s.length)",
     "correct": false,
     "timestamp": 1662070139323
+  },
+  {
+    "name": "Last character",
+    "canonical": "s[s.length - 1]",
+    "answer": "s.substring(s.length,s.length+1)",
+    "correct": false,
+    "timestamp": 1662070144722
   }
 ]
