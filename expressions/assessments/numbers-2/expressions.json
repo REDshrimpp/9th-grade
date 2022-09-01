@@ -40,5 +40,12 @@
     "answer": "Math.abs(a-b)",
     "correct": true,
     "timestamp": 1662069754183
+  },
+  {
+    "name": "Area of circle with radius 2",
+    "canonical": "Math.PI * 4",
+    "answer": "Math.PI*(2**2)",
+    "correct": true,
+    "timestamp": 1662069765423
   }
 ]
