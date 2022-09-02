@@ -8,7 +8,7 @@ let ballSize = 15;
 //
 // drawShadow(size, darkness) - draws an elliptical shadow on the ground below
 // the ball at the given size and darkness.
-//
+drawShadow(15, darkness)
 // drawBall(height, size) - draws the ball at the given height and size.
 //
 // now() - returns the number of milliseconds since the program started.
