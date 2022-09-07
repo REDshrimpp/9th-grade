@@ -2,4 +2,6 @@ const difference = (n,b) => {
 return Math.abs(n-b);
 };
 
-difference(7,4)
+const sum = (a,b) => {
+  return a+b;
+}
