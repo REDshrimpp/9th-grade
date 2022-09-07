@@ -4,5 +4,5 @@ function add (a,b) {
 };
 
 function subtract (a,b) {
-  return Math.abs(a-b)
+  return a-b
 };
