@@ -20,5 +20,4 @@ function mod(a,b) {
   return a%b
 }
 
-}
 const averageOfTwo = (a,b) => (a+b)/2
