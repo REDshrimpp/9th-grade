@@ -19,3 +19,7 @@ function divide (a,b) {
 function mod(a,b) {
   return a%b
 }
+
+function average(a,b) {
+  return (a*b)/2
+}
