@@ -21,5 +21,5 @@ function mod(a,b) {
 }
 
 function average(a,b) {
-  return divide(sum(a,b))
+  return divide(a+b)
 }
