@@ -25,3 +25,5 @@ const averageOfTwo = (a,b) => (a+b)/2
 const averageOfThree = (a,b,c) => (a+b+c)/3
 
 const distance = (a,b) => (Math.abs(a-b))
+
+const distance = (a,b,c,d) => (math.abs(a-c)+math.abs(b-d))
