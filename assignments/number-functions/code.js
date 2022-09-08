@@ -20,6 +20,5 @@ function mod(a,b) {
   return a%b
 }
 
-function average(a,b) {
-  return (a+b)/2
 }
+const = (a,b) => (a+b)/2
