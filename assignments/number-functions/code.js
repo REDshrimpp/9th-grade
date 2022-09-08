@@ -21,4 +21,4 @@ function mod(a,b) {
 }
 
 }
-const average of two = (a,b) => (a+b)/2
+const averageOfTwo = (a,b) => (a+b)/2
