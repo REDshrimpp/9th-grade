@@ -28,4 +28,4 @@ const distance = (a,b) => (Math.abs(a-b))
 
 const manhattanDistance = (a,b,c,d) => (Math.abs(a-c)+Math.abs(b-d))
 
-const euclideanDistance = (a,b,c,d) => (Math.sqrt((Math.abs(a,c)+Math.abs(b,d)**2))
+const euclideanDistance = (a,b,c,d) => (Math.sqrt((Math.abs(a,c)+Math.abs(b,d)**2)))
