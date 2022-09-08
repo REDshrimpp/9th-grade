@@ -26,4 +26,4 @@ const averageOfThree = (a,b,c) => (a+b+c)/3
 
 const distance = (a,b) => (Math.abs(a-b))
 
-const distance = (a,b,c,d) => (math.abs(a-c)+math.abs(b-d))
+const manhattanDistance = (a,b,c,d) => (math.abs(a-c)+math.abs(b-d))
