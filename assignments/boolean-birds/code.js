@@ -17,4 +17,4 @@
  *
  */
 
-const flobbyBird = areRed && eatsFish && isSpotted
+const flobbyBird = isRed&&isSpotted
