@@ -21,3 +21,5 @@
 
 
 const isFlobbyBird = (isRed,isSpotted) => isRed&&isSpotted
+
+const isBloggyBird = (isSpotted,isRed) => !isSpotted&&!isRed
