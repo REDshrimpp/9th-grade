@@ -23,3 +23,5 @@ const isBloggyBird = (isRed,isSpotted) => !isSpotted && isRed
 const isFlibbleBird = (isRed,isSpotted) => !isRed&&isSpotted
 
 const isGlobbyBird = (isRed,isSpotted) => !isRed&&!isSpotted
+
+const eatsWorms = (isRed,isSpotted) => isRed||isSpotted
