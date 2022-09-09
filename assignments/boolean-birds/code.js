@@ -36,3 +36,6 @@ const isRed = (redBird) => {
   return redBird=== 'Flobby' || redBird=== 'Bloggy'
 }
 
+const isSpotted = (spottedBird) => {
+  return spottedBird === 'flobby' || spottedBird == 'flibble'
+}
