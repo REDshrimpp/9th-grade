@@ -17,4 +17,6 @@
  *
  */
 
-const flobbyBird = isRed&&isSpotted
+const flobbyBird = (isRed,isSpotted) {
+  return isRed&&isSpotted
+}
