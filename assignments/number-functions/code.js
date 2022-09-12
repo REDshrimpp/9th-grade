@@ -11,12 +11,7 @@ function multiply (a,b) {
   return a*b
 }
 
-function divide (a,b) {
-  return a/b
-
-}
-
-
+const divide = (a,b) => (a/b)
 
 const mod = (a,b) => (a%b)
 
