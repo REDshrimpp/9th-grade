@@ -32,7 +32,7 @@ const eatsFish = (isRed,isSpotted) => isSpotted||!isRed
 
 const eatsMice = (isRed,isSpotted) => !isRed||!isSpotted
 
-const isRed = (redBird) => {
+const color = (redBird) => {
   return redBird=== 'Flobby' || redBird=== 'Bloggy'
 }
 
