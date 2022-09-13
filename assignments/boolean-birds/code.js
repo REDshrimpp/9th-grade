@@ -44,6 +44,6 @@ const isNotRed = (notRedBird) => {
   return notRedBird === 'Flibble' || notRedBird === 'Globby'
 }
 
-const isNotSpotted = (notSpottedBird) => {
-  return notSpottedBird === 'Bloggy' || notSpottedBird === 'Globby'
+const isNotSpotted = (pattern) => {
+  return pattern === 'Bloggy' || pattern === 'Globby'
 }
