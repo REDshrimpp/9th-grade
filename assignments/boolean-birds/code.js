@@ -40,8 +40,8 @@ const isSpotted = (pattern) => {
   return pattern === 'Flobby' || pattern == 'Flibble'
 }
 
-const isNotRed = (notRedBird) => {
-  return notRedBird === 'Flibble' || notRedBird === 'Globby'
+const isNotRed = (color) => {
+  return color === 'Flibble' || color === 'Globby'
 }
 
 const isNotSpotted = (pattern) => {
