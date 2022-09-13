@@ -38,7 +38,7 @@ const isRed = (color) => {
 
 const isSpotted = (pattern) => {
   return pattern === 'Flobby' || pattern == 'Flibble'
-}t
+}
 
 const isNotRed = (notRedBird) => {
   return notRedBird === 'Flibble' || notRedBird === 'Globby'
