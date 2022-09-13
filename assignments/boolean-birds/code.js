@@ -32,8 +32,8 @@ const eatsFish = (isRed,isSpotted) => isSpotted||!isRed
 
 const eatsMice = (isRed,isSpotted) => !isRed||!isSpotted
 
-const color = (redBird) => {
-  return redBird=== 'Flobby' || redBird=== 'Bloggy'
+const isRed = (color) => {
+  return color=== 'Flobby' || color=== 'Bloggy'
 }
 
 const isSpotted = (spottedBird) => {
