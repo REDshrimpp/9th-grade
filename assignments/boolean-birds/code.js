@@ -33,7 +33,7 @@ const eatsFish = (isRed, isSpotted) => isSpotted || !isRed
 const eatsMice = (isRed, isSpotted) => !isRed || !isSpotted
 
 const isRed = (color) => {
-  return color=== 'Flobby' || color=== 'Bloggy'
+  return color === 'Flobby' || color === 'Bloggy'
 }
 
 const isSpotted = (pattern) => {
