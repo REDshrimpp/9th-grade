@@ -39,3 +39,7 @@ const advancedPigLatin = (s) => {
   let urmom = s.search(/[aeiou]/)
   return urmom === 0 ? s + 'way' : s.substring(urmom,s.length) + s.substring(0,urmom) + 'ay'
 }
+
+const fakeSpanish = (s) => s + 'o'
+
+fakeSpanish(car)
