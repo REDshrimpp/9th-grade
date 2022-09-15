@@ -33,7 +33,10 @@
 // operator works.
 
 
-const pigLatin = (s) => s.substring(s.search(/[aeiou]/), s.length) + s.substring(0, s.search(/[aeiou]/)) + 'ay'
+const pigLatin = (s) => {
+  let i = s.search (/[aeiou]/)
+  return s.substring (i, s.length) + s.substring(0,i) + 'ay'
+}
 
 const advancedPigLatin = (s) => {
   let urmom = s.search(/[aeiou]/)
