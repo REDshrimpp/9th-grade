@@ -39,8 +39,8 @@ const pigLatin = (s) => {
 }
 
 const advancedPigLatin = (s) => {
-  let urmom = s.search(/[aeiou]/)
-  return urmom === 0 ? s + 'way' : s.substring(urmom, s.length) + s.substring(0, urmom) + 'ay'
+  let b = s.search(/[aeiou]/)
+  return b === 0 ? s + 'way' : s.substring(b, s.length) + s.substring(0, b) + 'ay'
 }
 
 const fakeSpanish = (s) => s + 'o'
