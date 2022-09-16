@@ -25,4 +25,4 @@
  */
 
 
-const drawFilledCircle(100, 100, 50, 'red')
+drawFilledCircle(100, 100, 50, 'red')
