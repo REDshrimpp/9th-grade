@@ -29,4 +29,4 @@ const circleCalculator = (x, y) => {
   return
 };
 
-drawFilledCircle(x, y, 10, 'red')
+drawFilledCircle(0, 300, 10, 'red')
