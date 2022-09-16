@@ -29,4 +29,4 @@ while (x<600) {
   x = x+10
 }
 
-drawFilledCircle(50, 300, 10, 'red')
+drawFilledCircle(500, 300, 10, 'red')
