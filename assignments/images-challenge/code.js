@@ -31,10 +31,10 @@ while (x < 480) {
   x = x + 20
   drawFilledCircle(x, 300, 10, 'blue')
 }
-*/
+
 c = 20
 while (c < 300) {
 drawFilledCircle(300,300,c,'red')
 };
-
-  drawFilledCircle(300, 300, 20, 'red')
+*/
+drawFilledCircle(300, 300, 20, 'red')
