@@ -39,6 +39,3 @@ while (c < 250) {
 drawFilledCircle(300,300,c,'blue')
 
 };
-
-
-drawFilledCircle(250, 300, 250, 'red')
