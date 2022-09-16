@@ -33,8 +33,8 @@ while (x < 480) {
 }
 */
 c = 20
-while (w < 300) {
-drawFilledCircle(300,300,w,'red')
+while (c < 300) {
+drawFilledCircle(300,300,c,'red')
 };
 
   drawFilledCircle(300, 300, 20, 'red')
