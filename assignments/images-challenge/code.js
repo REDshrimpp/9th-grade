@@ -30,4 +30,4 @@ const circleCalculator = (x) => {
   return
 };
 
-drawFilledCircle(600, 300, 10, 'red')
+drawFilledCircle(300, 300, 10, 'red')
