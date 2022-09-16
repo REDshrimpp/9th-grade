@@ -23,9 +23,9 @@
  *
  *  clear()
  */
-
+let x1 = 300
 const circleCalculator = (x1, x2, x3, x4) => {
-
+  return
 };
 
-drawFilledCircle(100, 250, 50, 'red')
+drawFilledCircle(100, 300, 50, 'red')
