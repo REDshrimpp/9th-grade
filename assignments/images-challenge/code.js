@@ -25,9 +25,8 @@
  */
 let x = 0
 let y = 300
-while (x<600)
-const circleCalculator = (x) => {
-  return
-};
+while (x<600) {
+  x = x+10
+}
 
 drawFilledCircle(50, 300, 10, 'red')
