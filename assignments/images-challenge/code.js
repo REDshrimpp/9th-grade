@@ -25,8 +25,9 @@
  */
 let x = 0
 let y = 300
-while (x<600) {
-  x = x+10
+while (x < 500) {
+  x = x + 10
+  drawFilledCircle(x, 300, 10, 'red')
 }
 
 drawFilledCircle(500, 300, 10, 'red')
