@@ -23,10 +23,11 @@
  *
  *  clear()
  */
-let x1 = 300
-let x2 = 0
-const circleCalculator = (x, y) => {
+let x = 0
+let y = 300
+while (x<600)
+const circleCalculator = (x) => {
   return
 };
 
-drawFilledCircle(0, 300, 10, 'red')
+drawFilledCircle(600, 300, 10, 'red')
