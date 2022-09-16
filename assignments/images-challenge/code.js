@@ -33,7 +33,7 @@ while (x < 480) {
 }
 */
 
-c = 20
+let c = 20
 while (c < 250) {
   c = c + 20
 drawFilledCircle(300,300,c,'blue')
