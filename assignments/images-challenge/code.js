@@ -22,7 +22,7 @@
  *  drawFilledTriangle(x1, y1, x2, y2, x3, y3, color)
  *
  *  clear()
- */
+ *
 let x = 0
 let y = 300
 while (x < 480) {
@@ -31,6 +31,8 @@ while (x < 480) {
   x = x + 20
   drawFilledCircle(x, 300, 10, 'blue')
 }
+*/
 
+while (w<300)
 
-while (w = )
+drawFilledCircle(300,300,20,red)
