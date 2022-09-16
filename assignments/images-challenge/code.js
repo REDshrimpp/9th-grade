@@ -33,6 +33,8 @@ while (x < 480) {
 }
 */
 
-while (w < 300)
+while (w < 300) {
+  
+}
 
   drawFilledCircle(300, 300, 20, 'red')
