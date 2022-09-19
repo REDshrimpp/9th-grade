@@ -37,5 +37,6 @@ let c = 20
 while (c < 240) {
   c = c + 20
 drawFilledCircle(250,300,c,'blue')
+drawFilledCircle(250,300,c,'red')
 
 };
