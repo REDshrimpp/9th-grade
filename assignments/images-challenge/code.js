@@ -37,7 +37,7 @@ const lineOfCircles = () => {
   }
 }
 
-let n = 100
+let n = 10
 let c = 240
 const dartBoard = () => {
   while (c > n) {
@@ -48,9 +48,9 @@ const dartBoard = () => {
   };
 }
 
-dartBoard()
 
-/*
+
+
 let a = 0
 let r = 'red'
 let b = 'blue'
@@ -66,4 +66,4 @@ const checkerBoard = () => {
   drawFilledRect(a,500,100,100,b)
 a = a + 100
 
-*/
+
