@@ -55,4 +55,4 @@ const checkerBoard = () => {
   drawSquare(10,40,40,'red')
 }
 
-drawSquare(10,10,30,'red')
+drawSquare(10,10,30,50,'red')
