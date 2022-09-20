@@ -57,15 +57,15 @@ let b = 'blue'
 const checkerBoard = () => {
   while (b < 240) {
     drawFilledRect(a, 0, 100, 100, r)
-  drawFilledRect(a, 100, 100, 100, b)
-  drawFilledRect(a, 200, 100, 100, r)
-  drawFilledRect(a, 300, 100, 100, b)
-  drawFilledRect(a, 400, 100, 100, r)
-  drawFilledRect(a, 500, 100, 100, b)
-  a = a + 100
-  t = b
-  b = r
-  r = t
+    drawFilledRect(a, 100, 100, 100, b)
+    drawFilledRect(a, 200, 100, 100, r)
+    drawFilledRect(a, 300, 100, 100, b)
+    drawFilledRect(a, 400, 100, 100, r)
+    drawFilledRect(a, 500, 100, 100, b)
+    a = a + 100
+    t = b
+    b = r
+    r = t
   };
 }
 
