@@ -63,5 +63,10 @@ const checkerBoard = () => {
     drawFilledRect(a, 400, 100, 100, r)
     drawFilledRect(a, 500, 100, 100, b)
     a = a + 100
+    t = b
+    b = r
+    r = t
   };
 }
+
+checkerBoard()
