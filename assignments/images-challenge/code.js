@@ -49,3 +49,4 @@ drawFilledCircle(250,300,c,'red')
 }
 
 
+dartBoard()
