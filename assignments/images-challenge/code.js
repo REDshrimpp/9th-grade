@@ -66,6 +66,6 @@ const checkerBoard = () => {
   t = b
   b = r
   r = t
-  }
+  };
 }
 
