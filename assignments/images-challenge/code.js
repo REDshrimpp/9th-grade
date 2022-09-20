@@ -38,7 +38,7 @@ while (x < 480) {
 }
 
 
-let c = 100
+let c = 240
 const dartBoard = () => {
 while (c > 20) {
   c = c - 20
