@@ -37,7 +37,7 @@ const lineOfCircles = () => {
   }
 }
 
-let n = 70
+let n = 1
 let c = 240
 const dartBoard = () => {
   while (c > n) {
