@@ -54,5 +54,4 @@ const checkerBoard = () => {
   while (b < 240)
   drawSquare(10,40,40,'red')
 }
-
-drawSquare(10,10,30,50,'red')
+ drawFilledRect(0,10,40,40,'red')
