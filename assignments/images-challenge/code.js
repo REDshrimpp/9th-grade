@@ -55,7 +55,7 @@ let a = 0
 let r = 'red'
 let b = 'blue'
 const checkerBoard = () => {
-  while (a < 240) {
+  while (a < 500) {
     drawFilledRect(a, 0, 100, 100, r)
     drawFilledRect(a, 100, 100, 100, b)
     drawFilledRect(a, 200, 100, 100, r)
