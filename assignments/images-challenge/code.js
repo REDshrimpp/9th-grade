@@ -56,8 +56,7 @@ let r = 'red'
 let b = 'blue'
 const checkerBoard = () => {
   while (b < 240)
-  drawFilledCircle(0,0,0,0)
-}
+  
   drawFilledRect(a,0,100,100,r)
   drawFilledRect(a,100,100,100,b)
   drawFilledRect(a,200,100,100,r)
@@ -68,5 +67,5 @@ a = a + 100
 t = b
 b = r
 r = t
-
+}
 
