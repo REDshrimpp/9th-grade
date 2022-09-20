@@ -29,23 +29,23 @@
 let x = 0
 let y = 300
 const lineOfCircles = () => {
-while (x < 480) {
-  x = x + 20
-  drawFilledCircle(x, 300, 10, 'red')
-  x = x + 20
-  drawFilledCircle(x, 300, 10, 'blue')
-}
+  while (x < 480) {
+    x = x + 20
+    drawFilledCircle(x, 300, 10, 'red')
+    x = x + 20
+    drawFilledCircle(x, 300, 10, 'blue')
+  }
 }
 
-
+let n = 20
 let c = 240
 const dartBoard = () => {
-while (c > 20) {
-  c = c - 20
-drawFilledCircle(250,300,c,'blue')
-c = c -20
-drawFilledCircle(250,300,c,'red')
-};
+  while (c > 240) {
+    c = c - n
+    drawFilledCircle(250, 300, c, 'blue')
+    c = c - n
+    drawFilledCircle(250, 300, c, 'red')
+  };
 }
 
 dartBoard()
