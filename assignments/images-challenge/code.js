@@ -40,7 +40,7 @@ const lineOfCircles = () => {
 n = 20
 let c = 240
 const dartBoard = () => {
-  while (c > n) {
+  while (c > 20) {
     c = c - n
     drawFilledCircle(250, 300, c, 'blue')
     c = c - n
