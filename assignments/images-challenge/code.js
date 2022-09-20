@@ -48,20 +48,22 @@ drawFilledCircle(250,300,c,'red')
 };
 }
 
+dartBoard()
 
-let b = 0
+/*
+let a = 0
 let r = 'red'
 let b = 'blue'
 const checkerBoard = () => {
   while (b < 240)
   drawFilledCircle(0,0,0,0)
 }
-  drawFilledRect(b,0,100,100,r)
-  drawFilledRect(b,100,100,100,b)
-  drawFilledRect(b,200,100,100,r)
-  drawFilledRect(b,300,100,100,b)
-  drawFilledRect(b,400,100,100,r)
-  drawFilledRect(b,500,100,100,b)
-  
+  drawFilledRect(a,0,100,100,r)
+  drawFilledRect(a,100,100,100,b)
+  drawFilledRect(a,200,100,100,r)
+  drawFilledRect(a,300,100,100,b)
+  drawFilledRect(a,400,100,100,r)
+  drawFilledRect(a,500,100,100,b)
+a = a + 100
 
-
+*/
