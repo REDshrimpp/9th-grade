@@ -54,6 +54,7 @@ let t = 0
 let a = 0
 let r = 'red'
 let b = 'blue'
+let n = 30
 const checkerBoard = () => {
   while (a < 450) {
     drawFilledRect(a, 0, 100, 100, r)
@@ -68,5 +69,3 @@ const checkerBoard = () => {
     r = t
   };
 }
-
-checkerBoard()
