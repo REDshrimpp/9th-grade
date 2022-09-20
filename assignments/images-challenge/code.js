@@ -52,9 +52,11 @@ drawFilledCircle(250,300,c,'red')
 let b = 0
 const checkerBoard = () => {
   while (b < 240)
+  drawFilledCircle(0,0,0,0)
+}
   drawFilledRect(b,0,100,100,'red')
   drawFilledRect(b,100,100,100,'blue')
   drawFilledRect(b,200,100,100,'red')
   drawFilledRect(b,300,100,100,'blue')
   drawFilledRect(b,400,100,100,'red')
-}
+
