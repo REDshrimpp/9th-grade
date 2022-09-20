@@ -49,9 +49,9 @@ drawFilledCircle(250,300,c,'red')
 }
 
 
-let b = 10
+let b = 0
 const checkerBoard = () => {
   while (b < 240)
-  drawSquare(10,40,40,'red')
+  drawFilledRect(b,0,100,100,'red')
+
 }
- drawFilledRect(0,10,40,40,'red')
