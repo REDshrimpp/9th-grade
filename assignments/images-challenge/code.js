@@ -26,14 +26,14 @@
  * 
  * */
 
-let x = 0
-let y = 300
+
+let c = 22
+let r = c - 12
 const lineOfCircles = () => {
   while (x < 480) {
-    x = x + 20
-    drawFilledCircle(x, 300, 10, 'red')
-    x = x + 20
-    drawFilledCircle(x, 300, 10, 'blue')
+    drawFilledCircle(x,300,r,'red')
+    x = x + n
+    drawFilledCircle(x,300,r,'blue')
   }
 }
 
