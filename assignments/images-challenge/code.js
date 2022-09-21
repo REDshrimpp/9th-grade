@@ -28,7 +28,7 @@
 
 let d = 0
 let x = 22
-let r = d - 12
+let r = d + 12
 const lineOfCircles = () => {
   while (x < 480) {
     drawFilledCircle(x, 300, r, 'red')
