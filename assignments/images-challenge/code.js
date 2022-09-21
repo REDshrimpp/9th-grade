@@ -26,13 +26,11 @@
  * 
  * */
 
-let d = 0
-let x = 22
-let r = d + 12
-const lineOfCircles = () => {
+let r = 20
+const lineOfCircles = (r) => {
   while (x < 480) {
     drawFilledCircle(x, 300, r, 'red')
-    x = x + n
+    x = x + r
     drawFilledCircle(x, 300, r, 'blue')
   }
 }
