@@ -32,7 +32,6 @@ const lineOfCircles = (r) => {
   while (x < 480) {
     drawFilledCircle(x, 300, r, 'red')
     x = x + r
-    drawFilledCircle(x, 300, r, 'blue')
   }
 }
 
