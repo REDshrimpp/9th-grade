@@ -72,4 +72,4 @@ const checkerBoard = () => {
   };
 }
 
-linesOfCircles()
+lineOfCircles()
