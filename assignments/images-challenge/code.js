@@ -56,20 +56,20 @@ const dartBoard = () => {
 
 let t = 0
 let a = 0
-let r = 'red'
+let m = 'red'
 let b = 'blue'
 let k = 30
 const checkerBoard = () => {
   while (a < 450) {
-    drawFilledRect(a, 0, 100, 100, r)
+    drawFilledRect(a, 0, 100, 100, m)
     drawFilledRect(a, 100, 100, 100, b)
-    drawFilledRect(a, 200, 100, 100, r)
+    drawFilledRect(a, 200, 100, 100, m)
     drawFilledRect(a, 300, 100, 100, b)
-    drawFilledRect(a, 400, 100, 100, r)
+    drawFilledRect(a, 400, 100, 100, m)
     drawFilledRect(a, 500, 100, 100, b)
     a = a + 100
     t = b
-    b = r
-    r = t
+    b = m
+    m = t
   };
 }
