@@ -39,6 +39,8 @@ const lineOfCircles = () => {
 
 lineOfCircles()
 
+lineOfCircles()
+
 let n = 10
 let c = 240
 const dartBoard = () => {
