@@ -26,13 +26,13 @@
  * 
  * */
 
-let r = 20
-const lineOfCircles = (r) => {
-  let x = 0
-  while (x < width) {
-    drawFilledCircle(x, height/2, r, 'red')
-    x = x + r
-  }
+let r = 22
+let b = r
+const lineOfCircles = () => {
+  while ()
+  drawFilledCircle(r,300,r,'red')
+  r = r + b
+  drawFilledCircle(r,300,b,'red')
 }
 
 lineOfCircles()
