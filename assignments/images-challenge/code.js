@@ -28,7 +28,7 @@
 
 let r = 20
 const lineOfCircles = (r) => {
-  x = 0
+  let x = 0
   while (x < 480) {
     drawFilledCircle(x, 300, r, 'red')
     x = x + r
