@@ -26,7 +26,7 @@
  * 
  * */
 
-
+let d = 0
 let x = 22
 let r =  d - 12
 const lineOfCircles = () => {
