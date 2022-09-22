@@ -30,10 +30,10 @@ let r2 = 2
 let b2 = r2
 let c2 = b2 * 2
 const lineOfCircles = () => {
-  while (r<500) {
-    drawFilledCircle(r2,300,b2,'red')
+  while (r < 500) {
+    drawFilledCircle(r2, 300, b2, 'red')
     r2 = r2 + c2
-    drawFilledCircle(r2,300,b2,'blue')
+    drawFilledCircle(r2, 300, b2, 'blue')
     r2 = r2 + c2
   }
 }
@@ -45,10 +45,10 @@ let b = r
 let c = b * 2
 const lineOfAlternatingCircles = () => {
   while (r < 500) {
-  drawFilledCircle(r,300,b,'red')
-  r = r + c
-  drawFilledCircle(r,300,b,'blue')
-  r = r + c
+    drawFilledCircle(r, 300, b, 'red')
+    r = r + c
+    drawFilledCircle(r, 300, b, 'blue')
+    r = r + c
   }
 };
 
