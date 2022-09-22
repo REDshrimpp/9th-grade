@@ -40,7 +40,8 @@ const lineOfCircles = () => {
 let r = 22
 let x = 22
 const lineOfCircles = () => {
-  while (x < 240)
-  drawFilledCircle(x,300,r,'red')
-  x = x + r
+  while (x < 240) {
+    drawFilledCircle(x, 300, r, 'red')
+    x = x + r
+  }
 };
