@@ -43,5 +43,4 @@ const lineOfCircles = () => {
   while (x < 240)
   drawFilledCircle(x,300,r,'red')
   x = x + r
-  drawFilledCircle(x,300,r,'blue')
 };
