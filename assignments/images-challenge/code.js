@@ -27,7 +27,7 @@
  * */
 
 
-let r = 22
+let r = 11
 let b = r
 const lineOfCircles = () => {
   while (r < 240) {
