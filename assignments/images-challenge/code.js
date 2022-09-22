@@ -27,7 +27,7 @@
  * */
 
 
-let r = 11
+let r = 15
 let b = r
 let c = b * 2
 const lineOfCircles = () => {
