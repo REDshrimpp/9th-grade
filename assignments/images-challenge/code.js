@@ -26,6 +26,7 @@
  * 
  * */
 
+/*
 let r = 22
 let b = r
 const lineOfCircles = () => {
@@ -34,5 +35,5 @@ const lineOfCircles = () => {
   r = r + b
   drawFilledCircle(r,300,b,'red')
 };
-
+*/
 lineOfCircles()
