@@ -29,11 +29,12 @@
 
 let r = 11
 let b = r
+let c = b * 1.5
 const lineOfCircles = () => {
   while (r < 240) {
-  drawFilledCircle(r,300,b,'red')
+  drawFilledCircle(r,300,c,'red')
   r = r + b
-  drawFilledCircle(r,300,b,'red')
+  drawFilledCircle(r,300,c,'red')
   }
 };
 
