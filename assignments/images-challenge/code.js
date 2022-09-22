@@ -26,24 +26,13 @@
  * 
  * */
 
-/*
+
 let r = 22
 let b = r
 const lineOfCircles = () => {
-  while (r < 240)
+  while (r < 240) {
   drawFilledCircle(r,300,b,'red')
   r = r + b
   drawFilledCircle(r,300,b,'red')
-};
-*/
-
-let r = 22
-let x = 22
-const lineOfCircles = () => {
-  while (x < 240) {
-    drawFilledCircle(x, 300, r, 'red')
-    x = x + r
   }
 };
-
-lineOfCircles()
