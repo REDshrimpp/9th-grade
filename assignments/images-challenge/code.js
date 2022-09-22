@@ -45,3 +45,5 @@ const lineOfCircles = () => {
     x = x + r
   }
 };
+
+lineOfCircles()
