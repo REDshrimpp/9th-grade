@@ -35,6 +35,8 @@ const lineOfCircles = () => {
   drawFilledCircle(r,300,b,'red')
   r = r + c
   drawFilledCircle(r,300,b,'blue')
+  r = r + c
+  drawFilledCircle(r,300,b,'green')
   }
 };
 
