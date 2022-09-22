@@ -37,4 +37,11 @@ const lineOfCircles = () => {
 };
 */
 
-drawFilledCircle(50,50,50,'red')
+let r = 22
+let x = 22
+const lineOfCircles = () => {
+  while (x < 240)
+  drawFilledCircle(x,300,r,'red')
+  x = x + r
+  drawFilledCircle(x,300,r,'blue')
+};
