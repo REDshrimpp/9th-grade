@@ -29,7 +29,7 @@
 
 let r = 11
 let b = r
-let c = b * 1.5
+let c = b * 2
 const lineOfCircles = () => {
   while (r < 240) {
   drawFilledCircle(r,300,b,'red')
