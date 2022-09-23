@@ -56,9 +56,9 @@ let e = a
 const dartBoard = () => {
   while (d > 20) {
     drawFilledCircle(250, 250, d * e / a, 'blue')
-    let e = e - 1
+    e = e - 1
     drawFilledCircle(250,250, d * e / a, 'red')
-    let e = e - 1
+    e = e - 1
   }
 }
 
