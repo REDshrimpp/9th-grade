@@ -36,7 +36,7 @@ const lineOfCircles = () => {
   }
 }
 
-lineOfCircles()
+
 
 let r = 2
 let b = r
