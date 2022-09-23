@@ -51,7 +51,7 @@ const lineOfAlternatingCircles = () => {
 };
 
 let a = 20
-let d = 500
+let d = 300
 let e = a
 const dartBoard = () => {
   while (d > 20) {
