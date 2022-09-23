@@ -62,3 +62,4 @@ const dartBoard = () => {
   }
 }
 
+dartBoard()
