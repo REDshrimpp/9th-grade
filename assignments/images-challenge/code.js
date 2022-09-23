@@ -50,7 +50,7 @@ const lineOfAlternatingCircles = () => {
   }
 };
 
-let a = 20
+let a = 15
 let d = 250
 let e = a
 const dartBoard = () => {
