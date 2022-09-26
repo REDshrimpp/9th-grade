@@ -62,7 +62,3 @@ const dartBoard = () => {
     e = e - 1
   }
 }
-
-n1 = 
-n2 = 
-dartBoard()
