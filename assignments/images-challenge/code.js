@@ -36,6 +36,7 @@ const lineOfCircles = () => {
   }
 }
 
+lineOfCircles()
 
 
 let r = 2
@@ -62,4 +63,6 @@ const dartBoard = () => {
   }
 }
 
+n1 = 
+n2 = 
 dartBoard()
