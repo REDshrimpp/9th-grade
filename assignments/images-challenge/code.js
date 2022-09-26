@@ -39,15 +39,15 @@ const lineOfCircles = () => {
 lineOfCircles()
 
 
-let r = 2
-let b = r
+let f = 2
+let b = f
 let c = b * 2
 const lineOfAlternatingCircles = () => {
   while (r < 500) {
-    drawFilledCircle(r, 300, b, 'red')
-    r = r + c
-    drawFilledCircle(r, 300, b, 'blue')
-    r = r + c
+    drawFilledCircle(f, 300, b, 'red')
+    rf = f + c
+    drawFilledCircle(f, 300, b, 'blue')
+    f = f + c
   }
 };
 
