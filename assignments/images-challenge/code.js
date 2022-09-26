@@ -30,7 +30,7 @@ let r2 = 2
 let b2 = r2
 let c2 = b2 * 2
 const lineOfCircles = () => {
-  while (r2 < 500) {
+  while (r2 < 800) {
     drawFilledCircle(r2, 300, b2, 'red')
     r2 = r2 + c2
   }
