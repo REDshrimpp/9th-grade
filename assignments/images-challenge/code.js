@@ -38,7 +38,7 @@ const lineOfCircles = () => {
 
 lineOfCircles()
 
-
+/*
 let r = 2
 let b = r
 let c = b * 2
