@@ -38,7 +38,7 @@ const lineOfCircles = () => {
 
 lineOfCircles()
 
-/*
+
 let r = 2
 let b = r
 let c = b * 2
@@ -50,7 +50,7 @@ const lineOfAlternatingCircles = () => {
     r = r + c
   }
 };
-/*
+
 
 let a = 60
 let d = 250
