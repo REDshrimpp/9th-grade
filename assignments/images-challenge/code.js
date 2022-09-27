@@ -27,9 +27,9 @@
  * */
 
 const lineOfCircles = () => {
-let r = 40
-let b = r
-let c = b * 2
+  let r = 40
+  let b = r
+  let c = b * 2
   while (r < 800) {
     drawFilledCircle(r, 300, b, 'red')
     r = r + c
@@ -39,9 +39,9 @@ let c = b * 2
 
 
 const lineOfAlternatingCircles = () => {
-let f = 2
-let b = f
-let c = b * 2
+  let f = 2
+  let b = f
+  let c = b * 2
   while (r < 500) {
     drawFilledCircle(f, 300, b, 'red')
     rf = f + c
@@ -51,13 +51,13 @@ let c = b * 2
 };
 
 const dartBoard = () => {
-let a = 13
-let d = 250
-let e = a
+  let a = 13
+  let d = 250
+  let e = a
   while (d > 20) {
     drawFilledCircle(250, 250, d * e / a, 'blue')
     e = e - 1
-    drawFilledCircle(250,250, d * e / a, 'red')
+    drawFilledCircle(250, 250, d * e / a, 'red')
     e = e - 1
   }
 }
@@ -66,8 +66,13 @@ let e = a
 const checkerBoard = () => {
   let r = 5
   let c = 5
-  let a = 0
-  while (a<500) {
-    drawRect(a,a,500/r,500/c)
-  } 
+  let y = 0
+  let x = 0
+  while (y < 501) {
+    for (x = 0; x < 500; x = x + 500 / c) {
+      drawRect(x, y, 500 / r, 500 / c, red)
+      y = y + 500 / r
+    }
+  }
 }
+
