@@ -51,7 +51,7 @@ let c = b * 2
 };
 
 const dartBoard = () => {
-let a = 60
+let a = 13
 let d = 250
 let e = a
   while (d > 20) {
