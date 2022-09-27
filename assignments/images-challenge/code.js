@@ -70,7 +70,7 @@ const checkerBoard = () => {
   let x = 0
   while (y < 501) {
     for (x = 0; x < 500; x = x + 500 / c) {
-      drawRect(x, y, 500 / r, 500 / c, red)
+      drawRect(x, y, 500 / r, 500 / c, 'red')
       y = y + 500 / r
     }
   }
