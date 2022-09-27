@@ -62,4 +62,12 @@ let e = a
   }
 }
 
-dartBoard()
+
+const checkerBoard = () => {
+  let r = 5
+  let c = 5
+  let a = 0
+  while (a<500) {
+    drawRect(a,a,500/r,500/c)
+  } 
+}
