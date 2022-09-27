@@ -26,23 +26,22 @@
  * 
  * */
 
-let r2 = 40
-let b2 = r2
-let c2 = b2 * 2
 const lineOfCircles = () => {
-  while (r2 < 800) {
-    drawFilledCircle(r2, 300, b2, 'red')
-    r2 = r2 + c2
+let r = 40
+let b = r
+let c = b * 2
+  while (r < 800) {
+    drawFilledCircle(r, 300, b, 'red')
+    r = r + c
   }
 }
 
-lineOfCircles()
 
 
+const lineOfAlternatingCircles = () => {
 let f = 2
 let b = f
 let c = b * 2
-const lineOfAlternatingCircles = () => {
   while (r < 500) {
     drawFilledCircle(f, 300, b, 'red')
     rf = f + c
@@ -51,15 +50,16 @@ const lineOfAlternatingCircles = () => {
   }
 };
 
-
-let a = 60
-let d = 250
-let e = a
 const dartBoard = () => {
   while (d > 20) {
+  let a = 60
+let d = 250
+let e = a
     drawFilledCircle(250, 250, d * e / a, 'blue')
     e = e - 1
     drawFilledCircle(250,250, d * e / a, 'red')
     e = e - 1
   }
 }
+
+dartBoard()
