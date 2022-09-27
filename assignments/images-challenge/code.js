@@ -51,10 +51,10 @@ let c = b * 2
 };
 
 const dartBoard = () => {
-  while (d > 20) {
-  let a = 60
+let a = 60
 let d = 250
 let e = a
+  while (d > 20) {
     drawFilledCircle(250, 250, d * e / a, 'blue')
     e = e - 1
     drawFilledCircle(250,250, d * e / a, 'red')
