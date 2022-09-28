@@ -51,7 +51,7 @@ const lineOfAlternatingCircles = () => {
 };
 
 const dartBoard = () => {
-  let a = 13
+  let a = 67
   let r = height
   while (r > height / a) {
     drawFilledCircle(width/2,height/2,r,'blue')
