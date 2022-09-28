@@ -42,7 +42,7 @@ const lineOfAlternatingCircles = () => {
   let f = 2
   let b = f
   let c = b * 2
-  while (r < 500) {
+  while (r < width) {
     drawFilledCircle(f, 300, b, 'red')
     rf = f + c
     drawFilledCircle(f, 300, b, 'blue')
