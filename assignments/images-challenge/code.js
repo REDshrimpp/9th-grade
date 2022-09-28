@@ -55,9 +55,9 @@ const dartBoard = () => {
   let r = height
   while (r > height / a) {
     drawFilledCircle(width/2,height/2,r,'blue')
-    r = r - r / a
+    r = r - height / a
     drawFilledCircle(width/2,height/2,r,'red')
-    r = r - r / a
+    r = r - height / a
   }
 }
 
