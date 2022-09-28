@@ -62,6 +62,8 @@ const dartBoard = () => {
   }
 }
 
+dartBoard()
+
 
 const checkerBoard = () => {
   let r = 5
@@ -69,11 +71,11 @@ const checkerBoard = () => {
   let y = 0
   let x = 0
   while (y < 501) {
-    for (x = 0; x < w; x = x + w / c) {
-      drawRect(x, y, l / r, w / c, 'red')
-      y = y + l / r
+    for (x = 0; x < width; x = x + width / c) {
+      drawRect(x, y, length / r, width / c, 'red')
+      y = y + length / r
     }
   }
 }
 
-checkerBoard()
+
