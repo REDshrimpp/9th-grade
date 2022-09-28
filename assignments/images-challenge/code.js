@@ -78,5 +78,5 @@ const checkerBoard = () => {
   }
 }
 
-checkerBoard()
+
 
