@@ -52,13 +52,12 @@ const lineOfAlternatingCircles = () => {
 
 const dartBoard = () => {
   let a = 13
-  let d = 250
-  let e = a
-  while (d > 20) {
-    drawFilledCircle(width / 2, height / 2, d * e / a, 'blue')
-    e = e - 1
-    drawFilledCircle(width / 2, height / 2, d * e / a, 'red')
-    e = e - 1
+  let r = height
+  while (r > height / a) {
+    drawFilledCircle(width/2,height/2,r,'blue')
+    r = r - r / a
+    drawFilledCircle(width/2,height/2,r,'red')
+    r = r - r / a
   }
 }
 
