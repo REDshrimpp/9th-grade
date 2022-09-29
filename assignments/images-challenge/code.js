@@ -80,3 +80,13 @@ const checkerBoard = () => {
 }
 
 checkerBoard()
+
+const checkerBoard2 = () => {
+  let r = 5
+  let c = 5
+  let x = 0
+  let y = 0
+  while (y < 500) {
+    drawFilledRect
+  }
+}
