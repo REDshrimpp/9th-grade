@@ -68,7 +68,7 @@ const checkerBoard = () => {
   let r = 5
   let c = 5
   let y = 0
-  while (y < 501) {
+  while (y < 500) {
     for (let x = 0; x < length; x = x + length / c) {
       drawFilledRect(x, y, height / r, length / c, 'red')
     }
