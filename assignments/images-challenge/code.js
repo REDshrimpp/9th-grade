@@ -61,7 +61,7 @@ const dartBoard = () => {
   }
 }
 
-dartBoard()
+
 
 
 const checkerBoard = () => {
@@ -76,5 +76,4 @@ const checkerBoard = () => {
   }
 }
 
-
-
+checkerBoard()
