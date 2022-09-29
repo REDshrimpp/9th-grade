@@ -76,4 +76,4 @@ const checkerBoard = () => {
   }
 }
 
-drawFilledRect(length / 10, length / 10, length / 10, 60, 'red')
+drawFilledRect(length / 10, length / 10, length / 2, 60, 'red')
