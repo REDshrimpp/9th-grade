@@ -54,9 +54,9 @@ const dartBoard = () => {
   let a = 12
   let r = height
   while (r > height / a) {
-    drawFilledCircle(width/2,height/2,r,'blue')
+    drawFilledCircle(width / 2, height / 2, r, 'blue')
     r = r - height / a
-    drawFilledCircle(width/2,height/2,r,'red')
+    drawFilledCircle(width / 2, height / 2, r, 'red')
     r = r - height / a
   }
 }
@@ -76,4 +76,4 @@ const checkerBoard = () => {
   }
 }
 
-checkerBoard()
+drawFilledRect(length / 2, height / 2, length / 10, 'red')
