@@ -71,6 +71,7 @@ const checkerBoard = () => {
   let x = 0
   let red = 'red'
   let blue = 'blue'
+  let a = red
   while (y < 500) {
     for (let x = 0; x < width; x = x + width / c) {
       drawFilledRect(x, y, 662 / c, 355 / r, red)
