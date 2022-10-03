@@ -82,7 +82,7 @@ const checkerBoard = () => {
     y = y + height / r
     a = red
     red = blue
-    blue = red
+    blue = a
   }
 }
 
