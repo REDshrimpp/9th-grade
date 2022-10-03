@@ -8,7 +8,7 @@ const emit = (a, b, product) => {
 
 //1
 const averageWeight = (a, b) => {
-  a / b
+  return a / b
 }
 
 //2
