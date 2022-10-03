@@ -28,7 +28,7 @@ const numCircles = (a, b) => {
 
 //5
 const offset = (a,b) => {
-  return (b - a) / 2
+  return (a - b) / 2
 }
 
 //6
