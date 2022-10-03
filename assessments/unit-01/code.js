@@ -18,39 +18,39 @@ const hypotenuse = (a, b) => {
 
 //3
 const maxRadius = (a, b) => {
-   return Math.min(a, b) / 2
+  return Math.min(a, b) / 2
 }
 
 //4
 const numCircles = (a, b) => {
-  return b / (a * 2)  
+  return b / (a * 2)
 }
 
 //5
-const offset = (a,b) => {
+const offset = (a, b) => {
   return (a - b) / 2
 }
 
 //6
-const canSleepIn = (a,b) => {
+const canSleepIn = (a, b) => {
   return !a || b === true
-} 
+}
 
 //7
-const canGoToProm = (a,b,c) => {
+const canGoToProm = (a, b, c) => {
   a || b && !c === true
 }
 
 //8
-const getsSpeedingTicket = (a,b) => {
-  if (a>70) {
+const getsSpeedingTicket = (a, b) => {
+  if (a > 70) {
     b || !b === true
   }
   else if (70 > a > 65) {
     b === true
   }
   else
-  b || !b === false
+    b || !b === false
 }
 
 //9
