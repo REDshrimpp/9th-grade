@@ -23,7 +23,7 @@ const maxRadius = (a, b) => {
 
 //4
 const numCircles = (a, b) => {
-  return a * 2 / b
+  return b / (a * 2)  
 }
 
 //5
