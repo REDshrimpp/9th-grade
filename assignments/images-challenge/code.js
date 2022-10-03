@@ -66,7 +66,7 @@ const dartBoard = () => {
 
 const checkerBoard = () => {
   let r = 5
-  let c = 5
+  let c = 10
   let y = 0
   let x = 0
   let red = 'red'
