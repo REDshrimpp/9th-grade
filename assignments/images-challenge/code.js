@@ -68,6 +68,7 @@ const checkerBoard = () => {
   let r = 5
   let c = 5
   let y = 0
+  let x = 0
   let red = 'red'
   let blue = 'blue'
   while (y < 500) {
