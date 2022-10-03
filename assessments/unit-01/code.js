@@ -13,27 +13,27 @@ const averageWeight = (a, b) => {
 
 //2
 const hypotenuse = (a, b) => {
-  a ** 2 + b ** 2
+  return a ** 2 + b ** 2
 }
 
 //3
 const maxRadius = (a, b) => {
-  Math.min(a, b) / 2
+   return Math.min(a, b) / 2
 }
 
 //4
 const numCircles = (a, b) => {
-  b / 2 * a
+  return b / 2 * a
 }
 
 //5
 const offset = (a,b) => {
-  (b - a) / 2
+  return (b - a) / 2
 }
 
 //6
 const canSleepIn = (a,b) => {
-  !a || b === true
+  return !a || b === true
 } 
 
 //7
