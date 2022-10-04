@@ -82,3 +82,7 @@ const secondHalf = (a) => {
   return a.substring(a.length/2, a.length)
 }
 
+//13
+const upDown = (a) => {
+  return a.toUpperCase + a
+}
