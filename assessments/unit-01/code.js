@@ -58,7 +58,7 @@ const moreThanTwiceAsLong = (a, b) => {
   if (a.length > b.length * 2) {
   return true
   }
-  else {
+  else if (a.length < b.length * 2) {
   return false
   }
 }
