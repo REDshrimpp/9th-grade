@@ -71,3 +71,8 @@ const aFartherThanB = (a, b , c) => {
   else
   return false
 }
+
+//11
+const firstHalf = (a) => {
+  return a.substring(0, a.length / 2)
+}
