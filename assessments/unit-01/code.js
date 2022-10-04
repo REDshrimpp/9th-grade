@@ -62,3 +62,12 @@ const moreThanTwiceAsLong = (a, b) => {
   return false
   }
 }
+
+//10
+const aFartherThanB = (a, b , c) => {
+  if (Math.abs(a - c) > Math.abs(b - c)) {
+    return true
+  }
+  else
+  return false
+}
