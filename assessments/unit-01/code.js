@@ -81,3 +81,4 @@ const firstHalf = (a) => {
 const secondHalf = (a) => {
   return a.substring(a.length/2, a.length)
 }
+
