@@ -44,13 +44,13 @@ const canGoToProm = (a, b, c) => {
 //8
 const getsSpeedingTicket = (a, b) => {
   if (a > 70) {
-    b || !b === true
+    return b || !b === true
   }
   else if (70 > a > 65) {
-    b === true
+    return b === true
   }
   else
-    b || !b === false
+    return b || !b === false
 }
 
 //9
