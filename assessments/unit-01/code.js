@@ -38,7 +38,7 @@ const canSleepIn = (a, b) => {
 
 //7
 const canGoToProm = (a, b, c) => {
-  (a || b) && !c === true
+  return (a || b) && !c === true
 }
 
 //8
