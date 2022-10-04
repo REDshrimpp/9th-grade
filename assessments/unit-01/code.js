@@ -55,10 +55,10 @@ const getsSpeedingTicket = (a, b) => {
 
 //9
 const moreThanTwiceAsLong = (a, b) => {
-  if (a.length > b.length * 2) {
+  if (a.length / 2 > b.length) {
   return true
   }
-  else if (a.length < b.length * 2) {
+  else {
   return false
   }
 }
