@@ -84,5 +84,5 @@ const secondHalf = (a) => {
 
 //13
 const upDown = (a) => {
-  return a.toUpperCase + a
+  return a.toUpperCase() + a
 }
