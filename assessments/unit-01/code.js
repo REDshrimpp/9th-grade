@@ -86,3 +86,10 @@ const secondHalf = (a) => {
 const upDown = (a) => {
   return a.toUpperCase() + a
 }
+
+//14
+const everyOther = (a) => {
+  if (a.length > 4) {
+    return a.substring()
+  }
+}
