@@ -56,20 +56,20 @@ const getsSpeedingTicket = (a, b) => {
 //9
 const moreThanTwiceAsLong = (a, b) => {
   if (a.length / 2 > b.length) {
-  return true
+    return true
   }
   else {
-  return false
+    return false
   }
 }
 
 //10
-const aFartherThanB = (a, b , c) => {
+const aFartherThanB = (a, b, c) => {
   if (Math.abs(a - c) > Math.abs(b - c)) {
     return true
   }
   else
-  return false
+    return false
 }
 
 //11
@@ -79,7 +79,7 @@ const firstHalf = (a) => {
 
 //12
 const secondHalf = (a) => {
-  return a.substring(a.length/2, a.length)
+  return a.substring(a.length / 2, a.length)
 }
 
 //13
@@ -90,6 +90,8 @@ const upDown = (a) => {
 //14
 const everyOther = (a) => {
   if (a.length > 4) {
-    return a.substring()
+    for (x = 0; x < a.length; x + 2) {
+      return a[x]
+    }
   }
 }
