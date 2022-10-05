@@ -89,6 +89,7 @@ const upDown = (a) => {
 
 //14
 const everyOther = (a) => {
+  let x = 0
   if (a.length > 4) {
     for (x = 0; x < a.length; x + 2) {
       return a[x]
