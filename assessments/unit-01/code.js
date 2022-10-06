@@ -64,8 +64,8 @@ const moreThanTwiceAsLong = (string1, string2) => {
 }
 
 //10
-const aFartherThanB = (a, b, c) => {
-  if (Math.abs(a - c) > Math.abs(b - c)) {
+const aFartherThanB = (numberA, numberB, numberC) => {
+  if (Math.abs(numberA - numberC) > Math.abs(numberB - numberC)) {
     return true
   }
   else
@@ -73,8 +73,8 @@ const aFartherThanB = (a, b, c) => {
 }
 
 //11
-const firstHalf = (a) => {
-  return a.substring(0, a.length / 2)
+const firstHalf = (s) => {
+  return s.substring(0, s.length / 2)
 }
 
 //12
