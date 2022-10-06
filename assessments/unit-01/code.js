@@ -37,8 +37,8 @@ const canSleepIn = (isWeekday, onVacation) => {
 }
 
 //7
-const canGoToProm = (a, b, c) => {
-  return (a || b) && !c === true
+const canGoToProm = (isSenior, invitedBySenior, onPromExlusionList) => {
+  return (isSenior || invitedBySenior) && !onPromExlusionList === true
 }
 
 //8
