@@ -18,7 +18,7 @@ const hypotenuse = (aLength, bLength) => {
 
 //3
 const maxRadius = (drawingAreaWidth, drawingAreaHeight) => {
-  return Math.min(drawingAreaWidth, drawingAreaHeight) / 2
+  return Math.floor(Math.min(drawingAreaWidth, drawingAreaHeight) / 2)
 }
 
 //4
