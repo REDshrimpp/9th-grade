@@ -7,13 +7,13 @@ const emit = (a, b, product) => {
 // Write your code here ...
 
 //1
-const averageWeight = (a, b) => {
-  return a / b
+const averageWeight = (totalWeight, numberOfItems) => {
+  return totalWeight / numberOfItems
 }
 
 //2
-const hypotenuse = (a, b) => {
-  return a ** 2 + b ** 2
+const hypotenuse = (aLength, bLength) => {
+  return Math.sqrt(aLength ** 2 + bLength ** 2) 
 }
 
 //3
@@ -96,3 +96,4 @@ const everyOther = (a) => {
     }
   }
 }
+
