@@ -91,3 +91,10 @@ const upDown = (s) => {
 const everyOther = (s) => {
   return s[0] + s[2] + s[4]
 }
+
+//15
+const upDownLastCharacter = (s) => {
+  if (s.length > 0) {
+  return s[s.length].toUpperCase() + s(s.length) 
+  }
+}
