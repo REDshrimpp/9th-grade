@@ -13,7 +13,7 @@ const averageWeight = (totalWeight, numberOfItems) => {
 
 //2
 const hypotenuse = (aLength, bLength) => {
-  return Math.sqrt(aLength ** 2 + bLength ** 2) 
+  return Math.sqrt(aLength ** 2 + bLength ** 2)
 }
 
 //3
@@ -95,6 +95,16 @@ const everyOther = (s) => {
 //15
 const upDownLastCharacter = (s) => {
   if (s.length > 0) {
-  return s.substring(s.length - 1, s.length).toUpperCase() + s.substring(s.length - 1, s.length)
+    return s.substring(s.length - 1, s.length).toUpperCase() + s.substring(s.length - 1, s.length)
+  }
+}
+
+//16
+const yesIfEven = (number) => {
+  if (number % 2 !== 1) {
+    return true
+  }
+  else {
+    return false
   }
 }
