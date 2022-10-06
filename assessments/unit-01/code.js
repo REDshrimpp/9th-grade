@@ -54,8 +54,8 @@ const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
 }
 
 //9
-const moreThanTwiceAsLong = (a, b) => {
-  if (a.length / 2 > b.length) {
+const moreThanTwiceAsLong = (string1, string2) => {
+  if (string1.length / 2 > string2.length) {
     return true
   }
   else {
