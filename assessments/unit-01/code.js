@@ -83,17 +83,11 @@ const secondHalf = (a) => {
 }
 
 //13
-const upDown = (a) => {
-  return a.toUpperCase() + a
+const upDown = (s) => {
+  return s.toUpperCase() + s
 }
 
 //14
-const everyOther = (a) => {
-  let x = 0
-  if (a.length > 4) {
-    for (x = 0; x < a.length; x + 2) {
-      return a[x]
-    }
-  }
+const everyOther = (s) => {
+  return s[0] + s[2] + s[4]
 }
-
