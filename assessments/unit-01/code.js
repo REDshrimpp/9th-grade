@@ -27,8 +27,8 @@ const numCircles = (circleRadius, drawingAreaWidth) => {
 }
 
 //5
-const offset = (a, b) => {
-  return (a - b) / 2
+const offset = (drawingAreaWidth, figureWidth) => {
+  return (drawingAreaWidth - figureWidth) / 2
 }
 
 //6
