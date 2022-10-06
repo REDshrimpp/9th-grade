@@ -18,12 +18,12 @@ const hypotenuse = (aLength, bLength) => {
 
 //3
 const maxRadius = (drawingAreaWidth, drawingAreaHeight) => {
-  return Math.floor(Math.min(drawingAreaWidth, drawingAreaHeight) / 2)
+  return (Math.min(drawingAreaWidth, drawingAreaHeight) / 2)
 }
 
 //4
 const numCircles = (circleRadius, drawingAreaWidth) => {
-  return drawingAreaWidth / (circleRadius * 2)
+  return Math.floor(drawingAreaWidth / (circleRadius * 2))
 }
 
 //5
