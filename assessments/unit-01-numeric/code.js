@@ -47,3 +47,13 @@ const payWithOverTime = (numberOfHours, hourlyPay, overTimePay) => {
     return (hourlyPay * 8) + (numberOfHours - 8) * overTimePay
   }
 }
+
+//8
+const firstClassPostage = (weightOfLetter) => {
+  if (weightOfLetter <= 1) {
+  return 60
+  }
+  else {
+    return 60 + Math.ceil(weightOfLetter - 1) * 24
+  }
+}
