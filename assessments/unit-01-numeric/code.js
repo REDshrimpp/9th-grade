@@ -65,5 +65,5 @@ const weightOnJupiter = (weightOnEarth) => {
 
 //10
 const gravity = (massOfObject1, massOfObject2, distanceBetweenObjects) => {
-  return G * ((massOfObject1 + massOfObject2) / (distanceBetweenObjects **2))
+  return G * ((massOfObject1 * massOfObject2) / (distanceBetweenObjects **2))
 }
