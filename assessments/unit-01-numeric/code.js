@@ -39,7 +39,7 @@ const valueOfJewels = (numberOfDiamonds, numberOfEmeralds, diamondValue, emerald
 }
 
 //7
-const payWithOvertime = (numberOfHours, hourlyPay, overTimePay) => {
+const payWithOverTime = (numberOfHours, hourlyPay, overTimePay) => {
   if (numberOfHours < 8) {
     return numberOfHours * hourlyPay
   }
