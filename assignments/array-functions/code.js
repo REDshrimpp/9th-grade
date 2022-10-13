@@ -26,3 +26,17 @@ const sum = (array) => {
   }
   return total
 }
+
+//evens
+
+const evens = (array) => {
+  let y = 0
+  let array2 = [];
+  for (let x = 0; x < array.length; x++) {
+    if (array[y] % 2 === 0) {
+      array2.push[y]
+    }
+    y++
+  }
+  return array2
+}
