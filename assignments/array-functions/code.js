@@ -34,7 +34,7 @@ const evens = (array) => {
   const array2 = [];
   for (let x = 0; x < array.length; x++) {
     if (array[y] % 2 === 0) {
-      array2.push[y]
+      array2.push(array[y])
     }
     y++
   }
