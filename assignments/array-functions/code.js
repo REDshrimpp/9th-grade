@@ -38,5 +38,5 @@ const evens = (array) => {
     }
     y++
   }
-  return array2
+  return array2[]
 }
