@@ -6,7 +6,7 @@ const countTens = (array) => {
       amountOfTens++
     }
     else
-    amountOfTens = amountOfTens
+      amountOfTens = amountOfTens
   }
   return amountOfTens
 }
