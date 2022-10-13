@@ -5,8 +5,10 @@ const countTens = (array) => {
     if (array[y] === 10) {
       amountOfTens++
     }
-    else
+    else {
       amountOfTens = amountOfTens
+    }
+    y++
   }
   return amountOfTens
 }
