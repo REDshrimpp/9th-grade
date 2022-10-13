@@ -3,7 +3,7 @@
 const countTens = (array) => {
   let y = 0
   let amountOfTens = 0
-  for (let x = 0; x < array.length; x = x + 1) {
+  for (let x = 0; x < array.length; x++) {
     if (array[y] === 10) {
       amountOfTens++
     }
@@ -40,3 +40,7 @@ const evens = (array) => {
   }
   return array2
 }
+
+//anyOverOneHundred
+
+const anyOverOneHundred
