@@ -54,3 +54,15 @@ const anyOverOneHundred = (array) => {
   }
   return boolean
 }
+
+//pyramid
+
+const pyramid = (nonNegativeInteger) => {
+  let array = []
+  for (let x = 0; x < nonNegativeInteger.length; x++) {
+    for (let y = 0; y < nonNegativeInteger[x]; y++) {
+      array.push(x)
+    }
+  }
+  return array
+}
