@@ -64,7 +64,7 @@ const pyramid = (nonNegativeInteger) => {
     for (let y = 0; y < arrayPlacement; y++) {
       array.push(arrayPlacement)
     }
-    let arrayPlacement++
+    let arrayPlacement = arrayPlacement + 1
   }
   return array
 }
