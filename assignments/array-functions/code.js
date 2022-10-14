@@ -58,13 +58,13 @@ const anyOverOneHundred = (array) => {
 //pyramid
 
 const pyramid = (nonNegativeInteger) => {
-  let array = []
+  const array = []
   let arrayPlacement = 0
   for (let x = 0; x < nonNegativeInteger.length; x++) {
     for (let y = 0; y < arrayPlacement; y++) {
       array.push(arrayPlacement)
     }
-    let arrayPlacement = arrayPlacement + 1
+    arrayPlacement++
   }
   return array
 }
