@@ -47,7 +47,7 @@ const anyOverOneHundred = (array) => {
   let y = 0
   let boolean = true
   for (let x = 0; x < array.length; x++) {
-    if (array[y] > 100) {
+    if (array[y] < 100) {
       boolean = false
     }
     y++
