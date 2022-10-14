@@ -45,10 +45,10 @@ const evens = (array) => {
 
 const anyOverOneHundred = (array) => {
   let y = 0
-  let boolean = true
+  let boolean = false
   for (let x = 0; x < array.length; x++) {
-    if (array[y] < 100) {
-      boolean = false
+    if (array[y] > 100) {
+      boolean = true
     }
     y++
   }
