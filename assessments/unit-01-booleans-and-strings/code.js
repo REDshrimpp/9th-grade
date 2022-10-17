@@ -70,11 +70,11 @@ const randomCharacter = (string) => {
   return string[rand(string.length)]
 }
 
-/*
 //10
 const randomCharacterUpDown = (string) => {
 }
 
+/*
 //11
 const isAllUpperCase = (string) => {
 }
