@@ -16,4 +16,3 @@ const fireAlarm = (fireAlarmsGoOff, fireAlarmIsPulled, smokeDetected) => {
 }
 
 //2
-const 
