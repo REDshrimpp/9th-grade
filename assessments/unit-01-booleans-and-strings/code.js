@@ -26,6 +26,7 @@ const willSeeTweet = (followPersonWhoTweeted, followPersonWhoRetweeted, blockedP
 }
 
 //4
+//NOTE
 const evenGreaterThanZero = (number) => {
   if (number % 2 === 0) {
     if (number > 0) {
@@ -33,5 +34,24 @@ const evenGreaterThanZero = (number) => {
     }
   }
   else
-  return false
+    return false
+}
+
+//5
+//NOTE
+const isLeapYear = (year) => {
+  if (year % 4 === 0) {
+    if (year !== 100) {
+      return true
+    }
+    else
+    return false
+  }
+  else
+    return false
+}
+
+//6
+const firstAndLast = (string) => {
+  return string.substring(0) + string.substring(string.length)
 }
