@@ -22,5 +22,5 @@ const canBePresident = (isThirtyFiveYearsOld, isNaturalBornCitizen, hasLivedInUs
 
 //3
 const willSeeTweet = (followPersonWhoTweeted, followPersonWhoRetweeted, blockedPersonWhoTweeted) => {
-  return followPersonWhoTweeted || followPersonWhoRetweeted && !blockedPersonWhoTweeted
+  return (followPersonWhoTweeted || followPersonWhoRetweeted) && !blockedPersonWhoTweeted
 }
