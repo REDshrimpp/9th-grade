@@ -62,13 +62,15 @@ const swapFrontAndBack = (string) => {
 }
 
 //8
-/*const simplePigLatin = (string, indexOfFirstVowel) {
+const simplePigLatin = (string, indexOfFirstVowel) {
 }
 
 //9
 const randomCharacter = (string) => {
+  return string[rand(string.length)]
 }
 
+/*
 //10
 const randomCharacterUpDown = (string) => {
 }
