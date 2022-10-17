@@ -24,3 +24,14 @@ const canBePresident = (isThirtyFiveYearsOld, isNaturalBornCitizen, hasLivedInUs
 const willSeeTweet = (followPersonWhoTweeted, followPersonWhoRetweeted, blockedPersonWhoTweeted) => {
   return (followPersonWhoTweeted || followPersonWhoRetweeted) && !blockedPersonWhoTweeted
 }
+
+//4
+const evenGreaterThanZero = (number) => {
+  if (number % 2 === 0) {
+    if (number > 0) {
+      return true
+    }
+  }
+  else
+  return false
+}
