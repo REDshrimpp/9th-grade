@@ -62,7 +62,7 @@ const swapFrontAndBack = (string) => {
 }
 
 //8
-const simplePigLatin = (string, indexOfFirstVowel) {
+/*const simplePigLatin = (string, indexOfFirstVowel) {
 }
 
 //9
