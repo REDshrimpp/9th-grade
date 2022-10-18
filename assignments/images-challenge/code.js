@@ -26,6 +26,8 @@
  * 
  * */
 
+
+//lineOfCircles
 const lineOfCircles = () => {
   let r = 40
   let b = r
@@ -37,7 +39,7 @@ const lineOfCircles = () => {
 }
 
 
-
+//LineOfAlternatingCircles
 const lineOfAlternatingCircles = () => {
   let f = 2
   let b = f
@@ -50,6 +52,7 @@ const lineOfAlternatingCircles = () => {
   }
 };
 
+//dartBoard
 const dartBoard = () => {
   let a = 12
   let r = height
@@ -63,12 +66,11 @@ const dartBoard = () => {
 
 
 
-
+//checkerBoard
 const checkerBoard = () => {
   let r = 5
   let c = 10
   let y = 0
-  let x = 0
   let red = 'red'
   let blue = 'blue'
   let a = red
@@ -86,14 +88,11 @@ const checkerBoard = () => {
   }
 }
 
-checkerBoard()
+//notReallyCurved
 
-const checkerBoard2 = () => {
-  let r = 5
-  let c = 5
-  let x = 0
-  let y = 0
-  while (y < 500) {
-    drawFilledRect
+//fillWithCircles
+const fillWithCircles = (circleSize) => {
+  for(let x = 0; x < length; x++) {
+    
   }
 }
