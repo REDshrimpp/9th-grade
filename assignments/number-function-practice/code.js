@@ -12,3 +12,8 @@ const averageOfThree = (number1, number2, number3) => {
 const areaOfATrapazoid = (base1, base2, height) => {
   return 1 / 2 * (base2 + base1) * height
 }
+
+//areaOfATriangle
+const areaOfATriangle = (baseLength, height) => {
+  return 1/2 * (baseLength * height)
+}
