@@ -92,7 +92,8 @@ const checkerBoard = () => {
 
 //fillWithCircles
 const fillWithCircles = (circleSize) => {
-  for(let x = 0; x < length; x++) {
-    
+  for (let y = 0; y < height; y + circleSize)
+  for (let x = 0; x < width; x + circleSize) {
+    drawFilledCircle(x, y,)
   }
 }
