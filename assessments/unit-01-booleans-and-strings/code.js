@@ -89,4 +89,8 @@ const isAllUpperCase = (string) => {
 
 //12
 const sameIgnoringCase = (string1, string2) => {
+  if (string.substring(0).toUpperCase() === string.substring(0).toUpperCase()) {
+    return true
+  }
+  return false
 }
