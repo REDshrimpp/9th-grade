@@ -62,7 +62,8 @@ const swapFrontAndBack = (string) => {
 }
 
 //8
-const simplePigLatin = (string, indexOfFirstVowel) {
+const simplePigLatin = (string, indexOfFirstVowel) => {
+  return string.substring(indexOfFirstVowel, string.length) + string.substring(0, indexOfFirstVowel) 
 }
 
 //9
