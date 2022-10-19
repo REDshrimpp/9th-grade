@@ -76,6 +76,7 @@ const randomCharacterUpDown = (string) => {
   return s[rand(string.length)]
 }
 
+
 /*
 //11
 const isAllUpperCase = (string) => {
