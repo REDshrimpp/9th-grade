@@ -203,5 +203,12 @@
     "answer": "4/3 * Math.PI * r**3",
     "correct": true,
     "timestamp": 1666217193418
+  },
+  {
+    "name": "Midpoint of line",
+    "canonical": "a + (b - a) / 2",
+    "answer": "(a + b) / 2",
+    "correct": true,
+    "timestamp": 1666217238059
   }
 ]
