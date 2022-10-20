@@ -113,7 +113,7 @@ const yesIfEven = (number) => {
 const countXs = (string) => {
   let xCount = 0
   for(let x = 0; x < string.length; x++) {
-    if(string[x] === x) {
+    if(string.substring(x, x++) === x) {
       xCount = xCount++
     }
   }
