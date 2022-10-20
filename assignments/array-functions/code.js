@@ -73,5 +73,5 @@ const countTens = (array) => {
     if (array[x] === 10)
     tenCount++
     }
+    return tenCount
   }
-}
