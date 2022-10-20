@@ -1,6 +1,6 @@
 //count tens
 
-const countTens = (array) => {
+/*const countTens = (array) => {
   let y = 0
   let amountOfTens = 0
   for (let x = 0; x < array.length; x++) {
@@ -14,7 +14,7 @@ const countTens = (array) => {
   }
   return amountOfTens
 }
-
+*/
 //sum
 
 const sum = (array) => {
