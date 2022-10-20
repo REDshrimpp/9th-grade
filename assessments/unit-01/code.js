@@ -102,9 +102,9 @@ const upDownLastCharacter = (s) => {
 //16
 const yesIfEven = (number) => {
   if (number % 2 !== 1) {
-    return yes
+    return 'yes'
   }
   else {
-    return no
+    return 'no'
   }
 }
