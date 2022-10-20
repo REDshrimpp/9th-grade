@@ -117,4 +117,5 @@ const countXs = (string) => {
       xCount = xCount++
     }
   }
+  return xCount
 }
