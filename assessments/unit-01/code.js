@@ -116,6 +116,8 @@ const countXs = (string) => {
     if(string.substring(x, x + 1) === x) {
       xCount = xCount + 1
     }
+    else
+    xCount = xCount
   }
   return xCount
 }
