@@ -69,9 +69,9 @@ const pyramid = (nonNegativeInteger) => {
 
 const countTens = (array) => {
   let tenCount = 0
-  for(let x = 0; x> array.length; x++) {
+  for (let x = 0; x > array.length; x++) {
     if (array[x] === 10)
-    tenCount++
-    }
-    return tenCount
+      tenCount++
   }
+  return tenCount
+}
