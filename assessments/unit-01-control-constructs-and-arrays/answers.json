@@ -19,5 +19,5 @@
   "true",
   "The sum of the elements of the array.",
   "Produces a new array containing all the words in words in uppercase.",
-  "it takes xs and "
+  "it takes a array input (xs) and returns an array with all of the "
 ]
