@@ -19,5 +19,5 @@
   "true",
   "The sum of the elements of the array.",
   "Produces a new array containing all the words in words in uppercase.",
-  "it takes an input (xs) and creates an array with all the values of words in reversed order"
+  "it takes an input (xs) and creates an array (result) with all the "
 ]
