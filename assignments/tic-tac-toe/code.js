@@ -9,14 +9,15 @@ registerOnclick((x, y) => {
   drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
 });
 
-const drawFilledRect(width / 2, height / 2, length, height, 'black')
-const drawLine(width * 1 / 4, 0, width * 1 / 4, height, 'white', 5)
-const drawLine(width * 2 / 4, 0, width * 2 / 4, height, 'white', 5)
-const drawLine(width * 3 / 4, 0, width * 3 / 4, height, 'white', 5)
+drawFilledRect(width / 2, height / 2, width, height, 'black')
+drawLine(width * 1/4, 0, width * 1/4, height, 'white', 5)
+drawLine(width * 2/4, 0, width * 2/4, height, 'white', 5)
+drawLine(width * 3/4, 0, width * 3/4, height, 'white', 5)
 
-const drawLine(0, height * 1 / 4, width, height * 1 / 4, 'white', 5)
-const drawLine(0, height * 2 / 4, width, height * 2 / 4, 'white', 5)
-const drawLine(0, height * 3 / 4, width, height * 3 / 4, 'white', 5)
+drawLine(0, height * 1/4, width, height * 1/4, 'white', 5)
+drawLine(0, height * 2/4, width, height * 2/4, 'white', 5)
+drawLine(0, height * 3/4, width, height * 3/4, 'white', 5)
 
 const ticTacToe = () => {
+  
 }
