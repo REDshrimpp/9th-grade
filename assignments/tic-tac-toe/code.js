@@ -6,7 +6,7 @@
 // weeks but for now you can just adapt this code.
 
 registerOnclick((x, y) => {
-  drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
+  drawText('X', x-25, y+25, 'black', Math.min(width, height) * 0.3);
 });
 
 drawFilledRect(0, 0, width, height, 'black')
@@ -17,5 +17,4 @@ drawLine(0, height * 1/3, width, height * 1/3, 'white', 5)
 drawLine(0, height * 2/3, width, height * 2/3, 'white', 5)
 
 const ticTacToe = () => {
-  
 }
