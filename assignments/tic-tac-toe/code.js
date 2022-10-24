@@ -8,3 +8,9 @@
 registerOnclick((x, y) => {
   drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
 });
+
+drawFilledRect(length / 2, height / 2, length, height, 'black')
+
+
+const ticTacToe = () => {
+}
