@@ -9,7 +9,7 @@ registerOnclick((x, y) => {
   drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
 });
 
-drawFilledRect(width / 2, height / 2, width, height, 'black')
+drawFilledRect(0, 0, width, height, 'black')
 drawLine(width * 1/4, 0, width * 1/4, height, 'white', 5)
 drawLine(width * 2/4, 0, width * 2/4, height, 'white', 5)
 drawLine(width * 3/4, 0, width * 3/4, height, 'white', 5)
