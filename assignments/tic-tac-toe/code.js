@@ -5,8 +5,8 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
+let clickNumber = 0
 registerOnclick((x, y) => {
-  let clickNumber = 0
   clickNumber++
   if (clickNumber % 2 === 0)
   drawText('X', x-25, y+25, 'black', Math.min(width, height) * 0.3)
