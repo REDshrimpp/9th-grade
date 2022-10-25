@@ -11,7 +11,7 @@ registerOnclick((x, y) => {
   drawText('X', x-25, y+25, 'black', Math.min(width, height) * 0.3)
   else
   drawText('Y', x-25, y+25, 'black', Math.min(width, height) * 0.3)
-
+  clickNumber++
 });
 
 drawLine(width * 1/3, 0, width * 1/3, height, 'black', 5)
