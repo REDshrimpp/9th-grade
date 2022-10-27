@@ -29,9 +29,8 @@ const shape2 = xs[0,1]
  
 //top left
 if (y < height/3 && x < width/3) {
-xs[0,0] = currentShape
+x
 drawText(shape1, width*1/6-50 , height*1/6+25, colour, Math.min(width, height) * 0.3);
-xs[0,0] = 
 console.log(xs)
 }
 //middle left
