@@ -8,22 +8,28 @@
 let clickCount = -1
 let shape = 'O'
 let colour = 'red'
+let currentShape = 'X'
 registerOnclick((x, y) => {
 clickCount++
  if (clickCount % 2 === 0)
  colour = 'blue'
+ currentShape = 'O'
  else
  colour = 'red'
+ currentShape = 'X'
 let xs = [
   [0,0,0],
   [0,0,0],
   [0,0,0]
 ]
 const shape1 = xs[0,0]
+const shape2 = xs[0,1]
  
 //top left
 if (y < height/3 && x < width/3) {
+xs[0,0] = currentShape
 drawText(shape1, width*1/6-50 , height*1/6+25, colour, Math.min(width, height) * 0.3);
+xs[0,0] = 
 console.log(xs)
 }
 //middle left
