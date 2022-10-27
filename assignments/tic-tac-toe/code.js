@@ -11,12 +11,14 @@ let colour = 'red'
 let currentShape = 'X'
 registerOnclick((x, y) => {
 clickCount++
- if (clickCount % 2 === 0)
+ if (clickCount % 2 === 0) {
  colour = 'blue'
  currentShape = 'O'
- else
+ }
+ else {
  colour = 'red'
  currentShape = 'X'
+ }
 let xs = [
   [0,0,0],
   [0,0,0],
