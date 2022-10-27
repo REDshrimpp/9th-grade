@@ -5,21 +5,65 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-let clickNumber = 0
+let clickCount = -1
+let shape = 'O'
+let colour = 'red'
 registerOnclick((x, y) => {
-  clickNumber++
-  if (clickNumber % 2 === 0)
-  drawText('X', x-25, y+25, 'black', Math.min(width, height) * 0.3)
-  else
-  drawText('Y', x-25, y+25, 'black', Math.min(width, height) * 0.3)
-  clickNumber = clickNumber++
-});
-
-drawLine(width * 1/3, 0, width * 1/3, height, 'black', 5)
-drawLine(width * 2/3, 0, width * 2/3, height, 'black', 5)
-
-drawLine(0, height * 1/3, width, height * 1/3, 'black', 5)
-drawLine(0, height * 2/3, width, height * 2/3, 'black', 5)
-
-const ticTacToe = () => {
+clickCount++
+ if (clickCount % 2 === 0)
+ colour = 'blue'
+ else
+ colour = 'red'
+let xs = [
+  [0,0,0],
+  [0,0,0],
+  [0,0,0]
+]
+const shape1 = xs[0,0]
+ 
+//top left
+if (y < height/3 && x < width/3) {
+drawText(shape1, width*1/6-50 , height*1/6+25, colour, Math.min(width, height) * 0.3);
+console.log(xs)
 }
+//middle left
+ else
+ if (y < height/3*2 && x < width/3) {
+drawText(shape2, width*1/6-50 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
+console.log(xs)
+ }
+//bottom left
+   else
+ if (y < height && x < width/3)
+drawText(shape3, width*1/6-50 , height-10 , colour, Math.min(width, height) * 0.3);
+//top middle
+   else
+if (y < height/3 && x < width/3*2)
+drawText(shape4, width*3/6-50 , height*1/6+25 , colour, Math.min(width, height) * 0.3);
+ else
+   
+ if (y < height/3 && x < width/3*2)
+drawText(shape5, width*3/6-50 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
+ else
+  if (y < height/3*2 && x < width/3*2)
+drawText(shape6, width*3/6-50 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
+ else
+  if (y < height && x < width/3*2)
+drawText(shape7, width*3/6-50 , height-10 , colour, Math.min(width, height) * 0.3);
+else
+ if (y < height/3 && x < width)
+drawText(shape8, width-150 , height*1/6+25 , colour, Math.min(width, height) * 0.3);
+else
+ if (y < height/3*2 && x < width)
+drawText(shape9, width-150 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
+else
+ if (y < height && x < width)
+drawText(shape, width-150 , height-10 , colour, Math.min(width, height) * 0.3);
+});
+const drawFrame = () => {
+drawLine(width/3, height, width/3, 0, 'black', 10)
+drawLine(width/3*2, height, width/3*2, 0, 'black', 10)
+drawLine(width, height/3, 0, height/3, 'black', 10)
+drawLine(width, height/3*2, 0, height/3*2, 'black', 10)
+}
+drawFrame()
