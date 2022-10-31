@@ -60,7 +60,7 @@ const simplePigLatin = (string, number) => {
 
 //9
 const randomCharacter = (string) => {
-  return string[rand(string.length)]
+  return string[rand(string.length) + 1]
 }
 
 //10 NOTE
@@ -89,6 +89,7 @@ const sameIgnoringCase = (string, string2) => {
 
 //13
 const firstName = (string) => {
+  return
 }
 
 //14
