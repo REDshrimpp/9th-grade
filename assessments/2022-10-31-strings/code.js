@@ -80,7 +80,7 @@ const isAllUpperCase = (string) => {
 
 //12
 const sameIgnoringCase = (string, string2) => {
-  if (string.toUpperCase() === string2.toUpperCase) {
+  if (string.toUpperCase() === string2.toUpperCase()) {
     return true
   }
   else
