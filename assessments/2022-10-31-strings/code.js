@@ -26,3 +26,10 @@ const secondHalf = (string) => {
 const upDown = (string) => {
   return string.toUpperCase () + string
 }
+
+//4
+const firstFewEveryOther = (string) => {
+  if (string.length > 4) {
+    return string[1] + string[3] + string[5]
+  }
+}
