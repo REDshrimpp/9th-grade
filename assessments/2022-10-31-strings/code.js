@@ -70,8 +70,8 @@ const randomCharacterUpDown = (string) => {
 }
 
 //11
-const isAllUpperCase = (string) => {
-  if (string.toUpperCase() === string) {
+const isAllUpperCase = (word) => {
+  if (word.toUpperCase() === word) {
     return true
   }
   else
@@ -88,14 +88,14 @@ const sameIgnoringCase = (string, string2) => {
 }
 
 //13
-const firstName = (string) => {
+const firstName = (fullName) => {
   return
 }
 
 //14
-const lastName = (string) => {
+const lastName = (fullName) => {
 }
 
 //15
-const initials = (string) => {
+const initials = (fullName) => {
 }
