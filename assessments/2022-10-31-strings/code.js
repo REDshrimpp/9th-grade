@@ -40,3 +40,10 @@ const upDownLastCharacter = (string) => {
     return stringsubstring(string.length - 1).toUpperCase() + string[string.length]
   }
 }
+
+//6
+const firstAndLast = (string) => {
+  if (string.length > 1) {
+    return string[0] + string[string.length]
+  }
+}
