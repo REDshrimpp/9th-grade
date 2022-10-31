@@ -30,6 +30,6 @@ const upDown = (string) => {
 //4
 const firstFewEveryOther = (string) => {
   if (string.length > 4) {
-    return string[1] + string[3] + string[5]
+    return string[0] + string[2] + string[4]
   }
 }
