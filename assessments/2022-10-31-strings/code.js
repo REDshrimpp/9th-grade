@@ -44,6 +44,6 @@ const upDownLastCharacter = (string) => {
 //6
 const firstAndLast = (string) => {
   if (string.length > 1) {
-    return string[0] + string[string.length]
+    return string[0] + string[string.length - 1]
   }
 }
