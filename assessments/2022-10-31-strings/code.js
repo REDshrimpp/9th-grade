@@ -53,7 +53,36 @@ const swapFrontAndBack = (string) => {
   return string.substring(string.length / 2, string.length) + string.substring(0, string.length / 2)
 }
 
-//8
+//8 NOTE
 const simplePigLatin = (string, number) => {
   return string.substring(number, string.length) + string.substring(0,number)
+}
+
+//9
+const randomCharacter = (string) => {
+  return rand(string)
+}
+
+//10
+const randomCharacterUpDown = (string) => {
+}
+
+//11
+const isAllUpperCase = (string) => {
+}
+
+//12
+const sameIgnoringCase = (string, string2) => {
+}
+
+//13
+const firstName = (string) => {
+}
+
+//14
+const lastName = (string) => {
+}
+
+//15
+const initials = (string) => {
 }
