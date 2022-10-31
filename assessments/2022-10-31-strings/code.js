@@ -37,6 +37,6 @@ const firstFewEveryOther = (string) => {
 //5
 const upDownLastCharacter = (string) => {
   if (string.length > 1) {
-    return string[string.length].toUpperCase() + string[string.length]
+    return stringsubstring(string.length - 1).toUpperCase() + string[string.length]
   }
 }
