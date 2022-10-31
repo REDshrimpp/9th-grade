@@ -65,6 +65,8 @@ const randomCharacter = (string) => {
 
 //10
 const randomCharacterUpDown = (string) => {
+  let characterNumber = string[rand(string.length)]
+  return string[characterNumber].toUpperCase() + string[characterNumber]
 }
 
 //11
