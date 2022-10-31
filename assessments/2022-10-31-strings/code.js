@@ -33,3 +33,10 @@ const firstFewEveryOther = (string) => {
     return string[0] + string[2] + string[4]
   }
 }
+
+//5
+const upDownLastCharacter = (string) => {
+  if (string.length > 1) {
+    return s[s.length].toUpperCase() + s[s.length]
+  }
+}
