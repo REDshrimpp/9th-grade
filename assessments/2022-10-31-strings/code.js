@@ -24,5 +24,5 @@ const secondHalf = (string) => {
 
 //3
 const upDown = (string) => {
-  return
+  return string.toUpperCase () + string
 }
