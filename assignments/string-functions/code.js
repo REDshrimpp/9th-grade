@@ -1,6 +1,6 @@
 //findFnord
 const findFnord = (string) => {
-  return string.substring(3, string.length).search(/[Fnord]/)
+  return string.substring(2, string.length).search(/[Fnord]/)
 }
 
 //string contains
