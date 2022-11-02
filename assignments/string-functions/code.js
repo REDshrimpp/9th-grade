@@ -17,3 +17,8 @@ const firstAndLast = (string) => {
   if (string.length > 1)
   return string[0] + string[length]
 }
+
+//swap front and back
+const swapFrontAndBack = (string) => {
+  string.substring(string.length / 2, string.length)() + string.substring(0, string.length / 2)
+}
