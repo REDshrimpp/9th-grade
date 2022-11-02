@@ -9,13 +9,13 @@ const stringContains = (string1, string2) => {
     return true
   }
   else
-  return false
+    return false
 }
 
 //first and last
 const firstAndLast = (string) => {
   if (string.length > 1)
-  return string[0] + string[length]
+    return string[0] + string[length]
 }
 
 //swap front and back
