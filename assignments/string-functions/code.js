@@ -27,3 +27,13 @@ const swapFrontAndBack = (string) => {
 const simplePigLatin = (word, indexOfVowel) => {
   return word.substring(indexOfVowel, word.length) + word.substring(0, indexOfVowel) + 'ay'
 }
+
+//is all upper case
+const isAllUpperCase = (string) => {
+  if (string === string.toUpperCase()) {
+    return true
+  }
+  else {
+  return false
+  }
+}
