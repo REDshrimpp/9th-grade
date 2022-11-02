@@ -37,3 +37,8 @@ const isAllUpperCase = (string) => {
 const sameIgnoringCase = (string1, string2) => {
   return string1.toUpperCase() === string2.toUpperCase()
 }
+
+//first half
+const firstHalf = (string) => {
+  
+}
