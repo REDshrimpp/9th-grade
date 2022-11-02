@@ -1,4 +1,4 @@
 //findFnord
-const finFnord = (string) => {
+const findFnord = (string) => {
   return string.search(/[Fnord]/)
 }
