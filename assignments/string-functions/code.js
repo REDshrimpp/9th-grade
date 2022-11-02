@@ -20,7 +20,7 @@ const firstAndLast = (string) => {
 
 //swap front and back
 const swapFrontAndBack = (string) => {
-  return string.substring(string.length / 2, string.length)() + string.substring(0, string.length / 2)()
+  return string.substring(string.length / 2, string.length) + string.substring(0, string.length / 2)
 }
 
 //simple pig latin
@@ -40,5 +40,5 @@ const sameIgnoringCase = (string1, string2) => {
 
 //first half
 const firstHalf = (string) => {
-  
+
 }
