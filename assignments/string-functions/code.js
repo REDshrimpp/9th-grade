@@ -14,5 +14,6 @@ const stringContains = (string1, string2) => {
 
 //first and last
 const firstAndLast = (string) => {
-  return string[0] + string[string.length]
+  length = string.length
+  return string[0] + string[length]
 }
