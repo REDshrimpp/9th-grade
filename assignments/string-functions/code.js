@@ -30,10 +30,10 @@ const simplePigLatin = (word, indexOfVowel) => {
 
 //is all upper case
 const isAllUpperCase = (string) => {
-  if (string === string.toUpperCase()) {
-    return true
-  }
-  else {
-  return false
-  }
+  return string === string.toUpperCase()
+}
+
+//same ignoring case
+const sameIgnoringCase = (string1, string2) => {
+  return 
 }
