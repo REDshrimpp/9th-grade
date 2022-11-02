@@ -22,3 +22,8 @@ const firstAndLast = (string) => {
 const swapFrontAndBack = (string) => {
   return string.substring(string.length / 2, string.length)() + string.substring(0, string.length / 2)()
 }
+
+//simple pig latin
+const simplePigLatin = (word, indexOfVowel) => {
+  return word.substring(indexOfVowel, word.length) + word.substring(0, indexOfVowel) + 'ay'
+}
