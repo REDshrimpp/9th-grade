@@ -11,3 +11,8 @@ const stringContains = (string1, string2) => {
   else
   return false
 }
+
+//first and last
+const firstAndLast = (string) => {
+  string[0] + string[string.length]
+}
