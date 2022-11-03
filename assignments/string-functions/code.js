@@ -80,3 +80,8 @@ const concatenate = (string1, string2) => {
 const firstCharacter = (string) => {
   return string[0]
 }
+
+//last character
+const lastCharacter = (string) => {
+  return string[string.length - 1]
+}
