@@ -97,6 +97,6 @@ const firstThree = (string) => {
 }
 
 //all but first and last
-const allButFirstAndLast = (string) => {
+const allButFirstAndList = (string) => {
   return string.substring(1,string.length - 1)
 }
