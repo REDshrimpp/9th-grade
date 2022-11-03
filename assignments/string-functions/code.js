@@ -95,3 +95,8 @@ const allButFirst = (string) => {
 const firstThree = (string) => {
   return string.substring(0,3)
 }
+
+//all but first and last
+const allButFirstAndLast = (string) => {
+  return string.substring(1,string.length - 1)
+}
