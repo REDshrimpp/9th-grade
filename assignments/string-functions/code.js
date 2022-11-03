@@ -75,3 +75,8 @@ const lastName = (fullName) => {
 const concatenate = (string1, string2) => {
   return string1 + string2
 }
+
+//first character
+const firstCharacter = (string) => {
+  return string[0]
+}
