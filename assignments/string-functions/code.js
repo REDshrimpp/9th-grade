@@ -51,3 +51,8 @@ const secondHalf = (string) => {
 const upDown = (string) => {
   return string.toUpperCase() + string.toLowerCase()
 }
+
+//every other
+const everyOther = (string) => {
+  return string[0] + string[2] + string[4]
+}
