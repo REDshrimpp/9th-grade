@@ -46,3 +46,8 @@ return string.substring(0, string.length / 2)
 const secondHalf = (string) => {
   return string.substring(string.length / 2, string.length)
 }
+
+//up down
+const upDown = (string) => {
+  return string.toUppercase() + string.toLowerCase()
+}
