@@ -88,5 +88,5 @@ const lastCharacter = (string) => {
 
 //all but first
 const allButFirst = (string) => {
-  return string.substring(1, string.length - 1)
+  return string.substring(1, string.length)
 }
