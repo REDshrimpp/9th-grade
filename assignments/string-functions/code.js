@@ -56,3 +56,8 @@ const upDown = (string) => {
 const everyOther = (string) => {
   return string[0] + string[2] + string[4]
 }
+
+//up down last character
+const upDownLastCharacter = (string) => {
+  return string[string.length].toUpperCase() + string[string.length].toLowerCase()
+}
