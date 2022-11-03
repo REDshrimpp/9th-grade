@@ -65,3 +65,8 @@ const upDownLastCharacter = (string) => {
 const firstName = (fullName) => {
   return fullName.substring(0,fullName.search(/[' ']/))
 }
+
+//last name
+const lastName = (fullName) => {
+  return fullName.substring(fullName.search(/[' ']/), fullName.length)
+}
