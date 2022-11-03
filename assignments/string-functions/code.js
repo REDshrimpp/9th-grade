@@ -61,3 +61,7 @@ const everyOther = (string) => {
 const upDownLastCharacter = (string) => {
   return string[string.length - 1].toUpperCase() + string[string.length - 1].toLowerCase()
 }
+//first name
+const firstName = (fullName) => {
+  return fullName.substring(0,fullName.indexOf(/[' ']/))
+}
