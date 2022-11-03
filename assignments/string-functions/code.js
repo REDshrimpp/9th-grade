@@ -113,5 +113,5 @@ const capitalize = (string) => {
 
 //capitilize first three
 const capitalizeFirstThree = (string) => {
-  return string.substring(0,3).toUpperCase() + string.substring(4,string.length).toLowerCase()
+  return string.substring(0,3).toUpperCase() + string.substring(3,string.length).toLowerCase()
 }
