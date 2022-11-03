@@ -100,3 +100,8 @@ const firstThree = (string) => {
 const allButFirstAndList = (string) => {
   return string.substring(1,string.length - 1)
 }
+
+//last three
+const lastThree = (string) => {
+  return string.substring(string.length - 3, string.length)
+}
