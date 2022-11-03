@@ -107,6 +107,6 @@ const lastThree = (string) => {
 }
 
 //capitilize
-const capitilize = (string) => {
+const capitalize = (string) => {
   return string.toUpperCase()
 }
