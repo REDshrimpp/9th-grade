@@ -64,7 +64,7 @@ const firstName = (fullName) => {
 
 //last name
 const lastName = (fullName) => {
-  return fullName.substring(fullName.search(/[' ']/) + 1, fullName.length)
+  return fullName.substring(fullName.indexOf(' ') + 1, fullName.length)
 }
 
 //concatenate
