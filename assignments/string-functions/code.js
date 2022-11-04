@@ -59,7 +59,7 @@ const upDownLastCharacter = (string) => {
 }
 //first name
 const firstName = (fullName) => {
-  return fullName.substring(0,fullName.search(/[' ']/))
+  return fullName.substring(0,fullName.indexOf(' '))
 }
 
 //last name
