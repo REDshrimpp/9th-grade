@@ -1,6 +1,6 @@
 //findFnord
 const findFnord = (string) => {
-  return string.search(/[Fnord]/)
+  return string.indexof(/[Fnord]/)
 }
 
 //string contains
