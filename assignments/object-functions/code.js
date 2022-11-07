@@ -12,3 +12,8 @@ const point = (x, y) => {
 const emptyObject = () => {
   return {}
 }
+
+//distance
+const distance = (pointObject1, pointObject2) => {
+  return Math.sqrt((pointObject1 **2) + (pointObject2))
+}
