@@ -9,6 +9,6 @@ const point = (x, y) => {
 }
 
 //emptyObject
-const empyObject = () => {
+const emptyObject = () => {
   return {}
 }
