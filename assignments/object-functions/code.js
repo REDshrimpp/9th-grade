@@ -4,7 +4,7 @@ const getX = (object) => {
 }
 
 //point
-const point = (xValue, yValue) => {
-  let object = {xValue, yValue}
+const point = (x, y) => {
+  let object = {x, y}
   return object
 }
