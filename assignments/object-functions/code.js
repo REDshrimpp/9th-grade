@@ -10,5 +10,5 @@ const point = (x, y) => {
 
 //emptyObject
 const empyObject = () => {
-  return {0}
+  return {0,0}
 }
