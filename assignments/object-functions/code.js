@@ -7,3 +7,8 @@ const getX = (object) => {
 const point = (x, y) => {
   return {x, y}
 }
+
+//emptyObject
+const empyObject = () => {
+  return {}
+}
