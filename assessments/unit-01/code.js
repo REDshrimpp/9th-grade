@@ -95,7 +95,6 @@ const everyOther = (s) => {
 //15
 const upDownLastCharacter = (s) => {
     return s.substring(s.length - 1, s.length).toUpperCase() + s.substring(s.length - 1, s.length)
-  }
 }
 
 //16
