@@ -47,7 +47,7 @@ const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
     return true
   }
   else if (70 > milesPerHour && milesPerHour > 65) {
-    return copIsGrouchy === true
+    return copIsGrouchy
   }
   else
     return copIsGrouchy || !copIsGrouchy === false
