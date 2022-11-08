@@ -60,7 +60,7 @@ const getsSpeedingTicketBetter = (milesPerHour, copIsGrouchy) => {
 
 //9
 const moreThanTwiceAsLong = (string1, string2) => {
-  return string1.length / 2 > string2.length
+  return string1.length / 2 > string2.length;
 }
 
 //10
