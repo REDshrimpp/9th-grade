@@ -50,7 +50,7 @@ const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
     return copIsGrouchy
   }
   else
-    return copIsGrouchy || !copIsGrouchy === false
+    return copIsGrouchy || !copIsGrouchy
 }
 
 //9
