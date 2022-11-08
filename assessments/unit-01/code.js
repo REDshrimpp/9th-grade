@@ -75,7 +75,7 @@ const firstHalf = (s) => {
 
 //12
 const secondHalf = (a) => {
-  return a.substring(a.length / 2, a.length)
+  return a.substring(a.length / 2)
 }
 
 //13
