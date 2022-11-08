@@ -38,13 +38,13 @@ const canSleepIn = (isWeekday, onVacation) => {
 
 //7
 const canGoToProm = (isSenior, invitedBySenior, onPromExlusionList) => {
-  return (isSenior || invitedBySenior) && !onPromExlusionList === true
+  return (isSenior || invitedBySenior) && !onPromExlusionList
 }
 
 //8
 const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
   if (milesPerHour > 70) {
-    return copIsGrouchy || !copIsGrouchy === true
+    return true
   }
   else if (70 > milesPerHour > 65) {
     return copIsGrouchy === true
@@ -84,7 +84,7 @@ const secondHalf = (a) => {
 
 //13
 const upDown = (s) => {
-  return s.toUpperCase() + s
+  return s.toUpperCase() + s.toLowerCase()
 }
 
 //14
