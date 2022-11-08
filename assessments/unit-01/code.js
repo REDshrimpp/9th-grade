@@ -53,6 +53,11 @@ const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
     return false
 }
 
+//8 1/2
+const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
+  return milesPerHour > 70 || (copIsGrouchy && milesPerHour > 65)
+}
+
 //9
 const moreThanTwiceAsLong = (string1, string2) => {
   if (string1.length / 2 > string2.length) {
