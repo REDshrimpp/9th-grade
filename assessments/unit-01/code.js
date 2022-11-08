@@ -54,7 +54,7 @@ const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
 }
 
 //8 1/2
-const getsSpeedingTicket = (milesPerHour, copIsGrouchy) => {
+const getsSpeedingTicketBetter = (milesPerHour, copIsGrouchy) => {
   return milesPerHour > 70 || (copIsGrouchy && milesPerHour > 65)
 }
 
