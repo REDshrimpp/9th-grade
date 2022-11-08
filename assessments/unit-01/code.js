@@ -33,7 +33,7 @@ const offset = (drawingAreaWidth, figureWidth) => {
 
 //6
 const canSleepIn = (isWeekday, onVacation) => {
-  return !isWeekday || onVacation === true
+  return !isWeekday || onVacation
 }
 
 //7
