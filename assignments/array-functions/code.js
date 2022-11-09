@@ -19,7 +19,7 @@
 
 const sum = (array) => {
   for (let x = 0; x < array.length; x++) {
-    total = total + array[x]
+    total = x + array[x]
   }
   return total
 }
