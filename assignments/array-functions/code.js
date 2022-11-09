@@ -18,6 +18,7 @@
 //sum
 
 const sum = (array) => {
+  let total = 0
   for (let x = 0; x < array.length; x++) {
     total = x + array[x]
   }
