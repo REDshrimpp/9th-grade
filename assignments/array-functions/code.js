@@ -25,13 +25,11 @@ const evens = (array) => {
 //anyOverOneHundred
 
 const anyOverOneHundred = (array) => {
-  let y = 0
   let boolean = false
   for (let x = 0; x < array.length; x++) {
-    if (array[y] > 100) {
+    if (array[x] > 100) {
       boolean = true
     }
-    y++
   }
   return boolean
 }
