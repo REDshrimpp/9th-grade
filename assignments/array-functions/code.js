@@ -1,20 +1,3 @@
-//count tens
-
-/*const countTens = (array) => {
-  let y = 0
-  let amountOfTens = 0
-  for (let x = 0; x < array.length; x++) {
-    if (array[y] === 10) {
-      amountOfTens++
-    }
-    else {
-      amountOfTens = amountOfTens
-    }
-    y++
-  }
-  return amountOfTens
-}
-*/
 //sum
 
 const sum = (array) => {
@@ -29,14 +12,14 @@ const sum = (array) => {
 
 const evens = (array) => {
   let y = 0
-  const array2 = [];
+  const result = [];
   for (let x = 0; x < array.length; x++) {
     if (array[y] % 2 === 0) {
-      array2.push(array[y])
+      result.push(array[y])
     }
     y++
   }
-  return array2
+  return result
 }
 
 //anyOverOneHundred
