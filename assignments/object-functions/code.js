@@ -5,7 +5,7 @@ const getX = (object) => {
 
 //point
 const point = (x, y) => {
-  return {x, y}
+  return { x, y }
 }
 
 //emptyObject
@@ -14,6 +14,6 @@ const emptyObject = () => {
 }
 
 //distance
-const distance = (pointObject1, pointObject2) => {
-  return Math.sqrt(Math.abs(pointObject1.x)**2  - (pointObject2.x **2)+(Math.abs(pointObject1.y **2 - pointObject2.y)))
+const distance = (p1, p2) => {
+  return Math.sqrt(Math.abs(p1.x - p2.x).x ** 2 - (p2.y - p2.y ** 2) + (Math.abs(pointObject1.y ** 2 - pointObject2.y)))
 }
