@@ -40,15 +40,7 @@ const evenGreaterThanZero = (number) => {
 //5
 //NOTE
 const isLeapYear = (year) => {
-  if (year % 4 === 0) {
-    if (year !== 100) {
-      return true
-    }
-    else
-    return false
-  }
-  else
-    return false
+  return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0
 }
 
 //6
