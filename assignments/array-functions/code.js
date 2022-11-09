@@ -1,3 +1,13 @@
+//count tens
+const countTens = (array) => {
+  let tenCount = 0
+  for (let x = 0; x < array.length; x++) {
+    if (array[x] === 10)
+      tenCount++
+  }
+  return tenCount
+}
+
 //sum
 
 const sum = (array) => {
@@ -37,20 +47,12 @@ const anyOverOneHundred = (array) => {
 //pyramid
 
 const pyramid = (nonNegativeInteger) => {
-  const array = []
+  let array = []
+  const arrayPlacement = array.length
   for (let x = 0; x <= nonNegativeInteger; x++) {
     for (let y = 0; y < arrayPlacement; y++) {
       array.push(x)
     }
   }
   return array
-}
-
-const countTens = (array) => {
-  let tenCount = 0
-  for (let x = 0; x < array.length; x++) {
-    if (array[x] === 10)
-      tenCount++
-  }
-  return tenCount
 }
