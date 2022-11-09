@@ -25,13 +25,13 @@ const evens = (array) => {
 //anyOverOneHundred
 
 const anyOverOneHundred = (array) => {
-  let boolean = false
+  let found = false
   for (let x = 0; x < array.length; x++) {
     if (array[x] > 100) {
-      boolean = true
+      found = true
     }
   }
-  return boolean
+  return found
 }
 
 //pyramid
