@@ -6,12 +6,15 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
+  return 
 };
 
 const isSamePoint = (p1, p2) => {
+  return (p1.x === p2.x) && (p1.y === p2.y)
 };
 
 const totalWithTip = (bill, tipPercentage) => {
+  
 };
 
 const isWinner = (player) => {
