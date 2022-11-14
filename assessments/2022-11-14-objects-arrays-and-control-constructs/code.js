@@ -14,7 +14,7 @@ const isSamePoint = (p1, p2) => {
 };
 
 const totalWithTip = (bill, tipPercentage) => {
-  
+  let result = {}
 };
 
 const isWinner = (player) => {
