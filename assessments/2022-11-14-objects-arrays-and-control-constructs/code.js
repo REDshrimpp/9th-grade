@@ -14,7 +14,7 @@ const isSamePoint = (p1, p2) => {
 };
 
 const totalWithTip = (bill, tipPercentage) => {
-  let result = {subtotal:,tip:(), total: }
+  let result = {subtotal:bill.subtotal,tip:(bill.subtotal * tipPercentage), total: (bill + bill * subtotal)}
   return result
 };
 
