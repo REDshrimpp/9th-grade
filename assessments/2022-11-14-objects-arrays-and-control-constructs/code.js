@@ -6,7 +6,7 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
-  return 
+  return
 };
 
 const isSamePoint = (p1, p2) => {
@@ -14,7 +14,7 @@ const isSamePoint = (p1, p2) => {
 };
 
 const totalWithTip = (bill, tipPercentage) => {
-  let result = {subtotal:bill.subtotal,tip:(bill.subtotal * tipPercentage), total: (bill + bill * subtotal)}
+  let result = { subtotal: bill.subtotal, tip: (bill.subtotal * tipPercentage), total: (bill + bill * subtotal) }
   return result
 };
 
@@ -29,9 +29,17 @@ const bigWinners = (players) => {
 };
 
 const fillTimesTable = (table) => {
+  let n = 1
+  for(let x = 0; x < table.length; x++) {
+    table[n,x] = n * x
+  }
+  n++
 };
 
 const sums = (n) => {
+  let result = []
+  for (let x = 0; x < n; x++) {
+  }
 };
 
 const rule110 = (cells) => {
