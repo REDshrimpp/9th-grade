@@ -16,8 +16,8 @@ const fireAlarm = (fireAlarmsGoOff, fireAlarmIsPulled, smokeDetected) => {
 }
 
 //2
-const canBePresident = (isThirtyFiveYearsOld, isNaturalBornCitizen, hasLivedInUsForFourteenYears) => {
-  return isThirtyFiveYearsOld && isNaturalBornCitizen && hasLivedInUsForFourteenYears
+const canBePresident = (age, isNaturalBornCitizen, timeLivedInUs) => {
+  return age > 34 && isNaturalBornCitizen && timeLivedInUs > 13
 }
 
 //3
