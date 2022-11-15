@@ -47,7 +47,7 @@ const newHighScore = (currentHighScore, players) => {
 
 //summarize books
 const summarizeBooks = (books) => {
-  let result = { titles: '', pages: 0 }
+  let result = { titles: 0, pages: 0}
   for (let x = 0; x < books.length; x++) {
     result.pages = result.pages + books[x].pages
   }
