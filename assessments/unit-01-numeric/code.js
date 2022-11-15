@@ -25,7 +25,7 @@ const volumeOfCube = (edgeLength) => {
 
 //4
 const populationGrowth = (currentPopulation, growthRate) => {
-  return currentPopulation + currentPopulation * growthRate
+  return currentPopulation * growthRate
 }
 
 //5
