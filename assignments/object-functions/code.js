@@ -15,12 +15,12 @@ const emptyObject = () => {
 
 //distance
 const distance = (p1, p2) => {
-  return Math.sqrt(Math.abs(p1.x - p2.x) **2 + Math.abs(p1.y - p2.y) **2)
+  return Math.sqrt(Math.abs(p1.x - p2.x) ** 2 + Math.abs(p1.y - p2.y) ** 2)
 }
 
 //mid point
 const midpoint = (p1, p2) => {
-  let result = {x : 0, y : 0}
+  let result = { x: 0, y: 0 }
   result.x = (p1.x + p2.x) / 2
   result.y = (p1.y + p2.y) / 2
   return result
@@ -29,7 +29,7 @@ const midpoint = (p1, p2) => {
 //sum salaries
 const sumSalaries = (workers) => {
   let result = 0
-  for(let x = 0; x < workers.length; x++) {
+  for (let x = 0; x < workers.length; x++) {
     result = result + workers[x].salary
   }
   return result
@@ -37,10 +37,22 @@ const sumSalaries = (workers) => {
 
 //new high score
 const newHighScore = (currentHighScore, players) => {
-  for(let x = 0; x < players.length; x++) {
-    if(players[x].score > currentHighScore) {
+  for (let x = 0; x < players.length; x++) {
+    if (players[x].score > currentHighScore) {
       currentHighScore = players[x].score
     }
   }
   return currentHighScore
+}
+
+//summarize books
+const summarizeBooks = (books) => {
+  let result = { title, pages: 0 }
+  for (x = 0; x < books.length; x++) {
+    result.pages = result.pages + books[x].pages
+  }
+  for (x = 0; x < books.length; x++) {
+    result.title = result.title + books[x].title
+  }
+  return result
 }
