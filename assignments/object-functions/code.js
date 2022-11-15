@@ -34,3 +34,13 @@ const sumSalaries = (workers) => {
   }
   return result
 }
+
+//new high score
+const newHighScore = (currentHighScore, players) => {
+  for(x = 0; x < players.length; x++) {
+    if(players[x].score > currentHighScore) {
+      currentHighScore = players[x].score
+    }
+  }
+  return currentHighScore
+}
