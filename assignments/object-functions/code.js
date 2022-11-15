@@ -25,3 +25,12 @@ const midpoint = (p1, p2) => {
   result.y = (p1.y + p2.y) / 2
   return result
 }
+
+//sum salaries
+const sumSalaries = (workers) => {
+  let result = 0
+  for(let x = 0; x < workers.length; x++) {
+    result = result + worker[x].salary
+  }
+  return result
+}
