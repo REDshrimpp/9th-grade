@@ -30,7 +30,7 @@ const midpoint = (p1, p2) => {
 const sumSalaries = (workers) => {
   let result = 0
   for(let x = 0; x < workers.length; x++) {
-    result = result + worker[x].salary
+    result = result + workers[x].salary
   }
   return result
 }
