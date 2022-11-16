@@ -2,7 +2,7 @@
 // should save you some time.
 
 const area = (rect) => {
-  return rect.x * rect.y
+  return rect.width * rect.height
 };
 
 const higherPaid = (e1, e2) => {
