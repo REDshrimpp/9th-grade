@@ -14,7 +14,7 @@ const isSamePoint = (p1, p2) => {
 };
 
 const totalWithTip = (bill, tipPercentage) => {
-  let result = {subtotal: bill.subtotal, tip: (bill.subtotal * tipPercentage), total: (tipPercentage * subtotal) }
+  let result = { subtotal: bill.subtotal, tip: (bill.subtotal * tipPercentage), total: (tipPercentage * subtotal) }
   return result
 };
 
@@ -23,7 +23,7 @@ const isWinner = (player) => {
 };
 
 const updateWins = (players) => {
-  for(let x = 0; x < players.length; x++) {
+  for (let x = 0; x < players.length; x++) {
     if (players[x].score > 100) {
       players[x].wins++
     }
@@ -35,10 +35,10 @@ const bigWinners = (players) => {
 };
 
 const fillTimesTable = (table) => {
-  for(let y = 0; y < table.length; y++) {
-  for(let x = 0; x < table[y].length; x++) {
-    table[y][x] = y * x
-  }
+  for (let y = 1; y < table.length; y++) {
+    for (let x = 1; x < table[y].length; x++) {
+      table[y][x] = x * y
+    }
   }
   return table
 };
