@@ -35,9 +35,9 @@ const bigWinners = (players) => {
 };
 
 const fillTimesTable = (table) => {
-  for (let y = 1; y < table.length; y++) {
-    for (let x = 1; x < table[y].length; x++) {
-      table[y][x] = x * y
+  for (let y = 0; y < table.length; y++) {
+    for (let x = 0; x < table[y].length; x++) {
+      table[y][x] = (x + 1) * (y + 1)
     }
   }
   return table
