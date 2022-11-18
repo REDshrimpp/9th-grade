@@ -20,10 +20,10 @@ const distance = (p1, p2) => {
 
 //mid point
 const midpoint = (p1, p2) => {
-  let result = { x: 0, y: 0 }
-  result.x = (p1.x + p2.x) / 2
-  result.y = (p1.y + p2.y) / 2
-  return result
+  return {
+    x: (p1.x + p2.x) / 2,
+    y: (p1.y + p2.y) / 2
+  }
 }
 
 //sum salaries
@@ -47,7 +47,7 @@ const newHighScore = (currentHighScore, players) => {
 
 //summarize books
 const summarizeBooks = (books) => {
-  let result = { titles: [], pages: 0}
+  let result = { titles: [], pages: 0 }
   for (let x = 0; x < books.length; x++) {
     result.pages = result.pages + books[x].pages
   }
