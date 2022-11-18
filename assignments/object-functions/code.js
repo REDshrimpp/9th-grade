@@ -37,12 +37,13 @@ const sumSalaries = (workers) => {
 
 //new high score
 const newHighScore = (currentHighScore, players) => {
+  let newHighScore = 0
   for (let x = 0; x < players.length; x++) {
     if (players[x].score > currentHighScore) {
-      currentHighScore = players[x].score
+      newHighscore = players[x].score
     }
   }
-  return currentHighScore
+  return newHighScore
 }
 
 //summarize books
