@@ -24,8 +24,8 @@ let xs = [
   [0,0,0],
   [0,0,0]
 ]
-const shape1 = xs[0,0]
-const shape2 = xs[0,1]
+const shape1 = xs[0][0]
+const shape2 = xs[0][1]
  
 //top left
 if (y < height/3 && x < width/3) {
@@ -74,3 +74,5 @@ drawLine(width, height/3, 0, height/3, 'black', 10)
 drawLine(width, height/3*2, 0, height/3*2, 'black', 10)
 }
 drawFrame()
+
+
