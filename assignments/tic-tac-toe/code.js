@@ -6,7 +6,6 @@
 // weeks but for now you can just adapt this code.
 
 let clickCount = -1
-let shape = 'O'
 let colour = 'red'
 let currentShape = 'X'
 registerOnclick((x, y) => {
@@ -26,10 +25,18 @@ let xs = [
 ]
 const shape1 = xs[0][0]
 const shape2 = xs[0][1]
+const shape3 = xs[0][2]
+const shape4 = xs[1][0]
+const shape5 = xs[1][1]
+const shape6 = xs[1][2]
+const shape7 = xs[2][0]
+const shape8 = xs[2][1]
+const shape9 = xs[2][2]
  
 //top left
-if (y < height/3 && x < width/3) {
-x
+if ((y < height/3 && x < width/3) && ) {
+xs[0][0] = currentShape
+
 drawText(shape1, width*1/6-50 , height*1/6+25, colour, Math.min(width, height) * 0.3);
 console.log(xs)
 }
@@ -67,6 +74,7 @@ else
  if (y < height && x < width)
 drawText(shape, width-150 , height-10 , colour, Math.min(width, height) * 0.3);
 });
+
 const drawFrame = () => {
 drawLine(width/3, height, width/3, 0, 'black', 10)
 drawLine(width/3*2, height, width/3*2, 0, 'black', 10)
@@ -74,5 +82,3 @@ drawLine(width, height/3, 0, height/3, 'black', 10)
 drawLine(width, height/3*2, 0, height/3*2, 'black', 10)
 }
 drawFrame()
-
-
