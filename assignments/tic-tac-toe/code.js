@@ -34,9 +34,8 @@ const shape8 = xs[2][1]
 const shape9 = xs[2][2]
  
 //top left
-if ((y < height/3 && x < width/3) && ) {
+if ((y < height/3 && x < width/3) && xs[0][0] === 0) {
 xs[0][0] = currentShape
-
 drawText(shape1, width*1/6-50 , height*1/6+25, colour, Math.min(width, height) * 0.3);
 console.log(xs)
 }
