@@ -9,75 +9,70 @@ let clickCount = -1
 let colour = 'red'
 let currentShape = 'X'
 registerOnclick((x, y) => {
-clickCount++
- if (clickCount % 2 === 0) {
- colour = 'blue'
- currentShape = 'O'
- }
- else {
- colour = 'red'
- currentShape = 'X'
- }
-let xs = [
-  [0,0,0],
-  [0,0,0],
-  [0,0,0]
-]
-const shape1 = xs[0][0]
-const shape2 = xs[0][1]
-const shape3 = xs[0][2]
-const shape4 = xs[1][0]
-const shape5 = xs[1][1]
-const shape6 = xs[1][2]
-const shape7 = xs[2][0]
-const shape8 = xs[2][1]
-const shape9 = xs[2][2]
- 
+  clickCount++
+  if (clickCount % 2 === 0) {
+    colour = 'blue'
+    currentShape = 'O'
+  }
+  else {
+    colour = 'red'
+    currentShape = 'X'
+  }
+
+
+  const ticTacToe = () => {
+    let xs = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0]
+    ]
+    
 //top left
-if ((y < height/3 && x < width/3) && xs[0][0] === 0) {
-xs[0][0] = currentShape
-drawText(shape1, width*1/6-50 , height*1/6+25, colour, Math.min(width, height) * 0.3);
-console.log(xs)
+if ((y < height / 3 && x < width / 3) && xs[0][0] === 0) {
+      xs[0][0] = currentShape
+      drawText(shape1, width * 1 / 6 - 50, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+      console.log(xs)
+    }
+    //middle left
+    else
+      if (y < height / 3 * 2 && x < width / 3) {
+        drawText(shape2, width * 1 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+        console.log(xs)
+      }
+      //bottom left
+      else
+        if (y < height && x < width / 3)
+          drawText(shape3, width * 1 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
+        //top middle
+        else
+          if (y < height / 3 && x < width / 3 * 2)
+            drawText(shape4, width * 3 / 6 - 50, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+          else
+
+            if (y < height / 3 && x < width / 3 * 2)
+              drawText(shape5, width * 3 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+            else
+              if (y < height / 3 * 2 && x < width / 3 * 2)
+                drawText(shape6, width * 3 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+              else
+                if (y < height && x < width / 3 * 2)
+                  drawText(shape7, width * 3 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
+                else
+                  if (y < height / 3 && x < width)
+                    drawText(shape8, width - 150, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                  else
+                    if (y < height / 3 * 2 && x < width)
+                      drawText(shape9, width - 150, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                    else
+                      if (y < height && x < width)
+                        drawText(shape, width - 150, height - 10, colour, Math.min(width, height) * 0.3);
+  });
 }
-//middle left
- else
- if (y < height/3*2 && x < width/3) {
-drawText(shape2, width*1/6-50 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
-console.log(xs)
- }
-//bottom left
-   else
- if (y < height && x < width/3)
-drawText(shape3, width*1/6-50 , height-10 , colour, Math.min(width, height) * 0.3);
-//top middle
-   else
-if (y < height/3 && x < width/3*2)
-drawText(shape4, width*3/6-50 , height*1/6+25 , colour, Math.min(width, height) * 0.3);
- else
-   
- if (y < height/3 && x < width/3*2)
-drawText(shape5, width*3/6-50 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
- else
-  if (y < height/3*2 && x < width/3*2)
-drawText(shape6, width*3/6-50 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
- else
-  if (y < height && x < width/3*2)
-drawText(shape7, width*3/6-50 , height-10 , colour, Math.min(width, height) * 0.3);
-else
- if (y < height/3 && x < width)
-drawText(shape8, width-150 , height*1/6+25 , colour, Math.min(width, height) * 0.3);
-else
- if (y < height/3*2 && x < width)
-drawText(shape9, width-150 , height*3/6+25 , colour, Math.min(width, height) * 0.3);
-else
- if (y < height && x < width)
-drawText(shape, width-150 , height-10 , colour, Math.min(width, height) * 0.3);
-});
 
 const drawFrame = () => {
-drawLine(width/3, height, width/3, 0, 'black', 10)
-drawLine(width/3*2, height, width/3*2, 0, 'black', 10)
-drawLine(width, height/3, 0, height/3, 'black', 10)
-drawLine(width, height/3*2, 0, height/3*2, 'black', 10)
+  drawLine(width / 3, height, width / 3, 0, 'black', 10)
+  drawLine(width / 3 * 2, height, width / 3 * 2, 0, 'black', 10)
+  drawLine(width, height / 3, 0, height / 3, 'black', 10)
+  drawLine(width, height / 3 * 2, 0, height / 3 * 2, 'black', 10)
 }
 drawFrame()
