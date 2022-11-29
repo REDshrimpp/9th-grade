@@ -49,12 +49,13 @@ const ticTacToe = () => {
     else
       if (y < height / 3 * 2 && x < width / 3 && xs[1][0] === 0) {
         drawText(shape2, width * 1 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+        clickCount++
         console.log(xs)
       }
       //bottom left
       else
         if (y < height && x < width / 3 && xs[2][0] === 0) {
-          drawText(shape3, width * 1 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
+          drawText(currentShape, width * 1 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
         }
         //top middle
         else
