@@ -26,7 +26,6 @@ const ticTacToe = () => {
     [0, 0, 0]
   ]
   while (clickCount < 10) {
-    registerOnclick(x, y)
     //top left
     if (y < height / 3 && x < width / 3 && xs[0][0] === 0) {
       xs[0][0] = currentShape
@@ -83,4 +82,4 @@ const drawFrame = () => {
 
 drawFrame()
 
-ticTacToe
+ticTacToe()
