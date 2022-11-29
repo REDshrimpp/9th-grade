@@ -5,10 +5,9 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-registerOnclick((x, y) => {
-});
 
-const ticTacToe = () => {
+
+registerOnclick((x, y) => {
   let clickCount = 0
   let currentShape = 'X'
   let color = 'red'
@@ -71,7 +70,7 @@ const ticTacToe = () => {
                     }
     ;
   }
-}
+});
 
 const drawFrame = () => {
   drawLine(width / 3, height, width / 3, 0, 'black', 10)
