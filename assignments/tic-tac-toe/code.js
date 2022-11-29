@@ -34,7 +34,7 @@ registerOnclick((x, y) => {
     //middle left
     else
       if (y < height / 3 * 2 && x < width / 3 && xs[1][0] === 0) {
-        drawText(shape2, width * 1 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
+        drawText(currentShape, width * 1 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
         clickCount++
       }
       //bottom left
