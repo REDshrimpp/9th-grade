@@ -6,9 +6,7 @@
 // weeks but for now you can just adapt this code.
 
 registerOnclick((x, y) => {
-  console.log(x)
 });
-
 
 const ticTacToe = () => {
   let clickCount = 0
