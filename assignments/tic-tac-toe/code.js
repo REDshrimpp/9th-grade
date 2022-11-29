@@ -21,58 +21,73 @@ registerOnclick((x, y) => {
 
 
   const ticTacToe = () => {
+    let clickCount = 0
+    let currentShape = 'X'
+    let color = 'red'
+    if (clickCount % 2 !== 0) {
+      currentShape = 'Y'
+      color = 'blue'
+    }
+    else {
+      currentShape = 'X'
+      color = 'red'
+    }
     let xs = [
       [0, 0, 0],
       [0, 0, 0],
       [0, 0, 0]
     ]
-    
-//top left
-if ((y < height / 3 && x < width / 3) && xs[0][0] === 0) {
-      xs[0][0] = currentShape
-      drawText(shape1, width * 1 / 6 - 50, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
-      console.log(xs)
-    }
-    //middle left
-    else
-      if (y < height / 3 * 2 && x < width / 3) {
-        drawText(shape2, width * 1 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+    while (clickCount < 10) {
+      //top left
+      if (y < height / 3 && x < width / 3 && xs[0][0] === 0) {
+        xs[0][0] = currentShape
+        drawText(currentShape, width * 1 / 6 - 50, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
         console.log(xs)
       }
-      //bottom left
+      //middle left
       else
-        if (y < height && x < width / 3)
-          drawText(shape3, width * 1 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
-        //top middle
+        if (y < height / 3 * 2 && x < width / 3 && xs[1][0] === 0) {
+          drawText(shape2, width * 1 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+          console.log(xs)
+        }
+        //bottom left
         else
-          if (y < height / 3 && x < width / 3 * 2)
-            drawText(shape4, width * 3 / 6 - 50, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+          if (y < height && x < width / 3 && xs[2][0] === 0) {
+            drawText(shape3, width * 1 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
+          }
+          //top middle
           else
-
-            if (y < height / 3 && x < width / 3 * 2)
-              drawText(shape5, width * 3 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+            if (y < height / 3 && x < width / 3 * 2 && xs[0][1] === 0) {
+              drawText(shape4, width * 3 / 6 - 50, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+            }
             else
-              if (y < height / 3 * 2 && x < width / 3 * 2)
-                drawText(shape6, width * 3 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+              if (y < height / 3 && x < width / 3 * 2 && xs[1][1] === 0) {
+                drawText(shape5, width * 3 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+              }
               else
-                if (y < height && x < width / 3 * 2)
-                  drawText(shape7, width * 3 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
+                if (y < height / 3 * 2 && x < width / 3 * 2 && xs[2][1] === 0) {
+                  drawText(shape6, width * 3 / 6 - 50, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                }
                 else
-                  if (y < height / 3 && x < width)
-                    drawText(shape8, width - 150, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                  if (y < height && x < width / 3 * 2 && xs[0][2] === 0) {
+                    drawText(shape7, width * 3 / 6 - 50, height - 10, colour, Math.min(width, height) * 0.3);
+                  }
                   else
-                    if (y < height / 3 * 2 && x < width)
-                      drawText(shape9, width - 150, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                    if (y < height / 3 && x < width && xs[1][2] === 0) {
+                      drawText(shape8, width - 150, height * 1 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                    }
                     else
-                      if (y < height && x < width)
-                        drawText(shape, width - 150, height - 10, colour, Math.min(width, height) * 0.3);
-  });
-}
+                      if (y < height / 3 * 2 && x < width && xs[2][2] === 0) {
+                        drawText(shape9, width - 150, height * 3 / 6 + 25, colour, Math.min(width, height) * 0.3);
+                      }
+      ;
+    }
+  }
 
-const drawFrame = () => {
-  drawLine(width / 3, height, width / 3, 0, 'black', 10)
-  drawLine(width / 3 * 2, height, width / 3 * 2, 0, 'black', 10)
-  drawLine(width, height / 3, 0, height / 3, 'black', 10)
-  drawLine(width, height / 3 * 2, 0, height / 3 * 2, 'black', 10)
-}
-drawFrame()
+  const drawFrame = () => {
+    drawLine(width / 3, height, width / 3, 0, 'black', 10)
+    drawLine(width / 3 * 2, height, width / 3 * 2, 0, 'black', 10)
+    drawLine(width, height / 3, 0, height / 3, 'black', 10)
+    drawLine(width, height / 3 * 2, 0, height / 3 * 2, 'black', 10)
+  }
+  drawFrame()
