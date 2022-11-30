@@ -69,7 +69,6 @@ registerOnclick((x, y) => {
                       drawText(currentShape, width - 150, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
                     }
     ;
-  }
 });
 
 const drawFrame = () => {
