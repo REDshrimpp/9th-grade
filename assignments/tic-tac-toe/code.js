@@ -24,7 +24,7 @@ registerOnclick((x, y) => {
     [0, 0, 0],
     [0, 0, 0]
   ]
-  while (clickCount < 10) {
+
     //top left
     if ((y > height / 3 * 2) && (x < width / 3) && (xs[0][0] === 0)) {
       xs[0][0] = currentShape
