@@ -36,46 +36,52 @@ registerOnclick((x, y) => {
     else
       if ((y < height / 3 * 2 && y > height / 3 && x < width / 3) && xs[1][0] === 0) {
         xs[1][0] = currentShape
-        drawText(currentShape, width * 1 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
+        drawText(currentShape, width * 1 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3)
         clickCount++
       }
       //bottom left
       else
         if (y < height && x < width / 3 && xs[2][0] === 0) {
           xs[2][0] = currentShape
-          drawText(currentShape, width * 1 / 6 - 50, height - 10, color, Math.min(width, height) * 0.3);
+          drawText(currentShape, width * 1 / 6 - 50, height - 10, color, Math.min(width, height) * 0.3)
           clickCount++
         }
         //top middle
         else
           if (y < height / 3 && x < width / 3 * 2 && xs[0][1] === 0) {
             xs[0][1] = currentShape
-            drawText(currentShape, width * 3 / 6 - 50, height * 1 / 6 + 25, color, Math.min(width, height) * 0.3);
+            drawText(currentShape, width * 3 / 6 - 50, height * 1 / 6 + 25, color, Math.min(width, height) * 0.3)
+            clickCount++
           }
           else
             if (y < height / 3 && x < width / 3 * 2 && xs[1][1] === 0) {
               xs[1][1] = currentShape
-              drawText(currentShape, width * 3 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
+              drawText(currentShape, width * 3 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3)
+              clickCount++
             }
             else
               if (y < height / 3 * 2 && x < width / 3 * 2 && xs[2][1] === 0) {
                 xs[2][1] = currentShape
-                drawText(currentShape, width * 3 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
+                drawText(currentShape, width * 3 / 6 - 50, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3)
+                clickCount++
               }
               else
                 if (y < height && x < width / 3 * 2 && xs[0][2] === 0) {
                   xs[0][2] = currentShape
-                  drawText(currentShape, width * 3 / 6 - 50, height - 10, color, Math.min(width, height) * 0.3);
+                  drawText(currentShape, width * 3 / 6 - 50, height - 10, color, Math.min(width, height) * 0.3)
+                  clickCount++
                 }
                 else
                   if (y < height / 3 && x < width && xs[1][2] === 0) {
                     xs[1][2] = currentShape
-                    drawText(currentShape, width - 150, height * 1 / 6 + 25, color, Math.min(width, height) * 0.3);
+                    drawText(currentShape, width - 150, height * 1 / 6 + 25, color, Math.min(width, height) * 0.3)
+                    clickCount++
                   }
                   else
                     if (y < height / 3 * 2 && x < width && xs[2][2] === 0) {
                       xs[2][2] = currentShape
-                      drawText(currentShape, width - 150, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3);
+                      drawText(currentShape, width - 150, height * 3 / 6 + 25, color, Math.min(width, height) * 0.3)
+                      clickCount++
                     }
     ;
 });
