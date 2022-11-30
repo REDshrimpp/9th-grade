@@ -29,6 +29,7 @@ registerOnclick((x, y) => {
     if ((y < height / 3 * 2) && (x < width / 3 * 2) && (xs[0][0] === 0)) {
       xs[0][0] = currentShape
       drawText(currentShape, width * 1 / 6 - 30, height * 1 / 6 + 20, color, Math.min(width, height) * 0.3);
+      clickCount++
       console.log(xs)
     }
     //middle left
@@ -41,6 +42,7 @@ registerOnclick((x, y) => {
       //bottom left
       else
         if (y < height && x < width / 3 && xs[2][0] === 0) {
+          xs[2][0] = currentShape
           drawText(currentShape, width * 1 / 6 - 50, height - 10, color, Math.min(width, height) * 0.3);
         }
         //top middle
