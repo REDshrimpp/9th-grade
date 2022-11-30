@@ -80,4 +80,4 @@ const drawFrame = () => {
 
 drawFrame()
 
-ticTacToe()
+registerOnClick()
