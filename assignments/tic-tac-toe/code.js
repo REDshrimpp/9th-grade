@@ -26,7 +26,7 @@ registerOnclick((x, y) => {
   ]
   while (clickCount < 10) {
     //top left
-    if ((y < height / 3 && x < width / 3) && xs[0][0] === 0) {
+    if ((y < height / 3) && (y > height / 3) && (x < width / 3) && (xs[0][0] === 0)) {
       xs[0][0] = currentShape
       drawText(currentShape, width * 1 / 6 - 50, height * 1 / 6 + 25, color, Math.min(width, height) * 0.3);
       console.log(xs)
