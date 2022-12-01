@@ -14,7 +14,7 @@
 // return value in the REPL.
 
 const countCalories = (allCalories) => {
-  return allCalories
+  return allCalories;
 }
 //run('day_01.test', day01Part1)
-run('adventDay1', countCalories)
+run('adventDay1', countCalories);
