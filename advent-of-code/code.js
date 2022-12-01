@@ -16,3 +16,5 @@
 const countCalories = (allCalories) => {
   return allCalories
 }
+
+countCalories(adventDay1)
