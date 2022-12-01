@@ -18,7 +18,7 @@ const lines = (longString) => {
 }
 
 const numberSplit = (numberString) => {
-  return numberString.parseInt
+  return number.parseInt(numberString)
 }
 
 const countCalories = (text) => {
