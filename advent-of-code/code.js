@@ -22,9 +22,9 @@ const numberSplit = (numberString) => {
 }
 
 const countCalories = (text) => {
-  const seperateStrings = lines(text)
+  const seperateStrings = lines(text);
   const seperateNumbers = numberSplit(seperateStrings)
-  return seperateNumbers
+  return seperateNumbers;
 }
 //run('day_01.test', day01Part1)
 run('adventDay1', countCalories);
