@@ -24,7 +24,6 @@ const numberSplit = (numberString) => {
 const countCalories = (text) => {
   const seperateStrings = lines(text);
   const seperateNumbers = numberSplit(seperateStrings)
-
   return seperateNumbers;
 }
 //run('day_01.test', day01Part1)
