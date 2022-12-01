@@ -13,9 +13,13 @@
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
 
+const lines = (text) => {
+  return text.split('\n');
+}
+
 const countCalories = (text) => {
-  const lines = text.split('\n');
-  return lines;
+  const ll = lines(text)
+  return ll.length;
 }
 //run('day_01.test', day01Part1)
 run('adventDay1', countCalories);
