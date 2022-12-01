@@ -17,4 +17,4 @@ const countCalories = (allCalories) => {
   return allCalories
 }
 //run('day_01.test', day01Part1)
-countCalories('adventDay1')
+run('adventDay1', countCalories)
