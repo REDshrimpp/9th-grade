@@ -37,3 +37,5 @@ const winningRecord = (wins, losses, ties) => {
 const isMagicNumber = (number) => {
   return number === 42 || number === 17
 }
+
+// 42 is the meaning of life
