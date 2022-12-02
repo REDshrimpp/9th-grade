@@ -24,6 +24,9 @@ const okaySpeed = (speedLimit, carSpeed) => {
 }
 
 //6
+const twiceAsExpensive = (item1Price, item2Price) => {
+  return item1Price > item2Price * 2
+}
 
 //7
 
