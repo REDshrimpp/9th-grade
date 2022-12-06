@@ -20,5 +20,5 @@ const pair = (string1, string2) => {
 
 //5
 const containsX = (string) => {
-  return string.indexOf(/['x']/)
+  return string.indexOf(/[x]/)
 }
