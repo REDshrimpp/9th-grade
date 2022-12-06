@@ -22,3 +22,8 @@ const pair = (string1, string2) => {
 const containsX = (string) => {
   return string.indexOf('x') !== -1
 }
+
+//6
+const slug = (string1, string2, string3) => {
+  return string1.toLowerCase + '-' + string2.toLowerCase + '-' + string3.toLowerCase + '-'
+}
