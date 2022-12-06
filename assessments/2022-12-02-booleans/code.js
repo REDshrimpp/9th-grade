@@ -15,7 +15,7 @@ const needMittens = (goingOutside, somewhereWarm) => {
 
 //4 NOTE
 const isVenomous = (isStriped, hasBlueHead) => {
-  return !hasBlueHead
+return isStriped || !hasBlueHead
 }
 
 //5
