@@ -27,3 +27,8 @@ const containsX = (string) => {
 const slug = (string1, string2, string3) => {
   return string1.toLowerCase() + '-' + string2.toLowerCase() + '-' + string3.toLowerCase() + '-'
 }
+
+//7
+const capitalize = (string) => {
+  return string[0].toUpperCase() + string.substring(1, string.length)
+}
