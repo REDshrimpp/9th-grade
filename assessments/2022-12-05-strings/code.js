@@ -35,5 +35,5 @@ const capitalize = (string) => {
 
 //8
 const capitalizeName = (fullName) => {
-  return capitalize(fullName.substring(0, fullName.indexOf(' ')) + fullName.substring(fullName.indexOf(' ')))
+  return capitalize(fullName.substring(0, fullName.indexOf(' ')) + capitalize(fullName.substring(fullName.indexOf(' '))))
 }
