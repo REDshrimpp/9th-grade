@@ -32,3 +32,8 @@ const slug = (string1, string2, string3) => {
 const capitalize = (string) => {
   return string[0].toUpperCase() + string.substring(1, string.length)
 }
+
+//8
+const capitalizeName = (fullName) => {
+  return capitalize(fullName.substring(0, string.indexOf(' ') + fullName.substring(string.indexOf(' ')))
+}
