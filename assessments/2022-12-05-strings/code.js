@@ -17,3 +17,8 @@ const middle = (string) => {
 const pair = (string1, string2) => {
   return string1 + ' and ' + string2
 }
+
+//5
+const containsX = (string) => {
+  return string.indexOf(/['x']/)
+}
