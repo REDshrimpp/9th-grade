@@ -1,6 +1,6 @@
 //1 NOTE
 const upToX = (string) => {
-  return string.substring(0, string.indexOf(/[x]/))
+  return string.substring(0, string.indexOf('x'))
 }
 
 //2
@@ -20,5 +20,5 @@ const pair = (string1, string2) => {
 
 //5
 const containsX = (string) => {
-  return string.indexOf('x')
+  return string.indexOf('x') !== -1
 }
