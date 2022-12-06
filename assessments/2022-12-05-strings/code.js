@@ -15,5 +15,5 @@ const middle = (string) => {
 
 //4
 const pair = (string1, string2) => {
-  return string1 + 'and' + string2
+  return string1 + ' and ' + string2
 }
