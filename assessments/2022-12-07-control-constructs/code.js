@@ -130,6 +130,6 @@ const threewayClassify = (arbitraryValue) => {
 //6
 const sumOfSquares = (numbericArgument) => {
   for (let x = 0; x < 10; x = x + 2) {
+    console.log(x)
   }
-  return x
 }
