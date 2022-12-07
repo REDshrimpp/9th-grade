@@ -128,9 +128,9 @@ const threewayClassify = (arbitraryValue) => {
 }
 
 //6
-const sumOfSquares = (numbericArgument) => {
+const sumOfSquares = (numericArgument) => {
   let result = 0
-  for (let x = 0; x < 10; x = x++) {
+  for (let x = 0; x < numericArgument; x = x++) {
     result = result + x ** 2
   }
   return result
