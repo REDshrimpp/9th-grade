@@ -126,3 +126,10 @@ const threewayClassify = (arbitraryValue) => {
     recordNotOk()
   }
 }
+
+//6
+const sumOfSquares = (numbericArgument) => {
+  for (let x = 0; x < 10; x + 2) {
+  }
+  return x
+}
