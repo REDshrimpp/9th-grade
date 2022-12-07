@@ -91,9 +91,9 @@ const logIfOk = (argument) => {
  // if (isOk())
 //}
 
-//3
+//3 NOTE
 const timeToLeet = () => {
-  for (let x = 0; !isLeet(x); x = x) {
+  for (let x = 0; !isLeet(x); x++) {
      x = random10k()
   }
 }
