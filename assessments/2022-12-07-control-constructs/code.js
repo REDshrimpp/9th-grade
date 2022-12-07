@@ -104,14 +104,21 @@ const timeToLeet = () => {
   return result
 }
 
-//4
+//4 NOTE
 const classify = (arbitraryValue) => {
   if (isOk(arbitraryValue)) {
-    recordOk()
+    recordOk(arbitraryValue)
     console.log('ok')
   }
   else if (!isOk(arbitraryValue)) {
-    recordNotOk()
+    recordNotOk(arbitraryValue)
     console.log('not ok')
+  }
+}
+
+//5
+const threewayClassify = (arbitraryValue) => {
+  if (isOk(arbitraryValue)) {
+    recordOk()
   }
 }
