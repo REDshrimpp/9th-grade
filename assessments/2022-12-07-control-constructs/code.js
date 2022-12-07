@@ -103,3 +103,15 @@ const timeToLeet = () => {
   }
   return result
 }
+
+//4
+const classify = (arbitraryValue) => {
+  if (isOk(arbitraryValue)) {
+    recordOk()
+    console.log('ok')
+  }
+  else if (isNotOk) {
+    recordNotOk()
+    console.log('not ok')
+  }
+}
