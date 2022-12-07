@@ -97,5 +97,5 @@ const timeToLeet = () => {
   for(let y = 0; !isLeet(x); y++) {
     x = random10k()
   }
-  return y
+  return x
 }
