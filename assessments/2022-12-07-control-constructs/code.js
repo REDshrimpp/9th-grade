@@ -107,11 +107,11 @@ const timeToLeet = () => {
 //4 NOTE
 const classify = (arbitraryValue) => {
   if (isOk(arbitraryValue)) {
-    recordOk(arbitraryValue)
+    recordOk()
     console.log('ok')
   }
   else if (!isOk(arbitraryValue)) {
-    recordNotOk(arbitraryValue)
+    recordNotOk()
     console.log('not ok')
   }
 }
