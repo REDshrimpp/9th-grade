@@ -87,9 +87,9 @@ const logIfOk = (argument) => {
 }
 
 //2 NOTE
-const firstOk = (number) => {
-  if (isOk())
-}
+//const firstOk = (number) => {
+ // if (isOk())
+//}
 
 //3
 const timeToLeet = () => {
