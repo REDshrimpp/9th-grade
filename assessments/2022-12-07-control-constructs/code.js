@@ -110,7 +110,7 @@ const classify = (arbitraryValue) => {
     recordOk()
     console.log('ok')
   }
-  else if (isNotOk(arbitraryValue)) {
+  else if (!isOk(arbitraryValue)) {
     recordNotOk()
     console.log('not ok')
   }
