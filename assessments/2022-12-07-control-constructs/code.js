@@ -79,7 +79,21 @@ const pair = (a, b) => {
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
 
-//1
+//1 NOTE
 const logIfOk = (argument) => {
-  return isOk(argument)
+  if (isOk(argument)) {
+    log(x)
+  }
+}
+
+//2 NOTE
+const firstOk = (number) => {
+  if (isOk())
+}
+
+//3
+const timeToLeet = () => {
+  for (let x = 0; isLeet(x); x) {
+     x = random10k()
+  }
 }
