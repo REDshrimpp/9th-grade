@@ -22,7 +22,7 @@ const nextNumber = (n) => hash(n);
  * An arbitrary predicate on numbers you will use in one function.
  */
 const isLeet = (n) => {
- return n % 1337 === 0;
+  return n % 1337 === 0;
 }
 
 /*
@@ -90,14 +90,14 @@ const logIfOk = (argument) => {
 
 //2 NOTE
 //const firstOk = (number) => {
- // if (isOk())
+// if (isOk())
 //}
 
 //3 NOTE
 const timeToLeet = () => {
   let changingNumber = 0
   let result = 0
-  for(let y = 0; !isLeet(changingNumber); y++) {
+  for (let y = 0; !isLeet(changingNumber); y++) {
     changingNumber = random10k()
     result++
   }
@@ -131,6 +131,6 @@ const threewayClassify = (arbitraryValue) => {
 const sumOfSquares = (numbericArgument) => {
   let result = 0
   for (let x = 0; x < 10; x = x + 2) {
-    result = result + x **2
+    result = result + x ** 2
   }
 }
