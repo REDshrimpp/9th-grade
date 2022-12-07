@@ -21,7 +21,9 @@ const nextNumber = (n) => hash(n);
 /*
  * An arbitrary predicate on numbers you will use in one function.
  */
-const isLeet = (n) => n % 1337 === 0;
+const isLeet = (n) => {
+ return n % 1337 === 0;
+}
 
 /*
  * Return a random number between 0, inclusive, and 10,000, exclusive.
