@@ -108,11 +108,9 @@ const timeToLeet = () => {
 const classify = (arbitraryValue) => {
   if (isOk(arbitraryValue)) {
     recordOk()
-    console.log('ok')
   }
   else if (!isOk(arbitraryValue)) {
     recordNotOk()
-    console.log('not ok')
   }
 }
 
@@ -120,5 +118,11 @@ const classify = (arbitraryValue) => {
 const threewayClassify = (arbitraryValue) => {
   if (isOk(arbitraryValue)) {
     recordOk()
+  }
+  else if (isMeh(arbitraryValue)) {
+    recordMeh()
+  }
+  else {
+    recordNotOk()
   }
 }
