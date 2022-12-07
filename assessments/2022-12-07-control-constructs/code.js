@@ -133,4 +133,5 @@ const sumOfSquares = (numbericArgument) => {
   for (let x = 0; x < 10; x = x + 2) {
     result = result + x ** 2
   }
+  return result
 }
