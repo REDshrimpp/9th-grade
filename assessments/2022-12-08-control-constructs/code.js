@@ -13,3 +13,12 @@ const countXs = (string) => {
   }
   return result
 }
+
+//3
+const timesTable = (number) => {
+  for (let x = 0; x < number; x++) {
+    for (let y = 0; y < number; y++) {
+      emit(x, y, x * y)
+    }
+  }
+}
