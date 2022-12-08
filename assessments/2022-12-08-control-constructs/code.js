@@ -5,6 +5,11 @@ const yesIfEven = (number) => {
 
 //2
 const countXs = (string) => {
-  string.subtring(0, string.indexOf('x'))
-  return 
+  let result = 0
+  for (let x = 0; x < string.length; x++) {
+    if (string[x] === x) {
+      result++
+    }
+  }
+  return result
 }
