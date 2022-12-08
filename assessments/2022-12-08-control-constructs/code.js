@@ -1,4 +1,4 @@
-const emit = (a, b) => console.log(a + ' ' + b);
+const emit = (a, b) => console.log(a + ', ' + b);
 
 //1
 const yesIfEven = (number) => {
@@ -20,7 +20,7 @@ const countXs = (string) => {
 const timesTable = (number) => {
   for (let x = 0; x < number; x++) {
     for (let y = 0; y < number; y++) {
-      emit(x, y, x * y)
+      emit(x, y)
     }
   }
 }
