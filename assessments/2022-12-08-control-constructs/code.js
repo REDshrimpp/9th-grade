@@ -19,8 +19,6 @@ const countXs = (string) => {
 //3
 const timesTable = (number) => {
   for (let x = 0; x < number; x++) {
-    for (let y = 0; y < number; y++) {
-      console.log(x)
-    }
+    console.log(x)
   }
 }
