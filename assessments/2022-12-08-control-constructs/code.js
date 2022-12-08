@@ -27,3 +27,10 @@ const timesTable = (number) => {
 const containsX = (string) => {
   return countXs(string) !== 0
 }
+
+//5
+const sumSquares = (number) => {
+  for (let x = 0; x < number; x++) {
+    console.log(x)
+  }
+}
