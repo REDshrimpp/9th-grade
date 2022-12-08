@@ -16,10 +16,12 @@ const countXs = (string) => {
   return result
 }
 
-//3
+//3 NOTE
 const timesTable = (number) => {
   for (let x = 0; x < number; x++) {
-    console.log('foobar')
+    for (let y = 0; y < number; y++) {
+      emit(x, y)
+    }
   }
 }
 
@@ -28,7 +30,7 @@ const containsX = (string) => {
   return countXs(string) !== 0
 }
 
-//5
+//5 NOTE
 const sumSquares = (number) => {
   for (let x = 0; x < number; x++) {
     console.log(x)
