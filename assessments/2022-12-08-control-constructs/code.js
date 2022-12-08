@@ -32,7 +32,9 @@ const containsX = (string) => {
 
 //5 NOTE
 const sumSquares = (number) => {
+  let result = 0
   for (let x = 0; x < number; x++) {
-    console.log(x)
+    result = result + x**2
   }
+  return result
 }
