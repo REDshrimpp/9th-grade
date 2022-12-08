@@ -22,3 +22,8 @@ const timesTable = (number) => {
     console.log('foobar')
   }
 }
+
+//4
+const containsX = (string) => {
+  return countXs(string) === 0
+}
