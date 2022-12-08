@@ -1,3 +1,5 @@
+const emit = (a, b) => console.log(a + ', ' + b);
+
 //1
 const yesIfEven = (number) => {
   return number % 2 === 0
