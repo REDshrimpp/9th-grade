@@ -8,7 +8,7 @@ const countXs = (string) => {
   let result = 0
   for (let x = 0; x < string.length; x++) {
     if (string[x] === x) {
-      result++
+      result = result + 1
     }
   }
   return result
