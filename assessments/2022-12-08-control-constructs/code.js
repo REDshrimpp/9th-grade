@@ -30,7 +30,7 @@ const containsX = (string) => {
   return countXs(string) !== 0
 }
 
-//5 NOTE
+//5
 const sumSquares = (number) => {
   let result = 0
   for (let x = 0; x < number; x++) {
