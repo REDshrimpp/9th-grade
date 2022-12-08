@@ -1,4 +1,4 @@
-const emit = (a, b) => console.log(a + ', ' + b);
+const emit = (a, b) => console.log(a + ' ' + b);
 
 //1
 const yesIfEven = (number) => {
