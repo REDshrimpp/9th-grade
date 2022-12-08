@@ -20,7 +20,7 @@ const countXs = (string) => {
 const timesTable = (number) => {
   for (let x = 0; x < number + 1; x++) {
     for (let y = 0; y < number + 1; y++) {
-      emit(x, y)
+      emit(x, y, x * y)
     }
   }
 }
