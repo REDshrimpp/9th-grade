@@ -40,6 +40,7 @@ const fillTimesTable = (table) => {
       table[x][y] = x * y
     }
   }
+  return table
 };
 
 const sums = (n) => {
