@@ -14,7 +14,7 @@ const countTens = (array) => {
 const sum = (array) => {
   let total = 0
   for (let x = 0; x < array.length; x++) {
-    total = total + array[x]
+    total += array[x]
   }
   return total
 }
