@@ -39,10 +39,9 @@ const anyOverOneHundred = (array) => {
   let found = false
   for (let x = 0; x < array.length; x++) {
     if (array[x] > 100) {
-      found = true
+      return true
     }
   }
-  return found
 }
 
 //pyramid
