@@ -42,6 +42,7 @@ const anyOverOneHundred = (array) => {
       return true
     }
   }
+  return false
 }
 
 //pyramid
