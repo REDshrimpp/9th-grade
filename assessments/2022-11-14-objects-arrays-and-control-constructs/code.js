@@ -24,7 +24,7 @@ const isWinner = (player) => {
 
 const updateWins = (players) => {
   for (let x = 0; x < players.length; x++) {
-    if (players[x].score > 100) {
+    if (isWinner(player[x])) {
       players[x].wins++
     }
   }
