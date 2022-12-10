@@ -54,8 +54,7 @@ const sums = (n) => {
   for (let x = 0; x < n; x++) {
     result.push(x + result[x])
   }
-  result.pop(0)
-  return result
+  return result.slice(1)
 };
 
 const rule110 = (cells) => {
