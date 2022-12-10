@@ -52,7 +52,7 @@ const fillTimesTable = (table) => {
 const sums = (n) => {
   let result = [0]
   for (let x = 0; x !== n; x++) {
-    result.push(x + result[x])
+    result.push(x + result[x - 1])
   }
   return result
 };
