@@ -6,7 +6,7 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
-  return Math.max(e1.salary, e2.salary)
+  return higherPaidEmployee = { salary: Math.max(e1.salary, e2.salary) }
 };
 
 const isSamePoint = (p1, p2) => {
