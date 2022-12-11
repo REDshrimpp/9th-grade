@@ -54,11 +54,13 @@ const sums = (n) => {
   for (let x = 0; x < n + 1; x++) {
     result.push(x + result[x])
   }
-  return result.slice(1)
+  return result.shift
 };
 
 const rule110 = (cells) => {
   let result = []
+  cells.unshift(0)
+  cells.push(0)
   for (let x = 0; x < cells.length; x++) {
     if ((cells[x - 1] === 0 && cells[x] === 0 && cells[x + 1] === 0) || (cells[x - 1] === 1 && cells[x] === cells[x + 1])) {
       result.push(0)
@@ -69,3 +71,5 @@ const rule110 = (cells) => {
   }
   return result
 };
+
+[0,0,0][0 - 1] === 0
