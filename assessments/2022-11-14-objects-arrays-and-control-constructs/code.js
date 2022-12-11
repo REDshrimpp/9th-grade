@@ -62,7 +62,7 @@ const rule110 = (cells) => {
   cells.unshift(0)
   cells.push(0)
   for (let x = 0; x < cells.length; x++) {
-    if ((cells[x - 1] === 0 && cells[x] === 0 && cells[x + 1] === 0) || (cells[x - 1] === 1 && cells[x] === cells[x + 1])) {
+    if ((cells[x - 1] === 0 && cells[x] === 0 && cells[x + 1] === 0) || (cells[x - 1] === 1 && (cells[x] === cells[x + 1]))) {
       result.push(0)
     }
     else {
@@ -71,5 +71,3 @@ const rule110 = (cells) => {
   }
   return result.slice(1, cells.length - 2)
 };
-
-[0,0,0][0 - 1] === 0
