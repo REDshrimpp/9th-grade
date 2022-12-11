@@ -60,7 +60,7 @@ const sums = (n) => {
 const rule110 = (cells) => {
   let result = []
   for (let x = 0; x < cells.length; x++) {
-    if ((cells[x - 1] === 0 && cells[x] === 0 && cells[x + 1] === 0) || (cells[x - 1] === 1 && cells[x] === cells[x - 1])) {
+    if ((cells[x - 1] === 0 && cells[x] === 0 && cells[x + 1] === 0) || (cells[x - 1] === 1 && cells[x] === cells[x + 1])) {
       result.push(0)
     }
     else {
