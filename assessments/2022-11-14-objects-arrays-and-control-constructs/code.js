@@ -69,5 +69,5 @@ const rule110 = (cells) => {
       result.push(1)
     }
   }
-  return result.slice(1, cells.length - 1)
+  return result.slice(1)
 };
