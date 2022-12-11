@@ -69,7 +69,7 @@ const rule110 = (cells) => {
       result.push(1)
     }
   }
-  return result
+  return result.slice(1, cells.length - 2)
 };
 
 [0,0,0][0 - 1] === 0
