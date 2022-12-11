@@ -61,6 +61,7 @@ const rule110 = (cells) => {
   let result = []
   cells.unshift(0)
   cells.push(0)
+  console.log(cells)
   for (let x = 0; x < cells.length; x++) {
     if ((cells[x - 1] === 0 && cells[x] === 0 && cells[x + 1] === 0) || (cells[x - 1] === 1 && (cells[x] === cells[x + 1]))) {
       result.push(0)
@@ -69,5 +70,5 @@ const rule110 = (cells) => {
       result.push(1)
     }
   }
-  return result.slice(1)
+  return result.slice()
 };
