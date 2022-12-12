@@ -30,3 +30,7 @@ const extractColumn = (board, index) => {
 }
 
 //7
+const recordMove = (array, move) => {
+  array.push(move.mark, move.row, move.column)
+  return array
+}
