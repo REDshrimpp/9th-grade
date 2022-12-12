@@ -5,4 +5,6 @@ const makeRow = () => {
 }
 
 //2
-const 
+const makeBoard = () => {
+  
+}
