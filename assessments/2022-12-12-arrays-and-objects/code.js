@@ -23,3 +23,8 @@ const placeMark = (board, move) => {
 const allTheSame = (arrayOfElements) => {
   return arrayOfElements[0] === arrayOfElements[1] && arrayOfElements[0] === arrayOfElements[2]
 }
+
+//6
+const extractCollumn = (board, index) => {
+  return [board[0][index], board[1][index], board[2][index]]
+}
