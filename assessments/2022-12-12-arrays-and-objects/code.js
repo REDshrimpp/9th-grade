@@ -10,13 +10,13 @@ const makeBoard = () => {
 }
 
 //3
-const makeMove = (mark, row, collumn) => {
-  return {mark: mark, row: row, collumn: collumn}
+const makeMove = (mark, row, column) => {
+  return {mark: mark, row: row, column: column}
 }
 
 //4
 const placeMark = (board, move) => {
-  board[move.row][move.collumn] = move.mark
+  board[move.row][move.column] = move.mark
 }
 
 //5
@@ -25,6 +25,9 @@ const allTheSame = (arrayOfElements) => {
 }
 
 //6
-const extractCollumn = (board, index) => {
+const extractColumn = (board, index) => {
   return [board[0][index], board[1][index], board[2][index]]
 }
+
+//7
+const 
