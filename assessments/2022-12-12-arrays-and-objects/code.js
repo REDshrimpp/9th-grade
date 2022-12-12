@@ -18,3 +18,8 @@ const makeMove = (mark, row, collumn) => {
 const placeMark = (board, move) => {
   board[move.row][move.collumn] = move.mark
 }
+
+//5
+const allTheSame = (arrayOfElements) => {
+  return arrayOfElements[0] === arrayOfElements[1] === arrayOfElements[2]
+}
