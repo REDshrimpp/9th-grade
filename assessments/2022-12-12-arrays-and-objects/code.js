@@ -30,4 +30,3 @@ const extractColumn = (board, index) => {
 }
 
 //7
-const 
