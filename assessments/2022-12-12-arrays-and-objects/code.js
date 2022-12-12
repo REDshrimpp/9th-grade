@@ -1,7 +1,6 @@
 //1
-const makeRow = () {
-  let result = ['', '', '']
-  return result
+const makeRow = () => {
+  return ['', '', '']
 }
 
 //2
