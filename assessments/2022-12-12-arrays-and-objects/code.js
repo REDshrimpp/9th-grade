@@ -1,6 +1,7 @@
 //1
 const makeRow = () {
-  return ['', '', '']
+  let result = ['', '', '']
+  return result
 }
 
 //2
