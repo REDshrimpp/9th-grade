@@ -41,7 +41,7 @@ const rowForMove = (moves, index) => {
 }
 
 //9
-const placeMoves = (board, moves) {
+const placeMoves = (board, moves) => {
   for(let x = 0; x < moves.length; x++) {
   placeMark(board, moves[x])
   }
