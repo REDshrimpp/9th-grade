@@ -6,5 +6,5 @@ const makeRow = () => {
 
 //2
 const makeBoard = () => {
-  
+  return [makeRow(), makeRow(), makeRow()]
 }
