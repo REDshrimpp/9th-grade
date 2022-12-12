@@ -10,6 +10,6 @@ const makeBoard = () => {
 }
 
 //3
-const makeMove = (mark, row, collumn) {
+const makeMove = (mark, row, collumn) => {
   return {mark: mark, row: row, collumn: collumn}
 }
