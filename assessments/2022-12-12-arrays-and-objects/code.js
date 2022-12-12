@@ -36,4 +36,6 @@ const recordMove = (array, move) => {
 }
 
 //8
-const rowForMove = (moveArray)
+const rowForMove = (moves, index) => {
+  return moves[index]
+}
