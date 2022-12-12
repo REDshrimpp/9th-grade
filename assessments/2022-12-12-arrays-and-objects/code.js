@@ -21,5 +21,5 @@ const placeMark = (board, move) => {
 
 //5
 const allTheSame = (arrayOfElements) => {
-  return arrayOfElements[0] === arrayOfElements[1] === arrayOfElements[2]
+  return (arrayOfElements[0] === arrayOfElements[1]) === arrayOfElements[2]
 }
