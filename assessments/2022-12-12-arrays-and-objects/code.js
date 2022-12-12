@@ -39,3 +39,10 @@ const recordMove = (array, move) => {
 const rowForMove = (moves, index) => {
   return moves[index].row
 }
+
+//9
+const placeMoves = (board, moves) {
+  for(let x = 0; x < moves.length; x++) {
+  placeMark(board, moves[x])
+  }
+}
