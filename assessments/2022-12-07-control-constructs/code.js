@@ -95,10 +95,8 @@ const logIfOk = (argument) => {
 
 //3 NOTE
 const timeToLeet = () => {
-  let changingNumber = 0
   let result = 0
-  for (let y = 0; !isLeet(changingNumber); y++) {
-    changingNumber = random10k()
+  for (let y = 0; !isLeet(random10k()); y++) {
     result++
   }
   return result
