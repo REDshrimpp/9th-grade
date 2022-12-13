@@ -133,3 +133,12 @@ const sumOfSquares = (numericArgument) => {
   }
   return result
 }
+
+//7
+const pairs = (numbericArgument) => {
+  for (let x = 0; x < numbericArgument; x++) {
+    for (let y = 0; y < numbericArgument; y++) {
+      pair(x, y)
+    }
+  }
+}
