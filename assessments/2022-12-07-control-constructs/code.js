@@ -129,7 +129,7 @@ const threewayClassify = (arbitraryValue) => {
 const sumOfSquares = (numericArgument) => {
   let result = 0
   for (let x = 0; x < numericArgument; x++) {
-    result = result + x ** 2
+    result += x ** 2
   }
   return result
 }
