@@ -8,7 +8,7 @@ const area = (rect) => {
 
 //2
 const higherPaid = (e1, e2) => {
-  return Math.max(e1.salary,e2.salary)
+  return Math.max(e1,e2)
 };
 
 //3
