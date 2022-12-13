@@ -107,7 +107,7 @@ const classify = (arbitraryValue) => {
   if (isOk(arbitraryValue)) {
     recordOk()
   }
-  else if (!isOk(arbitraryValue)) {
+  else {
     recordNotOk()
   }
 }
