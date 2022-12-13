@@ -28,7 +28,7 @@ const timesTable = (number) => {
 //4
 const containsX = (string) => {
   for (let x = 0; x < string.length; x++) {
-    if (x === 'x') {
+    if (string[x] === 'x') {
       return true
     }
   }
