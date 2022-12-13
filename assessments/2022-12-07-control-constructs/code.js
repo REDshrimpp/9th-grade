@@ -89,9 +89,13 @@ const logIfOk = (argument) => {
 }
 
 //2 NOTE
-//const firstOk = (number) => {
-// if (isOk())
-//}
+const firstOk = (number) => {
+  for (let x = 0; x < number; x++) {
+    if (isOk(x)) {
+      return x
+    }
+  }
+}
 
 //3
 const timeToLeet = () => {
@@ -102,7 +106,7 @@ const timeToLeet = () => {
   return result
 }
 
-//4 NOTE
+//4
 const classify = (arbitraryValue) => {
   if (isOk(arbitraryValue)) {
     recordOk()
