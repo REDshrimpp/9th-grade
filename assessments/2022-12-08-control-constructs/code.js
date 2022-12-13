@@ -27,7 +27,11 @@ const timesTable = (number) => {
 
 //4
 const containsX = (string) => {
-  return countXs(string) !== 0
+  for (let x = 0; x < string.length; x++) {
+    if (x === 'x') {
+      return true
+    }
+  }
 }
 
 //5
