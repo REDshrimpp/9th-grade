@@ -81,14 +81,14 @@ const pair = (a, b) => {
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
 
-//1 NOTE
+//1
 const logIfOk = (argument) => {
   if (isOk(argument)) {
     log(x)
   }
 }
 
-//2 NOTE
+//2
 const firstOk = (number) => {
   for (let x = 0; x < number; x++) {
     if (isOk(x)) {
