@@ -93,7 +93,7 @@ const logIfOk = (argument) => {
 // if (isOk())
 //}
 
-//3 NOTE
+//3
 const timeToLeet = () => {
   let result = 0
   for (let y = 0; !isLeet(random10k()); y++) {
@@ -128,7 +128,7 @@ const threewayClassify = (arbitraryValue) => {
 //6
 const sumOfSquares = (numericArgument) => {
   let result = 0
-  for (let x = 0; x < numericArgument; x = x++) {
+  for (let x = 0; x < numericArgument; x++) {
     result = result + x ** 2
   }
   return result
