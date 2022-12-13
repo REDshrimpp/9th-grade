@@ -84,7 +84,7 @@ const pair = (a, b) => {
 //1
 const logIfOk = (argument) => {
   if (isOk(argument)) {
-    log(x)
+    log(argument)
   }
 }
 
