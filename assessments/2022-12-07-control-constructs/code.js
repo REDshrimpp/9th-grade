@@ -21,7 +21,9 @@ const nextNumber = (n) => hash(n);
 /*
  * An arbitrary predicate on numbers you will use in one function.
  */
-const isLeet = (n) => n % 1337 === 0;
+const isLeet = (n) => {
+  return n % 1337 === 0;
+}
 
 /*
  * Return a random number between 0, inclusive, and 10,000, exclusive.
@@ -78,3 +80,69 @@ const pair = (a, b) => {
 
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
+
+//1
+const logIfOk = (argument) => {
+  if (isOk(argument)) {
+    log(argument)
+  }
+}
+
+//2
+const firstOk = (number) => {
+  for (let x = 0; x < number; x++) {
+    if (isOk(x)) {
+      return x
+    }
+  }
+}
+
+//3
+const timeToLeet = () => {
+  let result = 0
+  for (let y = 0; !isLeet(random10k()); y++) {
+    result++
+  }
+  return result
+}
+
+//4
+const classify = (arbitraryValue) => {
+  if (isOk(arbitraryValue)) {
+    recordOk()
+  }
+  else {
+    recordNotOk()
+  }
+}
+
+//5
+const threewayClassify = (arbitraryValue) => {
+  if (isOk(arbitraryValue)) {
+    recordOk()
+  }
+  else if (isMeh(arbitraryValue)) {
+    recordMeh()
+  }
+  else {
+    recordNotOk()
+  }
+}
+
+//6
+const sumOfSquares = (numericArgument) => {
+  let result = 0
+  for (let x = 0; x < numericArgument; x++) {
+    result += x ** 2
+  }
+  return result
+}
+
+//7
+const pairs = (numbericArgument) => {
+  for (let x = 0; x < numbericArgument; x++) {
+    for (let y = 0; y < numbericArgument; y++) {
+      pair(x, y)
+    }
+  }
+}
