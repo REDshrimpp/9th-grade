@@ -83,6 +83,5 @@ const rule110 = (cells) => {
       result.push(1)
     }
   }
-  result.shift()
   return result
 };
