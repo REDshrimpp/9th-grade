@@ -21,7 +21,7 @@ const countXs = (string) => {
   return result
 }
 
-//3 NOTE
+//3
 const timesTable = (number) => {
   for (let x = 1; x < number + 1; x++) {
     for (let y = 1; y < number + 1; y++) {
@@ -37,6 +37,7 @@ const containsX = (string) => {
       return true
     }
   }
+  return false
 }
 
 //5
