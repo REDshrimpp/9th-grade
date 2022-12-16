@@ -178,7 +178,7 @@ const pairs = (number) => {
 const timesTable = (number) => {
   for (let x = 1; x < number; x++) {
     for (let y = 1; y < number; y++) {
-      emit(x, y)
+      emit(x, y, x * y)
     }
   }
 }
