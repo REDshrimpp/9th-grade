@@ -240,7 +240,7 @@ const isWinner = (player) => {
 const updateWins = (playerList) => {
   for (let x = 0; x < playerList; x++) {
     if (isWinner(playerList[x])) {
-      playerList[x].wins += 1
+      playerList[x].wins = playerList[x].wins + 1
     }
   }
 }
