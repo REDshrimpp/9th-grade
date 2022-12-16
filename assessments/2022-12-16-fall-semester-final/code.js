@@ -147,16 +147,16 @@ const containsX = (string) => {
 }
 
 //63
-const slug = (string1, string2, string3 ) => {
+const slug = (string1, string2, string3) => {
   return string1.toLowerCase() + '-' + string2.toLowerCase() + '-' + string3.toLowerCase()
 }
 
 //64
 const capitalize = (string) => {
-  return  string[0].toUpperCase() + string.substring(1, string.length).toLowerCase()
+  return string[0].toUpperCase() + string.substring(1, string.length).toLowerCase()
 }
 
 //65
-//const capitalizeName = (fullName) {
-//  return 
-//}
+const capitalizeName = (fullName) {
+  return capitalize(fullName.substring(0, fullName.indexOf(' '))) + capitalize(fullName.substring(fullName.indexOf(' '), fullName.length))
+}
