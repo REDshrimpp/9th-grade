@@ -13,5 +13,6 @@ const rand = (n) => Math.floor(Math.random() * n);
 
 //10
 const randomCharacterUpDown = (string) => {
-  return string[rand(string.length)] + string[rand(string.length)]
+  let randomCharacter = rand(string.length)
+  return string[randomCharacter].toUpperCase() + string[randomCharacter].toLowerCase()
 }
