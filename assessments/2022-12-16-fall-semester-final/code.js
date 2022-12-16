@@ -176,8 +176,8 @@ const pairs = (number) => {
 
 //75
 const timesTable = (number) => {
-  for (let x = 1; x !== number; x++) {
-    for (let y = 1; y !== number; y++) {
+  for (let x = 1; x < number + 1; x++) {
+    for (let y = 1; y < number + 1; y++) {
       emit(x, y, x * y)
     }
   }
