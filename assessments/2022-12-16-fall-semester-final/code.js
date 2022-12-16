@@ -131,7 +131,17 @@ const middle = (string) => {
   return string.substring(string.length / 4, string.length / 4 * 3)
 }
 
-//61
+//61 NOTE
 const paire = (string1, string2) => {
   return string1 + ' and ' + string2
+}
+
+//62 
+const containsX = (string) => {
+  for (let x = 0; x < string.length; x++) {
+    if (string[x] === 'x') {
+      return true
+    }
+  }
+  false
 }
