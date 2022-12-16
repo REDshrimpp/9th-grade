@@ -225,6 +225,7 @@ const countXs = (string) => {
       result += 1
     }
   }
+  return result
 }
 
 
