@@ -101,3 +101,8 @@ const pair = (a, b) => {
 const getsSpeedingTicket = (carSpeed, copIsGrouchy) => {
   return carSpeed > 65 && copIsGrouchy || carSpeed > 70
 }
+
+//37
+const evenGreaterThanZero = (number) => {
+  return number > 0 && number % 2 === 0
+}
