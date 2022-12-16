@@ -143,5 +143,5 @@ const containsX = (string) => {
       return true
     }
   }
-  false
+  return false
 }
