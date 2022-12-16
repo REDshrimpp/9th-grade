@@ -213,11 +213,30 @@ const fillTimesTable = (array) => {
   return array
 }
 
-//83
+//83 NOTE
 const sums = (number) => {
   let array = [0]
   for (let x = 0; x < number; x++) {
     array.push(x + array[x])
   }
   return array
+}
+
+//84
+const rule110 = (array) => {
+
+}
+
+
+//OBJECTS
+
+//89
+const isWinner = (player) => {
+  return player.score > 100
+}
+
+
+//90
+const updateWins = (arrayOfObjects) => {
+
 }
