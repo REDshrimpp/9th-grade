@@ -164,10 +164,21 @@ const capitalizeName = (fullName) => {
 
 
 //CONTROL CONSTRUCTS
+
+//74
 const pairs = (number) => {
   for (let x = 1; x < number; x++) {
     for (let y = 1; y < number; y++) {
       pair(x, y)
+    }
+  }
+}
+
+//75
+const timesTable = (number) => {
+  for (let x = 1; x < number; x++) {
+    for (let y = 1; y < number; y++) {
+      emit(x, y)
     }
   }
 }
