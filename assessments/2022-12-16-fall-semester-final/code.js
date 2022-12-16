@@ -157,6 +157,6 @@ const capitalize = (string) => {
 }
 
 //65
-const capitalizeName = (fullName) {
+const capitalizeName = (fullName) => {
   return capitalize(fullName.substring(0, fullName.indexOf(' '))) + capitalize(fullName.substring(fullName.indexOf(' '), fullName.length))
 }
