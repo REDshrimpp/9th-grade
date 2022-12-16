@@ -96,3 +96,8 @@ const pair = (a, b) => {
 
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
+
+//36
+const getsSpeedingTicket = (carSpeed, copIsGrouchy) => {
+  return carSpeed > 65 && copIsGrouchy || carSpeed > 70
+}
