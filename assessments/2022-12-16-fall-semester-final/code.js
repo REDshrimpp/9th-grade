@@ -184,7 +184,12 @@ const timesTable = (number) => {
 }
 
 //76
-
+const sumSquares = (number) => {
+  let result = 0
+  for (let x = 0; x < number; x++) {
+    result = result + x **2
+  }
+}
 
 
 
