@@ -228,6 +228,10 @@ const countXs = (string) => {
   return result
 }
 
+//78
+const makeRow = () => {
+  return ['', '', '']
+}
 
 
 
