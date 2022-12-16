@@ -153,7 +153,7 @@ const slug = (string1, string2, string3 ) => {
 
 //64
 const capitalize = (string) => {
-  return string[0].toUpperCase() //+ string.substring(1, string.length).toLowerCase()
+  return string[0].toUpperCase() + string.substring(1, string.length).toLowerCase()
 }
 
 //65
