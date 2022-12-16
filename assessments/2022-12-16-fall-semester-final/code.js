@@ -133,5 +133,5 @@ const middle = (string) => {
 
 //61
 const pair = (string1, string2) => {
-  return string1 + 'and' + string2
+  return string1 + ' and ' + string2
 }
