@@ -99,6 +99,31 @@ const pair = (a, b) => {
 
 //BOOLEANS
 
+//1
+const needHeavyCoat = (goingOutside, somewhereCold) => {
+  return goingOutside && somewhereCold
+}
+
+//2
+const needSunscreen = (goingToBeach, goingSkiing) => {
+  return goingToBeach || goingSkiing
+}
+
+//3
+const needMittens = (goingOutside, someWhereWarm) => {
+  return goingOutside && !someWhereWarm
+}
+
+//4
+const isVenomous = (isStriped, hasBlueHead) => {
+  return isStriped || (!isStriped, !hasBlueHead)
+}
+
+//5
+const okaySpeed = (speedLimit, carSpeed) => {
+  return carSpeed <= speedLimit + 10 && carSpeed >= speedLimit - 10
+}
+
 //36
 const getsSpeedingTicket = (carSpeed, copIsGrouchy) => {
   return carSpeed > 65 && copIsGrouchy || carSpeed > 70
@@ -192,7 +217,15 @@ const sumSquares = (number) => {
   return result
 }
 
-
+//77
+const countXs = (string) => {
+  let result = 0
+  for (let x = 0; x < string.length; x++) {
+    if (string[x] === 'x') {
+      result += 1
+    }
+  }
+}
 
 
 
