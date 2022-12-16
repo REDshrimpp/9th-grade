@@ -132,7 +132,7 @@ const middle = (string) => {
 }
 
 //61 NOTE
-const paire = (string1, string2) => {
+const pair = (string1, string2) => {
   return string1 + ' and ' + string2
 }
 
