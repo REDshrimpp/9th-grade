@@ -131,8 +131,8 @@ const middle = (string) => {
   return string.substring(string.length / 4, string.length / 4 * 3)
 }
 
-//61 NOTE
-const pair = (string1, string2) => {
+//61
+const paire = (string1, string2) => {
   return string1 + ' and ' + string2
 }
 
@@ -158,5 +158,9 @@ const capitalize = (string) => {
 
 //65 NOTE
 const capitalizeName = (fullName) => {
-  return capitalize(fullName.substring(0, fullName.indexOf(' '))) + capitalize(fullName.substring(fullName.indexOf(' ') + 1, fullName.length))
+  return capitalize(fullName.substring(0, fullName.indexOf(' '))) + ' ' + capitalize(fullName.substring(fullName.indexOf(' ') + 1, fullName.length))
 }
+
+
+
+//CONTROL CONSTRUCTS
