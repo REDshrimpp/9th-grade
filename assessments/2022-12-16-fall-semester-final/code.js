@@ -145,3 +145,8 @@ const containsX = (string) => {
   }
   return false
 }
+
+//63
+const slug = (string1, string2, string3 ) => {
+  return string1.toLowerCase() + '-' + string2.toLowerCase() + '-' + string3.toLowerCase 
+}
