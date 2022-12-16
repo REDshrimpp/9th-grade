@@ -249,3 +249,13 @@ const updateWins = (playerList) => {
 const totalWithTip = (receet, tip) => {
   return {subtotal: receet.subtotal, tip: receet.subtotal * tip, total: receet.subtotal + receet.subtotal * tip}
 }
+
+//88
+const higherPaid = (employee1, employee2) => {
+  if (employee1.salary > employee2.salary) {
+    return employee1
+  }
+  else {
+    return employee2
+  }
+}
