@@ -237,6 +237,10 @@ const isWinner = (player) => {
 
 
 //90
-const updateWins = (arrayOfObjects) => {
-
+const updateWins = (playerList) => {
+  for (let x = 0; x < playerList; x++) {
+    if (isWinner(playerList[x])) {
+      playerList[x].wins += 1
+    }
+  }
 }
