@@ -202,3 +202,13 @@ const allTheSame = (arrayOfElements) => {
 const extractColumn = (board, index) => {
   return [board[0][index], board[1][index], board[2][index]]
 }
+
+//82
+const fillTimesTable = (array) => {
+  for (let x = 0; x < array.length; x++) {
+    for (let y = 0; y < array[x].length; y++) {
+      array[x][y] = x * y
+    }
+  }
+  return array
+}
