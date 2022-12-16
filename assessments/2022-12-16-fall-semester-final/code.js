@@ -200,5 +200,5 @@ const allTheSame = (arrayOfElements) => {
 
 //81
 const extractColumn = (board, index) => {
-  return board[index]
+  return [board[0][index], board[1], board[2]]
 }
