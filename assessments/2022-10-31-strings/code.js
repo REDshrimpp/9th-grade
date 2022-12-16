@@ -11,9 +11,7 @@ const rand = (n) => Math.floor(Math.random() * n);
 // function but you can get partial credit for a function that is basically
 // correct even if contains small mistakes.
 
-//1
-const firstHalf = (string) => {
-  return string.substring(0, string.length / 2)
+//10
+const randomCharacterUpDown = (string) => {
+  return string[rand(string.length)] + string[rand(string.length)]
 }
-
-//2
