@@ -97,6 +97,8 @@ const pair = (a, b) => {
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
 
+//BOOLEANS
+
 //36
 const getsSpeedingTicket = (carSpeed, copIsGrouchy) => {
   return carSpeed > 65 && copIsGrouchy || carSpeed > 70
@@ -120,4 +122,11 @@ const twiceAsExpensive = (price1, price2) => {
 //41
 const winningRecord = (wins, losses, ties) => {
   return wins > losses + ties
+}
+
+//STRINGS
+
+//60
+const middle = (string) => {
+  return string.substring(string.length / 4, string.length / 4 * 3)
 }
