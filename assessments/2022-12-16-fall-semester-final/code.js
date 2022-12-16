@@ -235,7 +235,7 @@ const makeRow = () => {
 
 //79
 const makeBoard = () => {
-  return [makeRow, makeRow, makeRow]
+  return [makeRow(), makeRow(), makeRow()]
 }
 
 
