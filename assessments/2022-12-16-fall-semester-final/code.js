@@ -165,8 +165,8 @@ const capitalizeName = (fullName) => {
 
 //CONTROL CONSTRUCTS
 const pairs = (number) => {
-  for (let x = 0; x < number; x++) {
-    for (let y = 0; y < number; y++) {
+  for (let x = 1; x < number; x++) {
+    for (let y = 1; y < number; y++) {
       pair(x, y)
     }
   }
