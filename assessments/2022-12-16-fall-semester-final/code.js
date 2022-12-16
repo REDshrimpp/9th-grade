@@ -116,3 +116,8 @@ const isLeapYear = (year) => {
 const twiceAsExpensive = (price1, price2) => {
   return price1 === price2 * 2
 }
+
+//41
+const winningRecord = (wins, losses, ties) => {
+  return wins > losses + ties
+}
