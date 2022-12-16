@@ -130,3 +130,8 @@ const winningRecord = (wins, losses, ties) => {
 const middle = (string) => {
   return string.substring(string.length / 4, string.length / 4 * 3)
 }
+
+//61
+const pair = (string1, string2) {
+  return string1 + 'and' + string2
+}
