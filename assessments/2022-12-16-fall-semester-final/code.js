@@ -197,3 +197,8 @@ const timesTable = (number) => {
 const allTheSame = (arrayOfElements) => {
   return arrayOfElements[0] === arrayOfElements[1] && arrayOfElements[0] === arrayOfElements[2]
 }
+
+//81
+const extractColumn = (board, index) => {
+  return board[index]
+}
