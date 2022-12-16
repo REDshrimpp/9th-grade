@@ -195,5 +195,5 @@ const timesTable = (number) => {
 
 //80
 const allTheSame = (arrayOfElements) => {
-  return arrayOfElements[0] === arrayOfElements[1] === arrayOfElements[2]
+  return arrayOfElements[0] === arrayOfElements[1] && arrayOfElements[0] === arrayOfElements[2]
 }
