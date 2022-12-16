@@ -20,5 +20,5 @@ const isVenomous = (isStriped, hasBlueHead) => {
 
 //5
 const okaySpeed = (speedLimit, carSpeed) => {
-  return carSpeed =< speedLimit + 10 && carSpeed >= speedLimit - 10
+  return carSpeed <= speedLimit + 10 && carSpeed >= speedLimit - 10
 }
