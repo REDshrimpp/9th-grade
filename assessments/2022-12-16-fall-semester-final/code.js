@@ -157,6 +157,6 @@ const capitalize = (string) => {
 }
 
 //65
-const capitalizeName = (fullName) {
-  return 
-}
+//const capitalizeName = (fullName) {
+//  return 
+//}
