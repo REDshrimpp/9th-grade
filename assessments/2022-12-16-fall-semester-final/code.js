@@ -244,3 +244,8 @@ const updateWins = (playerList) => {
     }
   }
 }
+
+//87
+const totalWithTip = (receet, tip) => {
+  return {subtotal: receet.subtotal, tip: receet.subtotal * tip, total: receet.subtotal + receet.subtotal * tip}
+}
