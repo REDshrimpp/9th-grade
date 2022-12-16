@@ -219,4 +219,5 @@ const sums = (number) => {
   for (let x = 0; x < number; x++) {
     array.push(x + array[x - 1])
   }
+  return array
 }
