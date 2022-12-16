@@ -189,6 +189,7 @@ const sumSquares = (number) => {
   for (let x = 0; x < number; x++) {
     result = result + x **2
   }
+  return result
 }
 
 
