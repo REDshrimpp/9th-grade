@@ -182,3 +182,18 @@ const timesTable = (number) => {
     }
   }
 }
+
+//76
+
+
+
+
+
+
+
+//ARRAYS
+
+//80
+const allTheSame = (arrayOfElements) => {
+  return arrayOfElements[0] === arrayOfElements[1] === arrayOfElements[2]
+}
