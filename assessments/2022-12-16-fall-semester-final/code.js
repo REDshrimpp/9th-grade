@@ -259,3 +259,13 @@ const higherPaid = (employee1, employee2) => {
     return employee2
   }
 }
+
+//91
+const bigWinners = (playerList) => {
+  let result = []
+  for (let x = 0; x < playerList.length; x++) {
+    if (playerList[x].wins > 10) {
+      result.push(playerList[x])
+    }
+  }
+}
