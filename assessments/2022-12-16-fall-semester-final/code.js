@@ -233,6 +233,11 @@ const makeRow = () => {
   return ['', '', '']
 }
 
+//79
+const makeBoard = () => {
+  return [makeRow, makeRow, makeRow]
+}
+
 
 
 //ARRAYS
