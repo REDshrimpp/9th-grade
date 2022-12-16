@@ -17,3 +17,8 @@ const needMittens = (goingOutside, someWhereWarm) => {
 const isVenomous = (isStriped, hasBlueHead) => {
   return isStriped || (!isStriped, !hasBlueHead)
 }
+
+//5
+const okaySpeed = (speedLimit, carSpeed) => {
+  return carSpeed =< speedLimit + 10 && carSpeed >= speedLimit - 10
+}
