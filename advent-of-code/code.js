@@ -12,3 +12,29 @@
 //
 // Which will load the file and pass them to your function and then print the
 // return value in the REPL.
+
+const lines = (longString) => {
+  return longString.split('\n');
+}
+
+const numbers = (strings) => {
+  let array = []
+  for(let x = 0;x < strings.length; x++) {
+    array.push(strings[x])
+  }
+  return array
+}
+
+const numberSplit = (numberString) => {
+  return Number.parseInt(numberString)
+}
+
+const countCalories = (text) => {
+  const seperateStrings = lines(text);
+  const array = numbers(seperateStrings)
+  const seperateNumbers = numberSplit(array)
+  return seperateNumbers;
+}
+
+//run('day_01.test', day01Part1)
+run('adventDay1', countCalories);
