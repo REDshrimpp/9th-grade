@@ -9,33 +9,16 @@ const needSunscreen = (goingToBeach, goingSkiing) => {
 }
 
 //3
-const needMittens = (goingOutside, somewhereWarm) => {
-  return goingOutside && !somewhereWarm
+const needMittens = (goingOutside, someWhereWarm) => {
+  return goingOutside && !someWhereWarm
 }
 
 //4
 const isVenomous = (isStriped, hasBlueHead) => {
-return isStriped || !hasBlueHead
+  return isStriped || (!isStriped, !hasBlueHead)
 }
 
 //5
 const okaySpeed = (speedLimit, carSpeed) => {
-  return (carSpeed > speedLimit - 11) && (carSpeed < speedLimit + 11)
+  return carSpeed <= speedLimit + 10 && carSpeed >= speedLimit - 10
 }
-
-//6
-const twiceAsExpensive = (item1Price, item2Price) => {
-  return item1Price > item2Price * 2
-}
-
-//7
-const winningRecord = (wins, losses, ties) => {
-  return wins > losses + ties
-}
-
-//8
-const isMagicNumber = (number) => {
-  return number === 42 || number === 17
-}
-
-// 42 is the meaning of life
