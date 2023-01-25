@@ -10,8 +10,8 @@ const q3 = document.createElement('h1');
 const p3 = document.createElement('p');
 const q4 = document.createElement('h1');
 const p4 = document.createElement('p');
-const ls = document.createElement('ui');
-const l1 = document.createElement('ui');
+const ls = document.createElement('ol');
+const l1 = document.createElement('li');
 const l2 = document.createElement('li');
 const l3 = document.createElement('li');
 const l4 = document.createElement('li');
@@ -21,7 +21,17 @@ const l7 = document.createElement('li');
 const l8 = document.createElement('li');
 const l9 = document.createElement('li');
 const l10 = document.createElement('li');
+const ls2 = document.createElement('ol');
 const p5 = document.createElement('p');
+const credits = document.createElement('div')
+const c = document.createElement('p');
+const a = document.createElement('a');
+const c2 = document.createElement('p');
+const a2 = document.createElement('a');
+const c3 = document.createElement('p');
+const a3 = document.createElement('a');
+const img = document.createElement('img');
+const div = document.createElement('div')
 
 //const image = document.createElement('')
 
@@ -39,13 +49,26 @@ l3.append(document.createTextNode('<body>: This element contains the content of 
 l4.append(document.createTextNode('<h1> to <h6>: These elements are used for headings and subheadings. <h1> is the highest level heading, while <h6> is the lowest.'))
 l5.append(document.createTextNode('<p>: This element is used for paragraphs of text.'))
 l6.append(document.createTextNode('<a>: This element is used for hyperlinks, which allow users to navigate between pages on the web.'))
-l7.append(document.createTextNode('<img>: This element is used to embed images in a web page.'))
-l8.append(document.createTextNode('<ul> and <ol>: These elements are used for unordered and ordered lists, respectively.'))
-l9.append(document.createTextNode('<li>: This element is used for list items.'))
-l10.append(document.createTextNode('<div> and <span>: These elements are used for grouping and applying styles to elements on a web page.'))
-p4.append(document.createTextNode('These are some of the main elements, but there are many more available, like <header>, <nav>, <main>, <footer>, <form>, <input>, <select>, etc.'))
+l7.append(document.createTextNode('<img>: This element is used to embed images in a web page.'));
+l8.append(document.createTextNode('<ul> and <ol>: These elements are used for unordered and ordered lists, respectively.'));
+l9.append(document.createTextNode('<li>: This element is used for list items.'));
+l10.append(document.createTextNode('<div> and <span>: These elements are used for grouping and applying styles to elements on a web page.'));
+ls2.append(document.createTextNode(''));
+p4.append(document.createTextNode('These are some of the main elements, but there are many more available, like <header>, <nav>, <main>, <footer>, <form>, <input>, <select>, etc.'));
 q4.append(document.createTextNode('Can you find a picture of the inventor of the web?'));
 p5.append(document.createTextNode("I'm sorry, I am a text based model and I am not able to find or show images. However, I can tell you that the inventor of the World Wide Web (WWW) is Sir Tim Berners-Lee. He is a British computer scientist and is considered to be the inventor of the World Wide Web. He proposed and developed the first successful communication between a Hypertext Transfer Protocol (HTTP) client and server via the Internet in 1989. He also created the first web browser, called WorldWideWeb, and the first web server, called httpd. He also wrote the first version of the HTML language, which provided the structure for web pages. He is currently working on a decentralized web project called Solid."));
+
+credits.setAttribute('class', 'credits');
+c.append(document.createTextNode('Text from 2023-01-14 conversation with'));
+a.setAttribute('href', 'https://chat.openai.com/auth/login');
+a.append(document.createTextNode('ChatGPT'));
+c2.append(document.createTextNode('Photo of a young Tim Berners-Lee from'));
+a2.setAttribute('href', "https:www.flickr.com/photos/itupictures/16662336315");
+a2.append(document.createTextNode('Flickr'));
+c3.append(document.createTextNode('no thanks to ChatGPT.'));
+a3.setAttribute('href', 'https://creativecommons.org/licenses/by/2.0/');
+a3.append(document.createTextNode('CC BY 2.0'));
+img.append(document.querySelector("body > img"));
 
 // Add the new H1 element to the body.
 body.append(q1);
@@ -64,9 +87,19 @@ body.append(l7);
 body.append(l8);
 body.append(l9);
 body.append(l10);
+body.append(ls2);
 body.append(p4)
 body.append(q4);
 body.append(p5);
+body.append(img);
+
+body.append(credits);
+credits.append(c);
+c.append(a);
+credits.append(c2);
+c2.append(a2);
+c2.append(c3);
+c2.append(a3);
 
 // Create a text node and add it to the P element. Note the use of `` rather
 // than '' which allows us to break the string across lines.
