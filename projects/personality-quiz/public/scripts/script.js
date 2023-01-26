@@ -3,12 +3,15 @@
 
 // Create a paragraph element
 const p = document.createElement('p');
+const p2 = document.createElement('p');
 
 // Create the text of the paragraph.
 const text = document.createTextNode('This paragraph is created dynamically.');
+p2.append(document.createTextNode('this is another paragraph that I added'))
 
 // Add the text to the paragraph.
 p.append(text);
+p.append(p2);
 
 // And add the new paragraph to the body of the document.
 document.querySelector('body').append(p);
