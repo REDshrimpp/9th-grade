@@ -47,19 +47,22 @@ const recordClick = (e) => {
 
 };
 
+
+
 const recordClick2 = (e) => {
-  const p2 = document.createElement('p');
 
   p2.append(document.createTextNode('foobar'))
 
-  p2.append(p2)
+  text.append(p2)
 }
 
+const c = document.createElement('h1')
+
+c.onclick = recordClick2
 
 ////////////////////////////////////////////////////////////////////////////////
 // Add something to every existing paragraph.
 
-const c = document.createElement('h1');
 const b = document.createElement('b');
 
 document.querySelectorAll('p').forEach((p) => {
@@ -74,12 +77,13 @@ document.querySelectorAll('p').forEach((p) => {
   // clicked.
   b.onclick = recordClick;
 
-  c.onclick = recordClick2;
-
   // Append some text to the current paragraph.
   p.append(document.createTextNode(' '));
 
   // And finally append the bold element to the paragraph.
   p.append(b);
+
+  //isolated click function
+
 });
 
