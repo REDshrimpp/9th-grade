@@ -14,7 +14,8 @@ p.append(text);
 p.append(p2);
 
 // And add the new paragraph to the body of the document.
-document.querySelector('body').append(p);
+const body = document.body;
+body.append(p);
 
 ////////////////////////////////////////////////////////////////////////////////
 // Add ten paragraphs.
@@ -53,12 +54,12 @@ const recordClick2 = (e) => {
 
   p2.append(document.createTextNode('foobar'))
 
-  text.append(p2)
 }
 
-const c = document.createElement('h1')
+body.append(p2)
 
-c.onclick = recordClick2
+
+p2.onclick = recordClick2
 
 ////////////////////////////////////////////////////////////////////////////////
 // Add something to every existing paragraph.
