@@ -1,20 +1,22 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Add a single paragraph dynamically
 
+
+
+
 // Create a paragraph element
 const p = document.createElement('p');
-const p2 = document.createElement('h1');
 
 // Create the text of the paragraph.
 const text = document.createTextNode('This paragraph is created dynamically.');
-p2.append(document.createTextNode('this is another paragraph that I added'))
+
 
 // Add the text to the paragraph.
 p.append(text);
 p.append(p2);
 
 // And add the new paragraph to the body of the document.
-const body = document.body;
+
 body.append(p);
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +49,9 @@ const recordClick = (e) => {
 
 
 };
+
+
+
 
 
 
@@ -88,3 +93,43 @@ document.querySelectorAll('p').forEach((p) => {
 
 });
 
+
+
+//
+// MY CODE
+//
+
+//defining the answercount variable
+let amountOf1Answers = 0
+let amountOf2Answers = 0
+
+//creating the answer elements
+const answer = document.createElement('h1');
+const answer2 = document.createElement('h1');
+const response = document.createElement('p');
+
+//creating the question text
+answer.append(document.createTextNode('ANSWER 1'));
+answer2.append(document.createTextNode('ANSWER 2'));
+
+//creating the onclick function
+const recordAnswer1 = () => {
+  amountOf1Answers++
+
+  //const response = document.createElement('p');
+  response.append(document.createTextNode('foobar'));
+   document.getElementById('Clicks').append(response);
+}
+
+const recordAnswer2 = () => {
+  amountOf2Answers++
+  console.log(amountOf2Answers)
+}
+
+//assigning the click function
+answer.onclick = recordAnswer1
+answer2.onclick = recordAnswer2
+
+const body = document.body;
+body.append(answer);
+body.append(answer2);
