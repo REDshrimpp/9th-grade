@@ -2,7 +2,7 @@
 // Add a single paragraph dynamically
 
 
-
+/*
 
 // Create a paragraph element
 const p = document.createElement('p');
@@ -93,7 +93,7 @@ document.querySelectorAll('p').forEach((p) => {
 
 });
 
-
+*/
 
 //
 // MY CODE
@@ -102,6 +102,7 @@ document.querySelectorAll('p').forEach((p) => {
 //defining the answercount variable
 let amountOf1Answers = 0
 let amountOf2Answers = 0
+let output = 'start'
 
 //creating the answer elements
 const answer = document.createElement('h1');
@@ -109,19 +110,19 @@ const answer2 = document.createElement('h1');
 const response = document.createElement('p');
 
 //creating the question text
-answer.append(document.createTextNode('ANSWER 1'));
-answer2.append(document.createTextNode('ANSWER 2'));
+answer.append('ANSWER 1');
+answer2.append('ANSWER 2');
+response.append(output);
 
 //creating the onclick function
 const recordAnswer1 = () => {
+  output = 'foobar'
   amountOf1Answers++
-
-  //const response = document.createElement('p');
-  response.append(document.createTextNode('foobar'));
-   document.getElementById('Clicks').append(response);
+  console.log(amountOf1Answers)
 }
 
 const recordAnswer2 = () => {
+  output = 'barfoo'
   amountOf2Answers++
   console.log(amountOf2Answers)
 }
@@ -133,3 +134,6 @@ answer2.onclick = recordAnswer2
 const body = document.body;
 body.append(answer);
 body.append(answer2);
+body.append(response);
+
+//OUTPUT FUNCTION
