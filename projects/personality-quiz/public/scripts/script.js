@@ -137,3 +137,12 @@ body.append(answer2);
 body.append(response);
 
 //OUTPUT FUNCTION
+
+const quizProduct = (amountOf1Answers, amountOf2Answers) => {
+  if (amountOf1Answers > amountOf2Answers) {
+    return 'product1'
+  }
+  else {
+    return 'product2'
+  }
+}
