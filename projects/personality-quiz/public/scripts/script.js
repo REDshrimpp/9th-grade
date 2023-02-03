@@ -99,42 +99,68 @@ document.querySelectorAll('p').forEach((p) => {
 // MY CODE
 //
 
-//defining the answercount variable
+//DEFINING THE VARIABLES
 let amountOf1Answers = 0
 let amountOf2Answers = 0
-let output = 'start'
 
-//creating the answer elements
-const answer = document.createElement('h1');
-const answer2 = document.createElement('h1');
-const response = document.createElement('p');
+//ASSIGNING NAMES TO ELEMENTS
+const answer = document.createElement('p');
+const answer2 = document.createElement('p');
+const question = document.createElement('h1');
+const questionChangerButton = document.createElement('p');
+//const response = document.createElement('p');
 
-//creating the question text
+//MAKING THE TEXT NODES
 answer.append('ANSWER 1');
 answer2.append('ANSWER 2');
-response.append(output);
+question.append('CURRENTQUESTION')
+questionChangerButton.append('change question')
+//response.append('start');
 
-//creating the onclick function
+//RECORD ANSWER FUNCTIONS
 const recordAnswer1 = () => {
-  output = 'foobar'
+  //response.replaceChildren('answer1')
   amountOf1Answers++
   console.log(amountOf1Answers)
 }
 
 const recordAnswer2 = () => {
-  output = 'barfoo'
+  //response.replaceChildren('answer2')
   amountOf2Answers++
   console.log(amountOf2Answers)
 }
 
-//assigning the click function
+const switchQuestion = () => {
+  question.replaceChildren('newQuestion');
+}
+
+//ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
 answer.onclick = recordAnswer1
 answer2.onclick = recordAnswer2
+questionChangerButton.onclick = switchQuestion
 
 const body = document.body;
+body.append(question);
 body.append(answer);
 body.append(answer2);
-body.append(response);
+body.append(questionChangerButton);
+//body.append(response);
+
+//QUESTION RANDOMIZER FUNCTION
+
+const questionRandomizer = () => {
+}
+
+
+
+ 
+
+
+
+
+
+
+
 
 //OUTPUT FUNCTION
 
@@ -146,3 +172,10 @@ const quizProduct = (amountOf1Answers, amountOf2Answers) => {
     return 'product2'
   }
 }
+
+const showQuizProduct = () => {
+  response.append(quizProduct(amountOf1Answers,amountOf2Answers));
+  body.append(response);
+}
+
+testText.onclick = showQuizProduct
