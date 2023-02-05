@@ -99,9 +99,48 @@ document.querySelectorAll('p').forEach((p) => {
 // MY CODE
 //
 
+
+
+
 //DEFINING THE VARIABLES
 let amountOf1Answers = 0
 let amountOf2Answers = 0
+let currentQuestion = 0
+const amountOfQuestions = 5
+
+//QUESTION RANDOMIZER FUNCTION
+
+/*
+const questionRandomizer = () => {
+  let questionNumber = Math.floor(Math.random() * amountOfQuestions);
+  let questions = ['question1', 'question2', 'question3', 'question4', 'question5']
+  for(let x = 0; 0 < amountOfQuestions; x++) {
+    return questions[questionNumber]
+  }
+}
+
+*/
+
+const sequenceQuestionSelector = () => {
+  let questions = ['question1', 'question2', 'question3', 'question4', 'question5']
+  currentQuestion++
+  for(let x = 0; 0 < amountOfQuestions; x++) {
+    return questions[currentQuestion - 1]
+  }
+}
+
+//RECORD ANSWER FUNCTIONS
+const recordAnswer1 = () => {
+  amountOf1Answers++
+  question.replaceChildren(sequenceQuestionSelector());
+  console.log(amountOf1Answers)
+}
+
+const recordAnswer2 = () => {
+  amountOf2Answers++
+  question.replaceChildren(sequenceQuestionSelector());
+  console.log(amountOf2Answers)
+}
 
 //ASSIGNING NAMES TO ELEMENTS
 const answer = document.createElement('p');
@@ -111,45 +150,19 @@ const questionChangerButton = document.createElement('p');
 //const response = document.createElement('p');
 
 //MAKING THE TEXT NODES
-answer.append('ANSWER 1');
-answer2.append('ANSWER 2');
-question.append('CURRENTQUESTION')
-questionChangerButton.append('change question')
-//response.append('start');
-
-//RECORD ANSWER FUNCTIONS
-const recordAnswer1 = () => {
-  //response.replaceChildren('answer1')
-  amountOf1Answers++
-  console.log(amountOf1Answers)
-}
-
-const recordAnswer2 = () => {
-  //response.replaceChildren('answer2')
-  amountOf2Answers++
-  console.log(amountOf2Answers)
-}
-
-const switchQuestion = () => {
-  question.replaceChildren('newQuestion');
-}
+answer.append('YES');
+answer2.append('NO');
+question.append('Select answer to begin')
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
 answer.onclick = recordAnswer1
 answer2.onclick = recordAnswer2
-questionChangerButton.onclick = switchQuestion
 
+//APPENDING ELEMENTS TO THE BODY
 const body = document.body;
 body.append(question);
 body.append(answer);
 body.append(answer2);
-body.append(questionChangerButton);
-//body.append(response);
-
-//QUESTION RANDOMIZER FUNCTION
-
-const questionRandomizer = () => {
-}
 
 
 
