@@ -103,12 +103,19 @@ document.querySelectorAll('p').forEach((p) => {
 
 
 //DEFINING THE VARIABLES
-let amountOf1Answers = 0
-let amountOf2Answers = 0
+let amountOfAnswers = 0
 let currentQuestion = 0
-const amountOfQuestions = 5
+const question1 = {charge:'positive', question:'QUESTION 1', influence: 3}
+const question2 = {charge:'negative', question:'QUESTION 2', influence: 1}
+const questions = [question1, question2]
+const amountOfQuestions = questions.length
 
-//QUESTION RANDOMIZER FUNCTION
+//ASSIGNING NAMES TO ELEMENTS
+const answer = document.createElement('p');
+const answer2 = document.createElement('p');
+const question = document.createElement('h1');
+
+//QUESTION RANDOMIZER
 
 /*
 const questionRandomizer = () => {
@@ -121,33 +128,52 @@ const questionRandomizer = () => {
 
 */
 
+//SEQUENCE QUESTION SELECTOR
+
 const sequenceQuestionSelector = () => {
-  let questions = ['question1', 'question2', 'question3', 'question4', 'question5']
   currentQuestion++
   for(let x = 0; 0 < amountOfQuestions; x++) {
     return questions[currentQuestion - 1]
   }
 }
 
+//DISPLAY ANSWER
+
+const displayAnswer = (score) => {
+  answer.replaceChildren('')
+  answer2.replaceChildren('')
+  question.replaceChildren('')
+  if (score > 0) {
+    question.replaceChildren('YOU ARE RESULT 1')
+  }
+  else if (score < 0) {
+    question.replaceChildren('YOU ARE RESULT 2')
+  }
+
+  else {
+    quesntion.replaceChildren('YOU ARE BALANCED')
+  }
+}
+
 //RECORD ANSWER FUNCTIONS
 const recordAnswer1 = () => {
-  amountOf1Answers++
-  question.replaceChildren(sequenceQuestionSelector());
-  console.log(amountOf1Answers)
+  amountOfAnswers++
+  question.replaceChildren(sequenceQuestionSelector().question);
+  console.log(amountOfAnsers)
+  if (amountOfAnswers >= amountOfQuestions) {
+    displayAnswer(amountOfAnsers, amountOf2Answers);
+  }
 }
 
 const recordAnswer2 = () => {
-  amountOf2Answers++
-  question.replaceChildren(sequenceQuestionSelector());
+  amountOfAnswers++
+  score = score + questions[currentQuestion.influence]
+  question.replaceChildren(sequenceQuestionSelector().question);
   console.log(amountOf2Answers)
+  if (amountOfAnsers + amountOf2Answers >= amountOfQuestions) {
+    displayAnswer(amountOfAnsers, amountOf2Answers);
+  }
 }
-
-//ASSIGNING NAMES TO ELEMENTS
-const answer = document.createElement('p');
-const answer2 = document.createElement('p');
-const question = document.createElement('h1');
-const questionChangerButton = document.createElement('p');
-//const response = document.createElement('p');
 
 //MAKING THE TEXT NODES
 answer.append('YES');
@@ -163,32 +189,3 @@ const body = document.body;
 body.append(question);
 body.append(answer);
 body.append(answer2);
-
-
-
- 
-
-
-
-
-
-
-
-
-//OUTPUT FUNCTION
-
-const quizProduct = (amountOf1Answers, amountOf2Answers) => {
-  if (amountOf1Answers > amountOf2Answers) {
-    return 'product1'
-  }
-  else {
-    return 'product2'
-  }
-}
-
-const showQuizProduct = () => {
-  response.append(quizProduct(amountOf1Answers,amountOf2Answers));
-  body.append(response);
-}
-
-testText.onclick = showQuizProduct
