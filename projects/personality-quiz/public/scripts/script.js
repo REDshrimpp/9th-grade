@@ -20,6 +20,7 @@ const sequenceQuestionSelector = () => {
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
+  //question.style.display = 
   if (score > 0) {
     question.replaceChildren('YOU ARE RESULT 1')
   }
@@ -34,17 +35,20 @@ const displayAnswer = (score) => {
 
 //RECORD ANSWER FUNCTIONS
 const recordAnswer = (e) => {
-  console.log('foobar')
-  //console.log(e.currentTarget)
-  if (e.currentTarget === 'yes') {
+  amountOfAnswers++;
+  console.log(score);
+  question.replaceChildren(sequenceQuestionSelector().question);
+  console.log(e.currentTarget);
+  if (e.currentTarget === yes) {
+    console.log('runCheck');
     if (questions[currentQuestion].charge === 'positive') {
       score = score + questions[currentQuestion].influence
     }
-    else if (questions[currentQuestion] === 'negative') {
+    else if (questions[currentQuestion].charge === 'negative') {
       score = score - questions[currentQuestion].influence
     }
   }
-  else if (e.currentTarget === answer2) {
+  else if (e.currentTarget === no) {
     if (questions[currentQuestion] === 'negative') {
       score = score - questions[currentQuestion].influence
     }
@@ -52,13 +56,11 @@ const recordAnswer = (e) => {
       score = score + questions[currentQuestion.influence]
     }
   }
-  amountOfAnswers++
-  question.replaceChildren(sequenceQuestionSelector().question);
   if (amountOfAnswers >= questions.length) {
     displayAnswer(score)
   }
 }
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
-yes.onclick = recordAnswer
-no.onclick = recordAnswer
+yes.onclick = recordAnswer;
+no.onclick = recordAnswer;
