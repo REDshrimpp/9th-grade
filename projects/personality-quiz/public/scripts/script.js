@@ -3,8 +3,21 @@ let amountOfAnswers = 0
 let currentQuestion = 0
 let score = 0
 const questions = [
-  { charge: 'positive', question: 'QUESTION 1', influence: 3 },
-  { charge: 'negative', question: 'QUESTION 2', influence: 1 }]
+  { charge: 'negative', question: 'do you poor the milk first?', influence: 5 },
+  { charge: 'negative', question: 'do you like the sun?', influence: 1 },
+  { charge: 'negative', question: 'do snakes intimidate you?', influence: 3 },
+  { charge: 'positive', question: 'thoughts on boulders?', influence: 1 },
+  { charge: 'positive', question: 'tu tienes que bebir la sandia?', influence: 4 },
+  { charge: 'positive', question: '', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },
+  { charge: 'positive', question: 'QUESTION 2', influence: 1 },]
+
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
@@ -20,12 +33,11 @@ const sequenceQuestionSelector = () => {
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  //question.style.display = 
   if (score > 0) {
-    question.replaceChildren('YOU ARE RESULT 1')
+    question.replaceChildren('you are right')
   }
   else if (score < 0) {
-    question.replaceChildren('YOU ARE RESULT 2')
+    question.replaceChildren('you are left')
   }
 
   else {
@@ -36,11 +48,10 @@ const displayAnswer = (score) => {
 //RECORD ANSWER FUNCTIONS
 const recordAnswer = (e) => {
   amountOfAnswers++;
-  console.log(score);
-  question.replaceChildren(sequenceQuestionSelector().question);
-  console.log(e.currentTarget);
+  if (amountOfAnswers >= questions.length) {
+    displayAnswer(score);
+  }
   if (e.currentTarget === yes) {
-    console.log('runCheck');
     if (questions[currentQuestion].charge === 'positive') {
       score = score + questions[currentQuestion].influence
     }
@@ -49,16 +60,14 @@ const recordAnswer = (e) => {
     }
   }
   else if (e.currentTarget === no) {
-    if (questions[currentQuestion] === 'negative') {
+    if (questions[currentQuestion].charge === 'negative') {
+      score = score + questions[currentQuestion].influence
+    }
+    else if (questions[currentQuestion].charge === 'positive') {
       score = score - questions[currentQuestion].influence
     }
-    else if (questions[currentQuestion] === 'positive') {
-      score = score + questions[currentQuestion.influence]
-    }
   }
-  if (amountOfAnswers >= questions.length) {
-    displayAnswer(score)
-  }
+  question.replaceChildren(sequenceQuestionSelector().question);
 }
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
