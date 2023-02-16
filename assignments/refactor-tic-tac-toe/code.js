@@ -72,6 +72,7 @@ registerOnclick((x, y) => {
   let c;
 
   // Check if there's a winner already.
+  const isWinnerAlready = () => {
   for (let i = 0; i < lines.length; i++) {
     r = lines[i][0][0];
     c = lines[i][0][1];
@@ -83,9 +84,10 @@ registerOnclick((x, y) => {
     c = lines[i][2][1];
     const m2 = board[r][c];
     if (m0 !== '' && m0 === m1 && m0 === m2) {
-      winner = lines[i];
     }
   }
+  return lines[i] === 0
+}
 
   r = Math.floor((y - boardTop) / cellSize);
   c = Math.floor((x - boardLeft) / cellSize);
@@ -94,6 +96,7 @@ registerOnclick((x, y) => {
   if (winner === null && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === '') {
 
     // Draw the mark and record the move
+    //const recordMove = () => {
     const marker = move % 2 === 0 ? 'X' : 'O';
     const x = boardLeft + c * cellSize + cellSize / 2;
     const y = boardTop + r * cellSize + cellSize / 2;
