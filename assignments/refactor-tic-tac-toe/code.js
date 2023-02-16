@@ -84,9 +84,9 @@ registerOnclick((x, y) => {
     c = lines[i][2][1];
     const m2 = board[r][c];
     if (m0 !== '' && m0 === m1 && m0 === m2) {
+      return lines[i] !== 0
     }
   }
-  return lines[i] !== 0
 }
 
   r = Math.floor((y - boardTop) / cellSize);
