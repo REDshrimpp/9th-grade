@@ -88,7 +88,7 @@ registerOnclick((x, y) => {
   return lines[i] === 0
 }
 
-console.log(isWinnerAlready)
+console.log(isWinnerAlready())
 
   r = Math.floor((y - boardTop) / cellSize);
   c = Math.floor((x - boardLeft) / cellSize);
