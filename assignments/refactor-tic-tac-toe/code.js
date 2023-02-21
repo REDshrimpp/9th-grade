@@ -67,13 +67,14 @@ const x2 = boardLeft + 2 * cellSize;
 const y1 = boardTop + cellSize;
 const y2 = boardTop + 2 * cellSize;;
 
+drawBoard(x1, x2, y1, y2)
+
 registerOnclick((x, y) => {
 
   let winner = null;
   let r;
   let c;
 
-drawBoard(boardLeft + cellsize, boardLeft + 2 * cellSize, boardTop + cellSize, boarddTop + 2 * cellSize)
   // Check if there's a winner already.
   const isWinnerAlready = () => {
     for (let i = 0; i < lines.length; i++) {
