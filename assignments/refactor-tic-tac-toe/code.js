@@ -70,6 +70,8 @@ const y2 = boardTop + 2 * cellSize;;
 drawBoard(x1, x2, y1, y2)
 
 const isWinnerAlready = () => {
+  let r;
+  let c;
   for (let i = 0; i < lines.length; i++) {
     r = lines[i][0][0];
     c = lines[i][0][1];
