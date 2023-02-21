@@ -78,13 +78,13 @@ registerOnclick((x, y) => {
   // Check if there's a winner already.
   const isWinnerAlready = () => {
     for (let i = 0; i < lines.length; i++) {
-      row = lines[i][0][0];
-      collumn = lines[i][0][1];
+      r = lines[i][0][0];
+      c = lines[i][0][1];
       const m0 = board[r][c];
-      row = lines[i][1][0];
-      collumn = lines[i][1][1];
+      r = lines[i][1][0];
+      c = lines[i][1][1];
       const m1 = board[row][collumn];
-      row = lines[i][2][0];
+      r = lines[i][2][0];
       c = lines[i][2][1];
       const m2 = board[r][c];
       return m0 !== '' && m0 === m1 && m0 === m2
