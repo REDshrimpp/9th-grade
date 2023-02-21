@@ -90,8 +90,6 @@ registerOnclick((x, y) => {
   let r;
   let c;
 
-  console.log(isWinnerAlready())
-
 
   // Check if there's a winner already.
 
@@ -99,6 +97,13 @@ registerOnclick((x, y) => {
 
   r = Math.floor((y - boardTop) / cellSize);
   c = Math.floor((x - boardLeft) / cellSize);
+
+  //replacement function:
+  /*
+  const isLegalMove = (isWinner, selectedRow, selectedCollumn) => {
+    return !isWinnerAlready && board[selectedRow][selectedCollumn] === ''
+  }
+*/
 
   // Only do anything if it's a legal move and the game isn't over.
   if (winner === null && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === '') {
