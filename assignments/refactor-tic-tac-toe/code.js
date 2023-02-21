@@ -55,15 +55,17 @@ const lines = [
   [[2, 0], [1, 1], [0, 2]],
 ];
 
-// Draw the board
+const drawBoard = (x1, x2, y1, y2) => {
+  drawLine(x1, boardTop, x1, boardTop + boardSize, 'grey', 2);
+  drawLine(x2, boardTop, x2, boardTop + boardSize, 'grey', 2);
+  drawLine(boardLeft, y1, boardLeft + boardSize, y1, 'grey', 2);
+  drawLine(boardLeft, y2, boardLeft + boardSize, y2, 'grey', 2);
+}
+
 const x1 = boardLeft + cellSize;
 const x2 = boardLeft + 2 * cellSize;
 const y1 = boardTop + cellSize;
 const y2 = boardTop + 2 * cellSize;;
-drawLine(x1, boardTop, x1, boardTop + boardSize, 'grey', 2);
-drawLine(x2, boardTop, x2, boardTop + boardSize, 'grey', 2);
-drawLine(boardLeft, y1, boardLeft + boardSize, y1, 'grey', 2);
-drawLine(boardLeft, y2, boardLeft + boardSize, y2, 'grey', 2);
 
 registerOnclick((x, y) => {
 
@@ -71,24 +73,25 @@ registerOnclick((x, y) => {
   let r;
   let c;
 
+drawBoard(boardLeft + cellsize, boardLeft + 2 * cellSize, boardTop + cellSize, boarddTop + 2 * cellSize)
   // Check if there's a winner already.
   const isWinnerAlready = () => {
-  for (let i = 0; i < lines.length; i++) {
-    row = lines[i][0][0];
-    collumn = lines[i][0][1];
-    const m0 = board[r][c];
-    row = lines[i][1][0];
-    collumn = lines[i][1][1];
-    const m1 = board[row][collumn];
-    row = lines[i][2][0];
-    c = lines[i][2][1];
-    const m2 = board[r][c];
+    for (let i = 0; i < lines.length; i++) {
+      row = lines[i][0][0];
+      collumn = lines[i][0][1];
+      const m0 = board[r][c];
+      row = lines[i][1][0];
+      collumn = lines[i][1][1];
+      const m1 = board[row][collumn];
+      row = lines[i][2][0];
+      c = lines[i][2][1];
+      const m2 = board[r][c];
       return m0 !== '' && m0 === m1 && m0 === m2
+    }
+    return lines[i] === 0
   }
-  return lines[i] === 0
-}
 
-console.log(isWinnerAlready())
+  console.log(isWinnerAlready())
 
   r = Math.floor((y - boardTop) / cellSize);
   c = Math.floor((x - boardLeft) / cellSize);
