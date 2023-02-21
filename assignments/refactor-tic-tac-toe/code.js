@@ -69,27 +69,31 @@ const y2 = boardTop + 2 * cellSize;;
 
 drawBoard(x1, x2, y1, y2)
 
+const isWinnerAlready = () => {
+  for (let i = 0; i < lines.length; i++) {
+    r = lines[i][0][0];
+    c = lines[i][0][1];
+    const m0 = board[r][c];
+    r = lines[i][1][0];
+    c = lines[i][1][1];
+    const m1 = board[r][c];
+    r = lines[i][2][0];
+    c = lines[i][2][1];
+    const m2 = board[r][c];
+    return m0 !== '' && m0 === m1 && m0 === m2
+  }
+}
+
 registerOnclick((x, y) => {
 
   let winner = null;
   let r;
   let c;
 
+  console.log(isWinnerAlready)
+
+
   // Check if there's a winner already.
-  const isWinnerAlready = () => {
-    for (let i = 0; i < lines.length; i++) {
-      r = lines[i][0][0];
-      c = lines[i][0][1];
-      const m0 = board[r][c];
-      r = lines[i][1][0];
-      c = lines[i][1][1];
-      const m1 = board[r][c];
-      r = lines[i][2][0];
-      c = lines[i][2][1];
-      const m2 = board[r][c];
-      return m0 !== '' && m0 === m1 && m0 === m2
-    }
-  }
 
   console.log(isWinnerAlready())
 
