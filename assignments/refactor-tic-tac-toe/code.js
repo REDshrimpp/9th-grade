@@ -71,15 +71,15 @@ drawBoard(x1, x2, y1, y2)
 
 const isWinnerAlready = () => {
   for (let i = 0; i < lines.length; i++) {
-    r = lines[i][0][0];
-    c = lines[i][0][1];
-    m0 = board[r][c];
-    r = lines[i][1][0];
-    c = lines[i][1][1];
-    m1 = board[r][c];
-    r = lines[i][2][0];
-    c = lines[i][2][1];
-    m2 = board[r][c];
+    let r = lines[i][0][0];
+    let c = lines[i][0][1];
+    let m0 = board[r][c];
+    let r = lines[i][1][0];
+    let c = lines[i][1][1];
+    let m1 = board[r][c];
+    let r = lines[i][2][0];
+    let c = lines[i][2][1];
+    let m2 = board[r][c];
     return m0 !== '' && m0 === m1 && m0 === m2
   }
 }
