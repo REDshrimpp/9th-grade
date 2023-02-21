@@ -89,7 +89,6 @@ registerOnclick((x, y) => {
       const m2 = board[r][c];
       return m0 !== '' && m0 === m1 && m0 === m2
     }
-    return lines[i] === 0
   }
 
   console.log(isWinnerAlready())
