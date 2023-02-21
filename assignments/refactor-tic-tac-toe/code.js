@@ -90,7 +90,7 @@ registerOnclick((x, y) => {
   let r;
   let c;
 
-  console.log(isWinnerAlready)
+  console.log(isWinnerAlready())
 
 
   // Check if there's a winner already.
