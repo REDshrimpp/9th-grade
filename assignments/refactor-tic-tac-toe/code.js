@@ -142,8 +142,7 @@ registerOnclick((x, y) => {
     // Check if there's a winner now
   
     if (isWinnerAlready) {
-      // Draw the line through three in a row
-    
+      console.log('test')
     }
   }
 });
