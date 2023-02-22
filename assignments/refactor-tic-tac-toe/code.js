@@ -147,7 +147,7 @@ registerOnclick((x, y) => {
 
 
   if (isWinnerAlready()) {
-    console.log('test')
+    drawWinnerLine()
   }
 });
 
