@@ -99,7 +99,7 @@ registerOnclick((x, y) => {
 
   let winner = null;
 
-
+console.log(isLegalMove())
 
   // Only do anything if it's a legal move and the game isn't over.
   if (isLegalMove()) {
