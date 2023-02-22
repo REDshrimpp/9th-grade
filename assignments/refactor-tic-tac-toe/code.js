@@ -142,7 +142,7 @@ registerOnclick((x, y) => {
     // Check if there's a winner now
   
     if (isWinnerAlready) {
-      console.log('test')
+      //console.log('test')
     }
   }
 });
