@@ -91,41 +91,43 @@ const isWinnerAlready = () => {
 
 const drawWinnerLine = () => {
   const [r1, c1] = winner[0];
-      const [r2, c2] = winner[winner.length - 1];
+  const [r2, c2] = winner[winner.length - 1];
 
-      const x1 = boardLeft + c1 * cellSize + cellSize / 2;
-      const y1 = boardTop + r1 * cellSize + cellSize / 2;
-      const x2 = boardLeft + c2 * cellSize + cellSize / 2;
-      const y2 = boardTop + r2 * cellSize + cellSize / 2;
+  const x1 = boardLeft + c1 * cellSize + cellSize / 2;
+  const y1 = boardTop + r1 * cellSize + cellSize / 2;
+  const x2 = boardLeft + c2 * cellSize + cellSize / 2;
+  const y2 = boardTop + r2 * cellSize + cellSize / 2;
 
-      let adjX1 = x1;
-      let adjX2 = x2;
-      let adjY1 = y1;
-      let adjY2 = y2;
+  let adjX1 = x1;
+  let adjX2 = x2;
+  let adjY1 = y1;
+  let adjY2 = y2;
 
-      if (y1 === y2 || x1 !== x2) {
-        adjX1 -= lineEndAdjustment;
-        adjX2 += lineEndAdjustment;
-      }
+  if (y1 === y2 || x1 !== x2) {
+    adjX1 -= lineEndAdjustment;
+    adjX2 += lineEndAdjustment;
+  }
 
-      if (x1 === x2 || y1 !== y2) {
-        const slope = y1 < y2 ? 1 : -1;
-        adjY1 -= (slope * lineEndAdjustment);
-        adjY2 += (slope * lineEndAdjustment);
-      }
+  if (x1 === x2 || y1 !== y2) {
+    const slope = y1 < y2 ? 1 : -1;
+    adjY1 -= (slope * lineEndAdjustment);
+    adjY2 += (slope * lineEndAdjustment);
+  }
 
-      drawLine(adjX1, adjY1, adjX2, adjY2, 'red', 15);
+  drawLine(adjX1, adjY1, adjX2, adjY2, 'red', 15);
 }
 
 const isLegalMove = (x, y) => {
   let r = Math.floor((y - boardTop) / cellSize);
   let c = Math.floor((x - boardLeft) / cellSize);
-  return 0 <= r && r < 3 && 0 <= c && c < 3  && board[r][c] === ''
+  return 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === ''
 }
 
 registerOnclick((x, y) => {
   const r = Math.floor((y - boardTop) / cellSize);
   const c = Math.floor((x - boardLeft) / cellSize);
+
+  concole.log(isWinnerAlready())
 
   // Only do anything if it's a legal move and the game isn't over.
   if (isLegalMove(x, y)) {
@@ -140,9 +142,9 @@ registerOnclick((x, y) => {
     move++;
 
     // Check if there's a winner now
-  
+
     if (isWinnerAlready) {
-      //console.log('test')
+      console.log('test')
     }
   }
 });
