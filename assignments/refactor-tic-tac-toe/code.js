@@ -89,6 +89,12 @@ const isWinnerAlready = () => {
   return false
 }
 
+const isLegalMove = () => {
+    r = Math.floor((y - boardTop) / cellSize);
+    c = Math.floor((x - boardLeft) / cellSize);
+    return !isWinnerAlready && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === ''
+  }
+
 registerOnclick((x, y) => {
 
   let winner = null;
@@ -96,22 +102,9 @@ registerOnclick((x, y) => {
   let c;
 
 
-  // Check if there's a winner already.
-
-  console.log(isWinnerAlready())
-
-  r = Math.floor((y - boardTop) / cellSize);
-  c = Math.floor((x - boardLeft) / cellSize);
-
-  //replacement function:
-  
-  const isLegalMove = (selectedRow, selectedCollumn) => {
-    return !isWinnerAlready && board[selectedRow][selectedCollumn] === ''
-  }
-
 
   // Only do anything if it's a legal move and the game isn't over.
-  if (!isWinnerAlready() && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === '') {
+  if (isLegalMove()) {
 
     // Draw the mark and record the move
     const marker = move % 2 === 0 ? 'X' : 'O';
