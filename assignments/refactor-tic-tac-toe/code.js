@@ -92,14 +92,13 @@ const isWinnerAlready = () => {
 const isLegalMove = (x, y) => {
   let r = Math.floor((y - boardTop) / cellSize);
   let c = Math.floor((x - boardLeft) / cellSize);
+  console.log(r)
   return !isWinnerAlready && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === ''
 }
 
 registerOnclick((x, y) => {
-
+isLegalMove()
   let winner = null;
-
-console.log(isLegalMove())
 
   // Only do anything if it's a legal move and the game isn't over.
   if (isLegalMove()) {
