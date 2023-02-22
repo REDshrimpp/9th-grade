@@ -104,11 +104,11 @@ registerOnclick((x, y) => {
   c = Math.floor((x - boardLeft) / cellSize);
 
   //replacement function:
-  /*
-  const isLegalMove = (isWinner, selectedRow, selectedCollumn) => {
+  
+  const isLegalMove = (selectedRow, selectedCollumn) => {
     return !isWinnerAlready && board[selectedRow][selectedCollumn] === ''
   }
-*/
+
 
   // Only do anything if it's a legal move and the game isn't over.
   if (!isWinnerAlready() && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === '') {
