@@ -98,10 +98,8 @@ const isLegalMove = (x, y) => {
 registerOnclick((x, y) => {
   let winner = null;
 
-  console.log(isLegalMove(x, y))
-
   // Only do anything if it's a legal move and the game isn't over.
-  if (isLegalMove()) {
+  if (isLegalMove(x, y)) {
 
     console.log('test')
     // Draw the mark and record the move
