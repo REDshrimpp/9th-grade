@@ -143,11 +143,11 @@ registerOnclick((x, y) => {
     drawMark(r, c)
   }
 
-    // Draw the mark and record the move
+  // Draw the mark and record the move
 
 
-    if (isWinnerAlready()) {
-      console.log('test')
-    }
+  if (isWinnerAlready()) {
+    console.log('test')
   }
 });
+
