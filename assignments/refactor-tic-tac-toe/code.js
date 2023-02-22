@@ -98,8 +98,6 @@ const isLegalMove = (x, y) => {
 registerOnclick((x, y) => {
 
   let winner = null;
-  let r;
-  let c;
 
 
 
