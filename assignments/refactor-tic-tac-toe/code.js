@@ -92,7 +92,7 @@ const isWinnerAlready = () => {
 const isLegalMove = (x, y) => {
   let r = Math.floor((y - boardTop) / cellSize);
   let c = Math.floor((x - boardLeft) / cellSize);
-  return <= r && r < 3 && 0 <= c && c < 3  && board[r][c] === ''
+  return 0 <= r && r < 3 && 0 <= c && c < 3  && board[r][c] === ''
 }
 
 registerOnclick((x, y) => {
