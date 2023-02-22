@@ -96,7 +96,6 @@ const isLegalMove = (x, y) => {
 }
 
 registerOnclick((x, y) => {
-  winner = null;
   const r = Math.floor((y - boardTop) / cellSize);
   const c = Math.floor((x - boardLeft) / cellSize);
 
