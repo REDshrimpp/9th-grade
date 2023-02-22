@@ -111,7 +111,7 @@ registerOnclick((x, y) => {
 */
 
   // Only do anything if it's a legal move and the game isn't over.
-  if (isWinnerAlready && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === '') {
+  if (!isWinnerAlready() && 0 <= r && r < 3 && 0 <= c && c < 3 && board[r][c] === '') {
 
     // Draw the mark and record the move
     const marker = move % 2 === 0 ? 'X' : 'O';
