@@ -89,7 +89,7 @@ const isWinnerAlready = () => {
   return false
 }
 
-const drawLine = () => {
+const drawWinnerLine = () => {
   const [r1, c1] = winner[0];
       const [r2, c2] = winner[winner.length - 1];
 
