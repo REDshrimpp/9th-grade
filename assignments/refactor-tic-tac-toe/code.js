@@ -81,11 +81,12 @@ const drawMark = (r, c) => {
 
 const isWinner = () => {
   let output = [{ r: 0, c: 0 }, { r: 0, c: 0 }, { r: 0, c: 0 }]
+  console.log(output[0])
   for (let i = 0; i < lines.length; i++) {
     output[i].r = lines[i][i][0]
     output[i].c = lines[i][i][1]
     if (output[0] !== '' && output[0] === output[1] && output[0] === output[2]) {
-      return lines
+      return
     }
   }
 }
@@ -128,7 +129,7 @@ registerOnclick((x, y) => {
   const r = Math.floor((y - boardTop) / cellSize);
   const c = Math.floor((x - boardLeft) / cellSize);
 
-
+isWinner()
 
   // Only do anything if it's a legal move and the game isn't over.
   if (isLegalMove(x, y)) {
