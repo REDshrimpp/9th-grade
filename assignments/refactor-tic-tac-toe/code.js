@@ -128,6 +128,7 @@ registerOnclick((x, y) => {
   const r = Math.floor((y - boardTop) / cellSize);
   const c = Math.floor((x - boardLeft) / cellSize);
 
+console.log(lines[0][0][0])
 
   // Only do anything if it's a legal move and the game isn't over.
   if (isLegalMove(x, y)) {
