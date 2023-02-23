@@ -81,7 +81,7 @@ const drawMark = (r, c) => {
 
 const isWinner = () => {
   let output = [{ r: 0, c: 0 }, { r: 0, c: 0 }, { r: 0, c: 0 }]
-  console.log(output[0])
+  console.log(output[0].r)
   for (let i = 0; i < lines.length; i++) {
     output[i].r = lines[i][i][0]
     output[i].c = lines[i][i][1]
