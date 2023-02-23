@@ -85,6 +85,7 @@ const isWinner = () => {
   for (let i = 0; i < lines.length; i++) {
     output[i].r = lines[i][i][0][0]
     output[i].c = lines[i][i][1][1]
+    console.log(output[0].r)
     if (output[0] !== '' && output[0] === output[1] && output[0] === output[2]) {
       return
     }
