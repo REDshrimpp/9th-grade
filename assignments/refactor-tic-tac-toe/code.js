@@ -80,19 +80,11 @@ const drawMark = (r, c) => {
 }
 
 const isWinnerAlready = () => {
-  let r;
-  let c;
+  let output = [{r: 0, c: 0}, {r:0, c: 0}, {r: 0, c: 0}]
   for (let i = 0; i < lines.length; i++) {
-    r = lines[i][0][0];
-    c = lines[i][0][1];
-    const m0 = board[r][c];
-    r = lines[i][1][0];
-    c = lines[i][1][1];
-    const m1 = board[r][c];
-    r = lines[i][2][0];
-    c = lines[i][2][1];
-    const m2 = board[r][c];
-    if (m0 !== '' && m0 === m1 && m0 === m2) {
+    output[i].r = lines[i][i][0]
+    output[i].c = lines[i][i][1]
+    if (output[0] !== '' && output[0] === output[1] && output[0] === output[2]) {
       return true
     }
   }
@@ -146,8 +138,8 @@ registerOnclick((x, y) => {
   // Draw the mark and record the move
 
 
-  if (isWinnerAlready()) {
-    drawWinnerLine()
+  if (isWinnerAlready() !== null) {
+    drawWinnerLine(isWinnerAlready())
   }
 });
 
