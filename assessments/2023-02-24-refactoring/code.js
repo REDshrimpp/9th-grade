@@ -24,20 +24,6 @@ const headRadius = headSize / 2;
   drawFilledRect(0, horizon, width, height, 'white');
   drawLine(0, horizon, width, horizon, '#bbb');
 
-  // Draw the snowman
-  const x = width / 2;
-  const proportions = [3, 4, 5];
-  const [headP, torsoP, buttP] = proportions;
-  const total = proportions.reduce((tot, p) => tot + p, 0);
-
-  const headSize = size * (headP / total);
-  const torsoSize = size * (torsoP / total)
-  const buttSize = size * (buttP / total);
-
-  const headY = (base - size) + headSize / 2;
-  const torsoY = headY + headSize / 2 + torsoSize / 2;
-  const buttY = torsoY + torsoSize / 2 + buttSize / 2;
-
   // Draw the head
   drawHead(headSize)
 
