@@ -30,7 +30,7 @@ const drawMouth = (headRadius, headY) => {
 const drawHat = (brimTop, brimWidth, headRadius) => {
   const hatHeight = headRadius * 1.25;
   drawFilledRect(x - brimWidth / 2, brimTop, brimWidth, brimWidth * 0.08, 'black');
-  drawFilledRect(x - hatWidth / 2, brimTop - hatHeight, brimWidth * 0.7, hatHeight, 'black');
+  drawFilledRect(x - brimWidth * 0.7 / 2, brimTop - hatHeight, brimWidth * 0.7, hatHeight, 'black');
 }
 const drawTorso = (torsoY, torsoRadius) => {
   drawCircle(x, torsoY, torsoRadius + 2, 'black', 3);
