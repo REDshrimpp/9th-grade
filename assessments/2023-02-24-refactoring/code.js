@@ -62,7 +62,6 @@ const drawButt = (buttSize, torsoY, torsoSize) => {
 
 const drawPicture = (horizon, base, size, proportions) => {
 
-  //const [proportions[0], proportions[1], proportions[2]] = proportions;
   const total = proportions.reduce((tot, p) => tot + p, 0);
 
   const headSize = size * (proportions[0] / total);
