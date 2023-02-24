@@ -1,5 +1,11 @@
 const drawPicture = (horizon, base, size) => {
 
+const drawHead = (headSize) => {
+const headRadius = headSize / 2;
+  drawCircle(x, headY, headRadius + 2, 'black', 3);
+  drawFilledCircle(x, headY, headRadius, 'white', 3);
+}
+
   // Draw the background
   drawFilledRect(0, 0, width, horizon, '#ddeeff');
   drawFilledRect(0, horizon, width, height, 'white');
@@ -20,9 +26,7 @@ const drawPicture = (horizon, base, size) => {
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 
   // Draw the head
-  const headRadius = headSize / 2;
-  drawCircle(x, headY, headRadius + 2, 'black', 3);
-  drawFilledCircle(x, headY, headRadius, 'white', 3);
+  drawHead()
 
   // Draw the eyes
   const eyeSpacing = headRadius * 0.25;
