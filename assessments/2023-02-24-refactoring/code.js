@@ -1,7 +1,6 @@
 const x = width / 2;
 
 const drawHead = (headSize, headY) => {
-  const headRadius = headSize / 2;
   drawCircle(x, headY, headRadius + 2, 'black', 3);
   drawFilledCircle(x, headY, headRadius, 'white', 3);
 }
@@ -75,6 +74,7 @@ const drawPicture = (horizon, base, size) => {
   const headY = (base - size) + headSize / 2;
   const torsoY = headY + headSize / 2 + torsoSize / 2;
   const torsoRadius = torsoSize / 2;
+  const headRadius = headSize / 2;
 
 
   // Draw the head
