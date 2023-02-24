@@ -54,7 +54,7 @@ const drawButtons = (torsoY, torsoRadius) => {
   }
 }
 
-const drawButt = (buttSize, torsoY) => {
+const drawButt = (buttSize, torsoY, torsoSize) => {
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
   const buttRadius = buttSize / 2;
   drawCircle(x, buttY, buttRadius + 2, 'black', 3);
