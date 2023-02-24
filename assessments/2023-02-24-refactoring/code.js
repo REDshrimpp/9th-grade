@@ -75,9 +75,12 @@ const drawPicture = (horizon, base, size) => {
   const torsoRadius = torsoSize / 2;
   const headRadius = headSize / 2;
 
+  //draw the background
+  drawBackground(horizon)
 
   // Draw the head
   drawHead(headY, headRadius)
+
   // Draw the eyes
   drawEyes(headRadius * 0.25, headY)
 
