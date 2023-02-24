@@ -27,7 +27,7 @@ const drawMouth = (headRadius, headY) => {
   }
 }
 
-const drawHat = (brimTop, brimWidth) => {
+const drawHat = (brimTop, brimWidth, headRadius) => {
   const brimHeight = brimWidth * 0.08;
   const hatWidth = brimWidth * 0.7;
   const hatHeight = headRadius * 1.25;
@@ -89,7 +89,7 @@ const drawPicture = (horizon, base, size) => {
   drawMouth(headRadius, headY)
 
   // Draw the hat
-  drawHat(headY - headRadius * 0.9, headRadius * 2.25)
+  drawHat(headY - headRadius * 0.9, headRadius * 2.25, headRadius)
 
   // Draw the torso
   drawTorso(torsoSize, torsoY)
