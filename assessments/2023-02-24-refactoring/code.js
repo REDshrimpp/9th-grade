@@ -60,8 +60,7 @@ const drawButt = (buttSize, torsoY, torsoSize) => {
   drawFilledCircle(x, buttY, buttRadius, 'white', 3);
 }
 
-const drawPicture = (horizon, base, size) => {
-
+const drawPicture = (horizon, base, size, proportions) => {
 
   const [headP, torsoP, buttP] = proportions;
   const total = proportions.reduce((tot, p) => tot + p, 0);
@@ -106,4 +105,4 @@ const drawPicture = (horizon, base, size) => {
   drawButt(buttSize, torsoY, torsoSize)
 };
 
-drawPicture(height * 0.7, height * 0.9, height * 0.7);
+drawPicture(height * 0.7, height * 0.9, height * 0.7, [3, 4, 5]);
