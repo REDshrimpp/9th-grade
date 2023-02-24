@@ -1,5 +1,7 @@
 const drawPicture = (horizon, base, size) => {
 
+const headSize = 10
+
 const drawHead = (headSize) => {
 const headRadius = headSize / 2;
   drawCircle(x, headY, headRadius + 2, 'black', 3);
@@ -26,7 +28,7 @@ const headRadius = headSize / 2;
   const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 
   // Draw the head
-  drawHead()
+  drawHead(headSize)
 
   // Draw the eyes
   const eyeSpacing = headRadius * 0.25;
