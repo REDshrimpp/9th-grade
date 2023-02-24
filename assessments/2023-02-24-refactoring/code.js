@@ -101,7 +101,7 @@ const drawPicture = (horizon, base, size) => {
   drawButtons(torsoY, torsoRadius)
 
   // Draw the butt
-  drawButt(buttSize, torsoY)
+  drawButt(buttSize, torsoY, torsoSize)
 };
 
 drawPicture(height * 0.7, height * 0.9, height * 0.7);
