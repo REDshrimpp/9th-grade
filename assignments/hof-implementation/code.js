@@ -2,8 +2,8 @@
 
 const filter = (predicate, array) => {
   let newArray = []
-  for(let x = 0; x < array.length; x++) {
-    if(array[x] === predicate) {
+  for (let x = 0; x < array.length; x++) {
+    if (array[x] === predicate) {
       newArray.push(array[x])
     }
   }
