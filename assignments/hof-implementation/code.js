@@ -11,6 +11,11 @@ const filter = (predicate, array) => {
 };
 
 const map = (fn, array) => {
+  let newArray = []
+  for (letx = 0; x < array.length; x++) {
+    newArray.push(fn(array[x]))
+  }
+  return newArray
 };
 
 const flatMap = (fn, array) => {
