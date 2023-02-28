@@ -1,7 +1,7 @@
 //EVENS
 
 const evens = (array) => {
-  return array.filter((n) % 2 === 0)
+  return array.filter((n) => n % 2 === 0)
 }
 
 //odds
