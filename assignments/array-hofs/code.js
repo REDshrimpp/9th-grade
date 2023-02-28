@@ -43,3 +43,7 @@ const flatpairs = (array) => {
   return array.flatMap((n) => n = [n, n])
 }
 
+//alleven
+const alleven = (array) => {
+  return array.every((n) => n % 2 === 0)
+}
