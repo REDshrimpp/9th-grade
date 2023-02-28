@@ -37,12 +37,13 @@ const reduce = (fn, initialValue, array) => {
 };
 
 const every = (predicate, array) => {
+  let answer = true
   for (let x = 0; x < array.length; x++) {
     if (array[x] !== predicate) {
-      return false
+      answer = false
     }
   }
-  return true
+  return answer
 };
 
 const some = (predicate, array) => {
