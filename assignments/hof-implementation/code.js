@@ -39,7 +39,6 @@ const every = (predicate, array) => {
       return false
     }
   }
-  return true
 };
 
 const some = (predicate, array) => {
