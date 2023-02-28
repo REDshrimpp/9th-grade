@@ -21,5 +21,7 @@ const grades = (array) => {
 
 //pairs
 const pairs = (array) => {
-  return array.flatmap(n = n, n)
+  return array.flatmap((n) = [n, n])
 }
+
+//
