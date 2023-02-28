@@ -1,7 +1,7 @@
 //EVENS
 
 const evens = (array) => {
-  return array.filter(n % 2 === 0)
+  return array.filter((n) % 2 === 0)
 }
 
 //odds
@@ -21,7 +21,10 @@ const grades = (array) => {
 
 //pairs
 const pairs = (array) => {
-  return array.flatmap((n) = [n, n])
+  return array.flatMap((n) = [n, n])
 }
 
-//
+//averageGrade
+const averageGrade = (array) {
+  return array.reduce((total, num) => total, n) / 
+}
