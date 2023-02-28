@@ -21,7 +21,7 @@ const map = (fn, array) => {
 const flatMap = (fn, array) => {
   let newArray = []
   for (let x = 0; x < array.length; x++) {
-    newArray.push(array[x])
+    newArray.push(fn(array[x]))
   }
   return newArray
 };
