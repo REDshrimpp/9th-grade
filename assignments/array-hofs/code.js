@@ -17,7 +17,7 @@ const big = (array) => {
 }
 
 //names
-const names = (array) 
+//const names = (array) 
 
 
 //grades
