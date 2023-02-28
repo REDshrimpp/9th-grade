@@ -7,25 +7,30 @@ const evens = (array) => {
 /*
 //odds
 const odds = (array) => {
-  return array.filter(n & 2 !== 0)
+  return array.filter((n) => n & 2 !== 0)
 }
 
 //big
 const big = (array) => {
-  return array.filter(n > 100)
+  return array.filter((n) => n > 100)
 }
 
 //grades
 const grades = (array) => {
-  return array.filter(n.grade !== undefined)
+  return array.filter((n) => n.grade !== undefined)
 }
 
 //pairs
 const pairs = (array) => {
-  return array.flatMap((n) = [n, n])
+  return array.flatMap((n) => = [n, n])
 }
 
 //averageGrade
 const averageGrade = (array) => {
   return array.reduce((total, num) => total, n)
+}
+
+//flatpairs
+const flatPairs = (array) => {
+  return array.flatMap
 }
