@@ -47,3 +47,8 @@ const flatpairs = (array) => {
 const allEven = (array) => {
   return array.every((n) => n % 2 === 0)
 }
+
+//someEven
+const someEven = (array) => {
+  return array.some((n) => n % 2 === 0)
+}
