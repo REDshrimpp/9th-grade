@@ -17,7 +17,9 @@ const big = (array) => {
 }
 
 //names
-//const names = (array) 
+const names = (array) => {
+  return array.map((n) => n.name)
+}
 
 
 //grades
