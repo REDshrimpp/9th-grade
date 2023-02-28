@@ -10,12 +10,13 @@ const odds = (array) => {
   return array.filter((n) => n & 2 !== 0)
 }
 
-/*
+
 //big
 const big = (array) => {
   return array.filter((n) => n > 100)
 }
 
+/*
 //grades
 const grades = (array) => {
   return array.filter((n) => n.grade !== undefined)
