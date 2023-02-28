@@ -16,7 +16,10 @@ const big = (array) => {
   return array.filter((n) => n > 100)
 }
 
-/*
+//names
+const names = (array) 
+
+
 //grades
 const grades = (array) => {
   return array.filter((n) => n.grade !== undefined)
