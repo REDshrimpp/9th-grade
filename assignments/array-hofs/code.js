@@ -33,15 +33,13 @@ const pairs = (array) => {
   return array.flatMap((n) => n = [[n, n]])
 }
 
-/*
+
 //averageGrade
 const averageGrade = (array) => {
-  return array.reduce((total, num) => total, n)
+  return array.reduce((total, n) => total + n)
 }
 
 //flatpairs
 const pairs = (array) => {
   return array.flatMap((n) => n = [n, n])
 }
-
-*/
