@@ -44,6 +44,6 @@ const flatpairs = (array) => {
 }
 
 //alleven
-const alleven = (array) => {
+const allEven = (array) => {
   return array.every((n) => n % 2 === 0)
 }
