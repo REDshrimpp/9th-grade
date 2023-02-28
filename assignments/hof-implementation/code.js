@@ -41,7 +41,6 @@ const every = (predicate, array) => {
   for (let x = 0; x < array.length; x++) {
     if (array[x] !== predicate) {
       answer = false
-      console.log(answer)
     }
   }
   return answer
