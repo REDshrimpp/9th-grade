@@ -22,7 +22,7 @@ const big = (array) => {
 
 //grades
 const grades = (array) => {
-  return array.filter((n) => n.grade !== undefined)
+  return array.filter((n) => n.grade !== undefined).grade
 }
 
 /*
