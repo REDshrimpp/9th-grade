@@ -25,6 +25,7 @@ const grades = (array) => {
   return array.filter((n) => n.grade !== undefined)
 }
 
+/*
 //pairs
 const pairs = (array) => {
   return array.flatMap((n) => = [n, n])
