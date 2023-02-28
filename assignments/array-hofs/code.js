@@ -4,12 +4,13 @@ const evens = (array) => {
   return array.filter((n) => n % 2 === 0)
 }
 
-/*
+
 //odds
 const odds = (array) => {
   return array.filter((n) => n & 2 !== 0)
 }
 
+/*
 //big
 const big = (array) => {
   return array.filter((n) => n > 100)
