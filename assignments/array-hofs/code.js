@@ -27,5 +27,5 @@ const pairs = (array) => {
 
 //averageGrade
 const averageGrade = (array) => {
-  return array.reduce((total, num) => total, n) / 
+  return array.reduce((total, num) => total, n)
 }
