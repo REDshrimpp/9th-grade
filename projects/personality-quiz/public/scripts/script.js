@@ -52,32 +52,51 @@ const randomQuestion = () => {
   return selectedQuestion
 }
 
-//RECORD ANSWER FUNCTION
-const recordAnswer = (e) => { //}, vibe, influence, questionNumber) => {
-  //let selectedQuestion = randomQuestion();
-  //selectedQuestion.asked = 'yes'
-  if (e.currentTarget === yes) {
-    vibe = vibe + influence
-  }
-  else if (e.currentTarget === no) {
-    vibe = vibe - influence
-  }
-  console.log(questionNumber)
-  console.log(questions[questionNumber])
-  //question.replaceChildren(questions[questionNumber].question);
+//RECORD CLICK FUNCTION
+const recordClick = (e) => {
+  return e.currentTarget
 }
 
-const personalityQuiz = (questions) => {
-  yes.onclick = recordAnswer;
-  no.onclick = recordAnswer;
-  for (let x = 0; x < questions.length; x++) {
-    recordAnswer(questions[x].vibe, questions[x].influence, x)
+//RECORD ANSWER FUNCTION
+const recordAnswer = (currentQuestion) => {
+  //selectedQuestion.asked = 'yes'
+  if (currentQuestion.vibe = 'positive') {
+    vibe = vibe + influence
   }
+  else if (currentQuestion.vibe = 'negative') {
+    vibe = vibe - influence
+  }
+}
+
+const recordNoAnswer = () => {
+  if (currentQuestion.vibe = 'positive') {
+    vibe = vibe - influence
+  }
+  else if (currentQuestion.vibe = 'negative') {
+    vibe = vibe + influence
+  }
+}
+
+const displayQuestion = (currentQuestion) => {
+  questions.replaceChildren()
+}
+
+const displayQuiz = (questions) => {
+
   //displayAnswer(goodVibes, badVibes);
 }
 
-personalityQuiz(questions);
+displayQuiz()
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
-//yes.onclick = recordAnswer;
-//no.onclick = recordAnswer;
+yes.onclick = (e) => {
+  recordYesAnswer(questions[questionNumber])
+  questionNumber++
+  displayQuestion(questions[currentQuestion])
+}
+
+no.onclick = (e) => {
+  recordNoAnswer(question[pquestionNumber])
+  questionNumber++
+  displayQuestion(questions[currentQuestion])
+}
