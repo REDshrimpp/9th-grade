@@ -1,32 +1,32 @@
 //DEFINING THE VARIABLES
-let goodVibes = 0
-let badVibes = 0
+let questionNumber = 0
+let score = 0
 const questions = [
-  { vibe: badVibes, question: 'do you pour the milk first?', influence: 5, asked: 'no' },
-  { vibe: badVibes, question: 'do you like the sun?', influence: 1, asked: 'no' },
-  { vibe: badVibes, question: 'do snakes intimidate you?', influence: 6, asked: 'no' },
-  { vibe: goodVibes, question: 'thoughts on boulders?', influence: 1, asked: 'no' },
-  { vibe: goodVibes, question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no' },
-  { vibe: goodVibes, question: 'have you ever broken any bones?', influence: 3, asked: 'no' },
-  { vibe: badVibes, question: 'do you like beige?', influence: 1, asked: 'no' },
-  { vibe: goodVibes, question: 'cats or dogs', influence: 1, asked: 'no' },
-  { vibe: goodVibes, question: 'do you like hoodies?', influence: 4, asked: 'no' },
-  { vibe: badVibes, question: 'are you a morning person', influence: 3, asked: 'no' },
-  { vibe: badVibes, question: 'dont you not own an air fryer?', influence: 2, asked: 'no' },
-  { vibe: badVibes, question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no' },
-  { vibe: goodVibes, question: 'is long hair unnatractive?', influence: 7, asked: 'no' },
-  { vibe: goodVibes, question: 'is the ocean annoying?', influence: 4, asked: 'no' },]
+  { vibe: 'badVibes', question: 'do you pour the milk first?', influence: 5, asked: 'no' },
+  { vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no' },
+  { vibe: 'badVibes', question: 'do snakes intimidate you?', influence: 6, asked: 'no' },
+  { vibe: 'goodVibes', question: 'thoughts on boulders?', influence: 1, asked: 'no' },
+  { vibe: 'goodVibes', question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no' },
+  { vibe: 'goodVibes', question: 'have you ever broken any bones?', influence: 3, asked: 'no' },
+  { vibe: 'badVibes', question: 'do you like beige?', influence: 1, asked: 'no' },
+  { vibe: 'goodVibes', question: 'cats or dogs', influence: 1, asked: 'no' },
+  { vibe: 'goodVibes', question: 'do you like hoodies?', influence: 4, asked: 'no' },
+  { vibe: 'badVibes', question: 'are you a morning person', influence: 3, asked: 'no' },
+  { vibe: 'badVibes', question: 'dont you not own an air fryer?', influence: 2, asked: 'no' },
+  { vibe: 'badVibes', question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no' },
+  { vibe: 'goodVibes', question: 'is long hair unnatractive?', influence: 7, asked: 'no' },
+  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no' },]
 
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
+const output = document.getElementById('output');
 
 //DISPLAY ANSWER
 
-const displayAnswer = (goodVibes, badVibes) => {
-  const score = goodVibes - badVibes
+const displayAnswer = (score) => {
   console.log(score)
   if (score > 0) {
     question.replaceChildren('you passed')
@@ -34,7 +34,6 @@ const displayAnswer = (goodVibes, badVibes) => {
   else if (score < 0) {
     question.replaceChildren('you didnt pass')
   }
-
   else {
     question.replaceChildren('YOU ARE BALANCED')
   }
@@ -52,51 +51,46 @@ const randomQuestion = () => {
   return selectedQuestion
 }
 
-//RECORD CLICK FUNCTION
-const recordClick = (e) => {
-  return e.currentTarget
-}
-
 //RECORD ANSWER FUNCTION
-const recordAnswer = (currentQuestion) => {
+const recordYesAnswer = (currentQuestion) => {
   //selectedQuestion.asked = 'yes'
-  if (currentQuestion.vibe = 'positive') {
-    vibe = vibe + influence
+  if (currentQuestion.vibe === 'positive') {
+    score += currentQuestion.influence
   }
-  else if (currentQuestion.vibe = 'negative') {
-    vibe = vibe - influence
+  else if (currentQuestion.vibe === 'negative') {
+    score -= currentQuestion.influence
   }
 }
 
-const recordNoAnswer = () => {
+const recordNoAnswer = (currentQuestion) => {
   if (currentQuestion.vibe = 'positive') {
-    vibe = vibe - influence
+    score -= currentQuestion.influence
   }
   else if (currentQuestion.vibe = 'negative') {
-    vibe = vibe + influence
+    score += currentQuestion.influence
   }
 }
 
 const displayQuestion = (currentQuestion) => {
-  questions.replaceChildren()
+  question.replaceChildren(currentQuestion.question)
 }
-
-const displayQuiz = (questions) => {
-
-  //displayAnswer(goodVibes, badVibes);
-}
-
-displayQuiz()
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
+output.onclick = (e) => {
+  displayQuestion(questions[questionNumber])
+  yes.replaceChildren('yes')
+  no.replaceChildren('no')
+  output.replaceChildren('')
+}
+
 yes.onclick = (e) => {
   recordYesAnswer(questions[questionNumber])
   questionNumber++
-  displayQuestion(questions[currentQuestion])
+  displayQuestion(questions[questionNumber])
 }
 
 no.onclick = (e) => {
-  recordNoAnswer(question[pquestionNumber])
+  recordNoAnswer(question[questionNumber])
   questionNumber++
-  displayQuestion(questions[currentQuestion])
+  displayQuestion(questions[questionNumber])
 }
