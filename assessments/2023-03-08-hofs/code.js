@@ -47,3 +47,7 @@ const smoeonesFavorite = (people, food) => {
     }
   }
 }
+
+const strange = (people) => {
+  return people.filter((p) => p.isStrange)
+}
