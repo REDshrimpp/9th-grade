@@ -51,3 +51,11 @@ const smoeonesFavorite = (people, food) => {
 const strange = (people) => {
   return people.filter((p) => p.isStrange)
 }
+
+const birthdays = (students) => {
+  return students.filter((s) => s.birthday)
+}
+
+const heaviest = (animals) => {
+  return animals.reduce((high, a) => Math.max(high, a))
+}
