@@ -67,3 +67,7 @@ const allStudents = (grades) => {
 const allCromulent = (things) => {
   return things.every((t) => isCromulent(t))
 }
+
+const notAllTerrible = (things) => {
+  return things.some((t) => !isTerrible(t))
+}
