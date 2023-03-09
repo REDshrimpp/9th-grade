@@ -59,3 +59,11 @@ const birthdays = (students) => {
 const heaviest = (animals) => {
   return animals.reduce((high, a) => Math.max(high, a.weight, 0))
 }
+
+const allStudents = (grades) => {
+  return grades.map((g) => g.students)
+}
+
+const allCromulent = (things) => {
+  return things.every((t) => isCromulent(t))
+}
