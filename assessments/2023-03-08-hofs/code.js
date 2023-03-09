@@ -9,14 +9,17 @@ const evens = (numbers) => {
 }
 
 const shouty = (strings) => {
+  let result = []
   for (let x = 0; x < strings.length; x++) {
-    strings[x] = strings[x].toUpperCase()
+    result[x] = strings[x].toUpperCase()
   }
-  return strings
+  return result
 }
 
 const join = (strings, delimiter) => {
+  for (let x = 0; x < strings.length; x++) {
 
+  }
 }
 
 const allSiblings = (students) => {
