@@ -57,5 +57,5 @@ const birthdays = (students) => {
 }
 
 const heaviest = (animals) => {
-  return animals.reduce((high, a.weight) => Math.max(high, a.weight))
+  return animals.reduce((high, a) => Math.max(high, a.weight, 0))
 }
