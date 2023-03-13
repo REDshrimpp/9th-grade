@@ -2,20 +2,20 @@
 let questionNumber = 0
 let score = 0
 const questions = [
-  { vibe: 'badVibes', question: 'do you pour the milk first?', influence: 5, asked: 'no' },
-  { vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no' },
-  { vibe: 'badVibes', question: 'do snakes intimidate you?', influence: 6, asked: 'no' },
-  { vibe: 'goodVibes', question: 'thoughts on boulders?', influence: 1, asked: 'no' },
-  { vibe: 'goodVibes', question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no' },
-  { vibe: 'goodVibes', question: 'have you ever broken any bones?', influence: 3, asked: 'no' },
-  { vibe: 'badVibes', question: 'do you like beige?', influence: 1, asked: 'no' },
-  { vibe: 'goodVibes', question: 'cats or dogs', influence: 1, asked: 'no' },
-  { vibe: 'goodVibes', question: 'do you like hoodies?', influence: 4, asked: 'no' },
-  { vibe: 'badVibes', question: 'are you a morning person', influence: 3, asked: 'no' },
-  { vibe: 'badVibes', question: 'dont you not own an air fryer?', influence: 2, asked: 'no' },
-  { vibe: 'badVibes', question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no' },
-  { vibe: 'goodVibes', question: 'is long hair unnatractive?', influence: 7, asked: 'no' },
-  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no' },]
+  { vibe: 'badVibes', question: 'do you pour the milk first?', influence: 5, asked: 'no', id: 0 },
+  { vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no', id: 1 },
+  { vibe: 'badVibes', question: 'do snakes intimidate you?', influence: 6, asked: 'no', id: 2 },
+  { vibe: 'goodVibes', question: 'thoughts on boulders?', influence: 1, asked: 'no', id: 3 },
+  { vibe: 'goodVibes', question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no', id: 4 },
+  { vibe: 'goodVibes', question: 'have you ever broken any bones?', influence: 3, asked: 'no', id: 5 },
+  { vibe: 'badVibes', question: 'do you like beige?', influence: 1, asked: 'no', id: 6 },
+  { vibe: 'goodVibes', question: 'cats or dogs', influence: 1, asked: 'no', id: 7 },
+  { vibe: 'goodVibes', question: 'do you like hoodies?', influence: 4, asked: 'no', id: 8 },
+  { vibe: 'badVibes', question: 'are you a morning person', influence: 3, asked: 'no', id: 9 },
+  { vibe: 'badVibes', question: 'dont you not own an air fryer?', influence: 2, asked: 'no', id: 10 },
+  { vibe: 'badVibes', question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no', id: 11 },
+  { vibe: 'goodVibes', question: 'is long hair unnatractive?', influence: 7, asked: 'no', id: 12 },
+  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no', id: 13 }]
 
 
 //ASSIGNING NAMES TO ELEMENTS
@@ -27,29 +27,31 @@ const output = document.getElementById('output');
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  console.log(score)
+  //console.log(score)
+  yes.replaceChildren('')
+  no.replaceChildren('')
+  question.replaceChildren('')
   if (score > 0) {
-    question.replaceChildren('you passed')
+    output.replaceChildren('you passed')
   }
   else if (score < 0) {
-    question.replaceChildren('you didnt pass')
+    output.replaceChildren('you didnt pass')
   }
   else {
-    question.replaceChildren('YOU ARE BALANCED')
+    output.replaceChildren('YOU ARE BALANCED')
   }
 }
 
 //RANDOM QUESTION FUNCTION
 
 const randomQuestion = () => {
-  let selectedQuestion = questions[Math.floor(Math.random() * questions.length) + 1]
-  if (selectedQuestion.asked !== 'no') {
-    while (selectedQuestion.asked !== 'no') {
-      selectedQuestion = questions[Math.floor(Math.random() * questions.length) + 1]
-    }
-  }
-  return selectedQuestion
+  Math.floor(Math.random() * questions.filter((q) => q.asked === 'no')
+  const selectedQuestionNumber = Math.floor(Math.random() * questions.length) + 1
+  console.log(selectedQuestionNumber)
 }
+questions[selectedQuestionNumber].asked = 'yes'
+return questions[selectedQuestionNumber]
+  }
 
 //RECORD ANSWER FUNCTION
 const recordYesAnswer = (currentQuestion) => {
@@ -71,26 +73,44 @@ const recordNoAnswer = (currentQuestion) => {
   }
 }
 
-const displayQuestion = (currentQuestion) => {
-  question.replaceChildren(currentQuestion.question)
-}
-
-//ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
-output.onclick = (e) => {
+const startQuiz = () => {
+  questionNumber = 0
   displayQuestion(questions[questionNumber])
   yes.replaceChildren('yes')
   no.replaceChildren('no')
   output.replaceChildren('')
 }
 
+const displayQuestion = (currentQuestion) => {
+  question.replaceChildren(currentQuestion.question)
+}
+
+//ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
+output.onclick = (e) => {
+  startQuiz()
+}
+
 yes.onclick = (e) => {
-  recordYesAnswer(questions[questionNumber])
-  questionNumber++
-  displayQuestion(questions[questionNumber])
+  if (questionNumber + 1 === questions.length) {
+    console.log('test')
+    displayAnswer(score)
+  }
+  else {
+    let selectedQuestion = randomQuestion()
+    recordYesAnswer(selectedQuestion)
+    questionNumber++
+    displayQuestion(selectedQuestion)
+  }
 }
 
 no.onclick = (e) => {
-  recordNoAnswer(question[questionNumber])
-  questionNumber++
-  displayQuestion(questions[questionNumber])
+  if (questionNumber + 1 === questions.length) {
+    displayAnswer(score)
+  }
+  else {
+    let selectedQuestion = randomQuestion()
+    recordNoAnswer(selectedQuestion)
+    questionNumber++
+    displayQuestion(selectedQuestion)
+  }
 }
