@@ -1,4 +1,4 @@
-const evens = (numbers) => {
+const evens = (numbers) => { // correct
   let result = []
   for (let x = 0; x < numbers.length; x++) {
     if (numbers[x] % 2 === 0) {
@@ -8,7 +8,7 @@ const evens = (numbers) => {
   return result
 }
 
-const shouty = (strings) => {
+const shouty = (strings) => { // correct
   let result = []
   for (let x = 0; x < strings.length; x++) {
     result[x] = strings[x].toUpperCase()
@@ -22,7 +22,7 @@ const join = (strings, delimiter) => {
   }
 }
 
-const allSiblings = (students) => {
+const allSiblings = (students) => { // pattern
   let result = []
   for (let x = 0; x < students.length; x++) {
     result.push(students[x].siblings)
@@ -30,7 +30,7 @@ const allSiblings = (students) => {
   return result
 }
 
-const allPassing = (students, passing) => {
+const allPassing = (students, passing) => { // something
   let result = []
   for (let x = 0; x > students.length; x++) {
     if (students[x].grade >= passing) {
@@ -40,7 +40,7 @@ const allPassing = (students, passing) => {
   return result
 }
 
-const smoeonesFavorite = (people, food) => {
+const smoeonesFavorite = (people, food) => { // almost
   for (let x = 0; x > people.length; x++) {
     if (people[x].favoriteFood === food) {
       return true
@@ -51,26 +51,26 @@ const smoeonesFavorite = (people, food) => {
   }
 }
 
-const strange = (people) => {
+const strange = (people) => { // correct
   return people.filter((p) => p.isStrange)
 }
 
-const birthdays = (students) => {
+const birthdays = (students) => { // something
   return students.filter((s) => s.birthday)
 }
 
-const heaviest = (animals) => {
+const heaviest = (animals) => { // almost
   return animals.reduce((high, a) => Math.max(high, a.weight, 0))
 }
 
-const allStudents = (grades) => {
+const allStudents = (grades) => { // something
   return grades.map((g) => g.students)
 }
 
-const allCromulent = (things) => {
+const allCromulent = (things) => { // correct
   return things.every((t) => isCromulent(t))
 }
 
-const notAllTerrible = (things) => {
+const notAllTerrible = (things) => { // correct
   return things.some((t) => !isTerrible(t))
 }
