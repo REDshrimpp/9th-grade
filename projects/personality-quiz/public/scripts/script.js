@@ -74,6 +74,7 @@ const recordNoAnswer = (currentQuestion) => {
 
 const changeQuestion = () => {
   currentQuestion = randomQuestion()
+  
   question.replaceChildren(currentQuestion.question)
   console.log(score)
 }
