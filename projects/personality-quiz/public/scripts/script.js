@@ -53,8 +53,8 @@ const randomQuestion = () => {
 //RECORD ANSWER FUNCTIONS
 
 const recordYesAnswer = (currentQuestion) => {
+  currentQuestion.asked = 'yes'
   if (currentQuestion.vibe === 'goodVibes') {
-    console.log('test')
     score += currentQuestion.influence
   }
   else if (currentQuestion.vibe === 'badVibes') {
@@ -63,6 +63,7 @@ const recordYesAnswer = (currentQuestion) => {
 }
 
 const recordNoAnswer = (currentQuestion) => {
+  currentQuestion.asked = 'yes'
   if (currentQuestion.vibe = 'goodVibes') {
     score -= currentQuestion.influence
   }
@@ -78,6 +79,8 @@ const changeQuestion = () => {
 }
 
 const startQuiz = () => {
+  questionNumber = 0
+  //questions.map((q) => q.asked = 'no')
   changeQuestion()
   yes.replaceChildren('yes')
   no.replaceChildren('no')
