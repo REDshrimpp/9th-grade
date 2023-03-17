@@ -28,7 +28,6 @@ const output = document.getElementById('output');
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  //console.log(score)
   yes.replaceChildren('')
   no.replaceChildren('')
   question.replaceChildren('')
@@ -74,9 +73,7 @@ const recordNoAnswer = (currentQuestion) => {
 
 const changeQuestion = () => {
   currentQuestion = randomQuestion()
-  
   question.replaceChildren(currentQuestion.question)
-  console.log(score)
 }
 
 const startQuiz = () => {
@@ -96,8 +93,8 @@ yes.onclick = (e) => {
     displayAnswer(score)
   }
   else {
-    changeQuestion()
     recordYesAnswer(currentQuestion)
+    changeQuestion()
     questionNumber++
   }
 }
@@ -107,8 +104,8 @@ no.onclick = (e) => {
     displayAnswer(score)
   }
   else {
-    changeQuestion()
     recordNoAnswer(currentQuestion)
+    changeQuestion()
     questionNumber++
   }
 }
