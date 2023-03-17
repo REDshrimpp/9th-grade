@@ -21,8 +21,8 @@ const questions = [
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
-const yes = document.getElementById('yes');
-const no = document.getElementById('no');
+const yes = document.getElementById('yesButton');
+const no = document.getElementById('noButton');
 const output = document.getElementById('output');
 
 //DISPLAY ANSWER
