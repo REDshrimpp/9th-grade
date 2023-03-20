@@ -21,15 +21,15 @@ const questions = [
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
-const yes = document.getElementById('yesButton');
-const no = document.getElementById('noButton');
+const yes = document.getElementById('yes');
+const no = document.getElementById('no');
 const output = document.getElementById('output');
 
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  yes.replaceChildren('')
-  no.replaceChildren('')
+  yes.style.display = 'none'
+  no.style.display = 'none'
   question.replaceChildren('')
   if (score > 0) {
     output.replaceChildren('you passed')
@@ -78,6 +78,8 @@ const changeQuestion = () => {
 
 const startQuiz = () => {
   questionNumber = 0
+  yes.style.display = 'block'
+  no.style.display = 'block'
   //questions.map((q) => q.asked = 'no')
   changeQuestion()
   yes.replaceChildren('yes')
