@@ -1,77 +1,113 @@
 //DEFINING THE VARIABLES
-let amountOfAnswers = 0
-let currentQuestion = 0
+let questionNumber = 0
+let score = 0
+let currentQuestion;
 const questions = [
-  { charge: +, question: 'QUESTION 1', influence: 3 },
-  { charge: 'negative', question: 'QUESTION 2', influence: 1 }]
+  { vibe: 'badVibes', question: 'do you pour the milk first?', influence: 5, asked: 'no' },
+  { vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no' },
+  { vibe: 'badVibes', question: 'do snakes intimidate you?', influence: 6, asked: 'no' },
+  { vibe: 'goodVibes', question: 'thoughts on boulders?', influence: 1, asked: 'no' },
+  { vibe: 'goodVibes', question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no' },
+  { vibe: 'goodVibes', question: 'have you ever broken any bones?', influence: 3, asked: 'no' },
+  { vibe: 'badVibes', question: 'do you like beige?', influence: 1, asked: 'no' },
+  { vibe: 'goodVibes', question: 'cats or dogs', influence: 1, asked: 'no' },
+  { vibe: 'goodVibes', question: 'do you like hoodies?', influence: 4, asked: 'no' },
+  { vibe: 'badVibes', question: 'are you a morning person', influence: 3, asked: 'no' },
+  { vibe: 'badVibes', question: 'dont you not own an air fryer?', influence: 2, asked: 'no' },
+  { vibe: 'badVibes', question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no' },
+  { vibe: 'goodVibes', question: 'is long hair unnatractive?', influence: 7, asked: 'no' },
+  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no' }]
+
 
 //ASSIGNING NAMES TO ELEMENTS
-const answer = document.createElement('p');
-const answer2 = document.createElement('p');
-const question = document.createElement('h1');
-
-//SEQUENCE QUESTION SELECTOR
-
-const sequenceQuestionSelector = () => {
-  return questions[currentQuestion++]
-}
+const question = document.getElementById('question');
+const yes = document.getElementById('yes');
+const no = document.getElementById('no');
+const output = document.getElementById('output');
 
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  answer.replaceChildren('')
-  answer2.replaceChildren('')
+  yes.style.display = 'none'
+  no.style.display = 'none'
   question.replaceChildren('')
   if (score > 0) {
-    question.replaceChildren('YOU ARE RESULT 1')
+    output.replaceChildren('you passed')
   }
   else if (score < 0) {
-    question.replaceChildren('YOU ARE RESULT 2')
+    output.replaceChildren('you didnt pass')
   }
-
   else {
-    question.replaceChildren('YOU ARE BALANCED')
+    output.replaceChildren('YOU ARE BALANCED')
   }
+}
+
+//RANDOM QUESTION FUNCTION
+
+const randomQuestion = () => {
+  const notAskedQuestions = (questions.filter((q) => q.asked === 'no'))
+  return notAskedQuestions[Math.floor(Math.random() * notAskedQuestions.length)]
 }
 
 //RECORD ANSWER FUNCTIONS
-const recordAnswer = (e) => {
-  console.log('foobar')
-  console.log(e.currentTarget)
-  if (e.currentTarget === answer) {
-    if (questions[currentQuestion] === 'positive') {
-      score = score + questions[currentQuestion].influence
-    }
-    else if (questions[currentQuestion] === 'negative') {
-      score = score - questions[currentQuestion.influence]
-    }
+
+const recordYesAnswer = (currentQuestion) => {
+  currentQuestion.asked = 'yes'
+  if (currentQuestion.vibe === 'goodVibes') {
+    score += currentQuestion.influence
   }
-  else if (e.currentTarget === answer2) {
-    if (questions[currentQuestion] === 'negative') {
-      score = score - questions[currentQuestion.influence]
-    }
-    else if (questions[currentQuestion] === 'positive') {
-      score = score + questions[currentQuestion.influence]
-    }
-  }
-  amountOfAnswers++
-  question.replaceChildren(sequenceQuestionSelector().question);
-  if (amountOfAnswers >= questions.length) {
-    displayAnswer(score);
+  else if (currentQuestion.vibe === 'badVibes') {
+    score -= currentQuestion.influence
   }
 }
 
-//MAKING THE TEXT NODES
-answer.append('YES');
-answer2.append('NO');
-question.append('Select answer to begin')
+const recordNoAnswer = (currentQuestion) => {
+  currentQuestion.asked = 'yes'
+  if (currentQuestion.vibe = 'goodVibes') {
+    score -= currentQuestion.influence
+  }
+  else if (currentQuestion.vibe = 'badVibes') {
+    score += currentQuestion.influence
+  }
+}
+
+const changeQuestion = () => {
+  currentQuestion = randomQuestion()
+  question.replaceChildren(currentQuestion.question)
+}
+
+const startQuiz = () => {
+  questionNumber = 0
+  yes.style.display = 'block'
+  no.style.display = 'block'
+  //questions.map((q) => q.asked = 'no')
+  changeQuestion()
+  yes.replaceChildren('yes')
+  no.replaceChildren('no')
+  output.replaceChildren('')
+}
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
-answer.onclick = recordAnswer
-answer2.onclick = recordAnswer
+output.onclick = (e) => { startQuiz() }
 
-//APPENDING ELEMENTS TO THE BODY
-const body = document.body;
-body.append(question);
-body.append(answer);
-body.append(answer2);
+yes.onclick = (e) => {
+  if (questionNumber + 1 === questions.length) {
+    displayAnswer(score)
+  }
+  else {
+    recordYesAnswer(currentQuestion)
+    changeQuestion()
+    questionNumber++
+  }
+}
+
+no.onclick = (e) => {
+  if (questionNumber + 1 === questions.length) {
+    displayAnswer(score)
+  }
+  else {
+    recordNoAnswer(currentQuestion)
+    changeQuestion()
+    questionNumber++
+  }
+}
