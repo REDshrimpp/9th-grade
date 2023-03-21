@@ -24,12 +24,14 @@ const question = document.getElementById('question');
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const output = document.getElementById('output');
+const eh = document.getElementById('eh');
 
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
   yes.style.display = 'none'
   no.style.display = 'none'
+  eh.style.display = 'none'
   question.replaceChildren('')
   if (score > 0) {
     output.replaceChildren('you passed')
@@ -76,11 +78,15 @@ const changeQuestion = () => {
   question.replaceChildren(currentQuestion.question)
 }
 
+const quizIsDone = () => {
+  return questionNumber + 1 === questions.length
+}
+
 const startQuiz = () => {
   questionNumber = 0
   yes.style.display = 'block'
   no.style.display = 'block'
-  //questions.map((q) => q.asked = 'no')
+  eh.style.display = 'block'
   changeQuestion()
   yes.replaceChildren('yes')
   no.replaceChildren('no')
@@ -91,7 +97,7 @@ const startQuiz = () => {
 output.onclick = (e) => { startQuiz() }
 
 yes.onclick = (e) => {
-  if (questionNumber + 1 === questions.length) {
+  if (quizIsDone) {
     displayAnswer(score)
   }
   else {
@@ -102,12 +108,18 @@ yes.onclick = (e) => {
 }
 
 no.onclick = (e) => {
-  if (questionNumber + 1 === questions.length) {
+  if (quizIsDone) {
     displayAnswer(score)
   }
-  else {
     recordNoAnswer(currentQuestion)
     changeQuestion()
     questionNumber++
   }
+
+eh.onclick = (e) => {
+  if (quizIsDone) {
+    displayAnswer(score)
+  }
+  changeQuestion()
+  questionsNumber++ 
 }
