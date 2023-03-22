@@ -23,6 +23,8 @@ const questions = [
 const question = document.getElementById('question');
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
+const eh = document.getElementById('eh');
+const answerButtons = document.getElementsByClassName('answerButtons');
 const output = document.getElementById('output');
 
 //DISPLAY ANSWER
@@ -77,9 +79,9 @@ const changeQuestion = () => {
 }
 
 const startQuiz = () => {
+  console.log('test')
   questionNumber = 0
-  yes.style.display = 'block'
-  no.style.display = 'block'
+  answerButtons.style.display = 'block';
   //questions.map((q) => q.asked = 'no')
   changeQuestion()
   yes.replaceChildren('yes')
