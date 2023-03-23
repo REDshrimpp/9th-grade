@@ -25,14 +25,17 @@ const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const output = document.getElementById('output');
 const eh = document.getElementById('eh');
+const answerButtons = document.querySelector('.answerButtons')
+const start = document.getElementById('start');
+const restart = document.getElementById('restart');
+const startButtons = document.querySelecto
 
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  yes.style.display = 'none'
-  no.style.display = 'none'
-  eh.style.display = 'none'
+  answerButtons.style.display = 'none'
   question.replaceChildren('')
+  restart.style.display = 'block'
   if (score > 0) {
     output.replaceChildren('you passed')
   }
@@ -84,9 +87,9 @@ const quizIsDone = () => {
 
 const startQuiz = () => {
   questionNumber = 0
-  yes.style.display = 'block'
-  no.style.display = 'block'
-  eh.style.display = 'block'
+  console.log(answerButtons)
+  answerButtons.style.display = 'block'
+  start.style.display = 'none'
   changeQuestion()
   yes.replaceChildren('yes')
   no.replaceChildren('no')
@@ -94,7 +97,9 @@ const startQuiz = () => {
 }
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
-output.onclick = (e) => { startQuiz() }
+start.onclick = (e) => { startQuiz() }
+
+restart.onclick = (e) => { startQuiz() }
 
 yes.onclick = (e) => {
   if (quizIsDone()) {

@@ -30,9 +30,11 @@ button {
   text-align: center;
   font-size: 50px;
   margin: 4px 2px;
-  display: none;
 }
 
+.answerButtons {
+  display: none;
+}
 
 #yes {
   width: 800px;
@@ -49,4 +51,15 @@ button {
   width: 800px;
   height: 100px;
 
+}
+
+#start {
+  width: 1400px;
+  height: 400px;
+}
+
+#restart {
+  width: 500px;
+  height: 100px;
+  display: none;
 }
