@@ -97,7 +97,7 @@ const startQuiz = () => {
 output.onclick = (e) => { startQuiz() }
 
 yes.onclick = (e) => {
-  if (quizIsDone) {
+  if (quizIsDone()) {
     displayAnswer(score)
   }
   else {
@@ -108,18 +108,22 @@ yes.onclick = (e) => {
 }
 
 no.onclick = (e) => {
-  if (quizIsDone) {
+  if (quizIsDone()) {
     displayAnswer(score)
   }
+  else {
     recordNoAnswer(currentQuestion)
     changeQuestion()
     questionNumber++
   }
+}
 
 eh.onclick = (e) => {
-  if (quizIsDone) {
+  if (quizIsDone()) {
     displayAnswer(score)
   }
-  changeQuestion()
-  questionsNumber++ 
+  else {
+    changeQuestion()
+    questionNumber++
+  }
 }
