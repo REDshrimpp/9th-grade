@@ -28,7 +28,7 @@ const eh = document.getElementById('eh');
 const answerButtons = document.querySelector('.answerButtons')
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
-const startButtons = document.querySelecto
+const startButtons = document.querySelector('startButtons')
 
 //DISPLAY ANSWER
 
@@ -87,9 +87,10 @@ const quizIsDone = () => {
 
 const startQuiz = () => {
   questionNumber = 0
-  console.log(answerButtons)
   answerButtons.style.display = 'block'
   start.style.display = 'none'
+  restart.style.display = 'none'
+  questions.map((q) => q.asked = 'no')
   changeQuestion()
   yes.replaceChildren('yes')
   no.replaceChildren('no')
