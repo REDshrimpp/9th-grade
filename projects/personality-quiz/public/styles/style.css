@@ -63,3 +63,18 @@ button {
   height: 100px;
   display: none;
 }
+
+#yes {
+  width: 750px;
+  height: 200px;
+}
+
+#no {
+  width: 750px;
+  height: 200px;
+}
+
+#eh {
+  width: 750px;
+  height: 200px;
+}

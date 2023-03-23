@@ -23,6 +23,8 @@ const questions = [
 const question = document.getElementById('question');
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
+const eh = document.getElementById('eh');
+const answerButtons = document.getElementsByClassName('answerButtons');
 const output = document.getElementById('output');
 const eh = document.getElementById('eh');
 const answerButtons = document.querySelector('.answerButtons')
@@ -86,6 +88,7 @@ const quizIsDone = () => {
 }
 
 const startQuiz = () => {
+  console.log('test')
   questionNumber = 0
   answerButtons.style.display = 'block'
   start.style.display = 'none'
