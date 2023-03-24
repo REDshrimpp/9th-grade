@@ -4,7 +4,7 @@ let score = 0
 let currentQuestion;
 const questions = [
   { vibe: 'badVibes', question: 'do you pour the milk first?', influence: 5, asked: 'no' },
-  { vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no' },
+  /*{ vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no' },
   { vibe: 'badVibes', question: 'do snakes intimidate you?', influence: 6, asked: 'no' },
   { vibe: 'goodVibes', question: 'thoughts on boulders?', influence: 1, asked: 'no' },
   { vibe: 'goodVibes', question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no' },
@@ -16,7 +16,10 @@ const questions = [
   { vibe: 'badVibes', question: 'dont you not own an air fryer?', influence: 2, asked: 'no' },
   { vibe: 'badVibes', question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no' },
   { vibe: 'goodVibes', question: 'is long hair unnatractive?', influence: 7, asked: 'no' },
-  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no' }]
+  */
+  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no' }
+  { vibe: 'goodVibes', question1: 'question1', question2: 'question2', influence: 5, asked: 'no'}
+]
 
 
 //ASSIGNING NAMES TO ELEMENTS
@@ -29,6 +32,8 @@ const answerButtons = document.querySelector('.answerButtons')
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
 const startButtons = document.querySelector('startButtons')
+const wouldYouRather1 = document.getElementById('wouldYouRatherAnswer1')
+const wouldYouRather2 = document.getElementById('wouldYouRatherAnswer2')
 
 //DISPLAY ANSWER
 
@@ -78,7 +83,17 @@ const recordNoAnswer = (currentQuestion) => {
 
 const changeQuestion = () => {
   currentQuestion = randomQuestion()
+  if (currentQuestion.type = 'yes/no') {
   question.replaceChildren(currentQuestion.question)
+}
+else if (currentQuestion.type = 'rather') {
+  question.replaceChildren('wouldYouRather')
+  wouldYouRather1.replaceChildren(currentQuestion.question1)
+  wouldYouRather2.replaceChildren(currentQuestion.question2)
+  wouldYouRather1.display = 'block'
+  wouldYouRather2.display = 'block'
+
+}
 }
 
 const quizIsDone = () => {

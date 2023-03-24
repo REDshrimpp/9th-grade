@@ -46,9 +46,7 @@ button {
 }
 
 #start {
-  position: relative;
-  right: 200px;
-  width: 1000px;
+  width: 800px;
   height: 400px;
 }
 
@@ -58,5 +56,13 @@ button {
   right: 0;
   width: 500px;
   height: 100px;
+  display: none;
+}
+
+#wouldYouRather1 {
+  display: none;
+}
+
+#wouldYouRather2 {
   display: none;
 }
