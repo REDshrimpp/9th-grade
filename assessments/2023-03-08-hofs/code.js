@@ -63,6 +63,45 @@ const allSiblings = (students) => { // pattern
   return result
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const allSiblings = (students) => {
+  let siblings = []
+  for (let x = 0; x < students.length; x++) {
+    for (let y = 0; y < students[x].length; x++) {
+      siblings.push(students[x][y].siblings)
+    }
+  }
+  return siblings
+}
+
 const allPassing = (students, passing) => { // something
   let result = []
   for (let x = 0; x > students.length; x++) {
