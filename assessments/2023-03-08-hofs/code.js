@@ -11,6 +11,7 @@ const evens = (numbers) => { // correct
 const shouty = (strings) => {
   let result = []
   for (let x = 0; x < strings.length; x++) {
+    console.log(strings[x])
     result.push(strings[x].toUpperCase())
   }
   return result
