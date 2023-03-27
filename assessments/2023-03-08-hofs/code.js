@@ -8,6 +8,35 @@ const evens = (numbers) => { // correct
   return result
 }
 
+const shouty = (strings) => {
+  let result = []
+  for (let x = 0; x < strings.length; x++) {
+    result.push(strings[x].toUpperCase())
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const shouty = (strings) => { // correct
   let result = []
   for (let x = 0; x < strings.length; x++) {
