@@ -55,6 +55,7 @@ const join = (strings, delimiter) => {
   }
 }
 
+/*
 const allSiblings = (students) => { // pattern
   let result = []
   for (let x = 0; x < students.length; x++) {
@@ -64,7 +65,7 @@ const allSiblings = (students) => { // pattern
 }
 
 
-
+*/
 
 
 
