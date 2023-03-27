@@ -63,7 +63,7 @@ const allSiblings = (students) => { // pattern
   }
   return result
 }
-*/
+
 
 const allSiblings = (students) => {
   const siblings = [];
@@ -74,6 +74,11 @@ const allSiblings = (students) => {
     }
   }
   return siblings;
+};
+*/
+
+const allSiblings = (students) => {
+  return students.flatMap((s) => s.siblings);
 };
 
 
