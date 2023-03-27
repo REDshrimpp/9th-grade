@@ -158,7 +158,8 @@ const allStudents = (grades) => { // something
 }
 */
 
-const allStudents = (grades) => grades.flatMap((grade) => grade.students);
+const allStudents = (grades) => grades.flatMap((grade) => 
+grade.students);
 
 const allCromulent = (things) => { // correct
   return things.every((t) => isCromulent(t))
