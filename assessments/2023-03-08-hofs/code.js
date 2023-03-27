@@ -8,7 +8,6 @@ const evens = (numbers) => { // correct
   return result
 }
 
-/*
 const shouty = (strings) => {
   let result = []
   for (let x = 0; x < strings.length; x++) {
@@ -20,7 +19,6 @@ const shouty = (strings) => {
 
 
 
-*/
 
 
 
@@ -39,6 +37,8 @@ const shouty = (strings) => {
 
 
 
+
+/*
 const shouty = (strings) => { // correct
   let result = []
   for (let x = 0; x < strings.length; x++) {
@@ -46,7 +46,7 @@ const shouty = (strings) => { // correct
   }
   return result
 }
-
+*/
 
 const join = (strings, delimiter) => {
   for (let x = 0; x < strings.length; x++) {
