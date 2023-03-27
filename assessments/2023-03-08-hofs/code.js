@@ -13,6 +13,7 @@ const shouty = (strings) => {
   for (let x = 0; x < strings.length; x++) {
     result.push(strings[x].toUpperCase())
   }
+  return result
 }
 
 
