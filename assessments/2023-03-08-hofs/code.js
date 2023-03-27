@@ -152,10 +152,13 @@ const birthdays = (students) => { // something
 const heaviest = (animals) => { // almost
   return animals.reduce((high, a) => Math.max(high, a.weight, 0))
 }
-
+/*
 const allStudents = (grades) => { // something
   return grades.flatmap((grade) => grade.students)
 }
+*/
+
+const allStudents = (grades) => grades.flatMap((grade) => grade.students);
 
 const allCromulent = (things) => { // correct
   return things.every((t) => isCromulent(t))
