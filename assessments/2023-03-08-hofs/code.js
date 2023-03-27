@@ -10,7 +10,7 @@ const evens = (numbers) => { // correct
 
 const shouty = (strings) => {
   let result = []
-  for (let x = 0; x < strings.length; x++) {
+  for (let x = 0; x < strings[x].length; x++) {
     result.push(strings[x].toUpperCase())
   }
   return result
