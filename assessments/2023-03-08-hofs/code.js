@@ -154,7 +154,7 @@ const heaviest = (animals) => { // almost
 }
 
 const allStudents = (grades) => { // something
-  return grades.map((grade) => grade.students)
+  return grades.flatmap((grade) => grade.students)
 }
 
 const allCromulent = (things) => { // correct
