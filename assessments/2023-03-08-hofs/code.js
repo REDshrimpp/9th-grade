@@ -56,7 +56,7 @@ const join = (strings, delimiter) => {
 }
 
 /*
-const allSiblings = (students) => { // pattern
+const allSiblings = (students) => { // pattern (brooks's original code on assessment)
   let result = []
   for (let x = 0; x < students.length; x++) {
     result.push(students[x].siblings)
@@ -65,7 +65,7 @@ const allSiblings = (students) => { // pattern
 }
 
 
-const allSiblings = (students) => {
+const allSiblings = (students) => { // mr seibuls code on "answer doc"
   const siblings = [];
   for (let i = 0; i < students.length; i++) {
     const sibs = students[i].siblings;
