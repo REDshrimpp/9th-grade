@@ -77,7 +77,7 @@ const allSiblings = (students) => { // mr seibuls code on "answer doc"
 };
 */
 
-const allSiblings = (students) => {
+const allSiblings = (students) => { //given function
   return students.flatMap((s) => s.siblings);
 };
 
@@ -154,7 +154,7 @@ const heaviest = (animals) => { // almost
 }
 
 const allStudents = (grades) => { // something
-  return grades.map((g) => g.students)
+  return grades.map((grade) => grade.students)
 }
 
 const allCromulent = (things) => { // correct
