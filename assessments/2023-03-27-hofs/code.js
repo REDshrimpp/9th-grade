@@ -163,7 +163,7 @@ const allCountries = (fruits) => {
   let result = []
   for (let x = 0; x < fruits.length; x++) {
     for (let y = 0; y < fruits[x].length; y++) {
-      result.push((fruits[x])[y])
+      result.push(fruits[x].grownIn[y])
     }
   }
   return result
