@@ -174,3 +174,11 @@ const allCountries = (fruits) => { //NOTE
   return result
 }
 
+const allGrownInMoreThanNCountries = (fruits, n) => {
+  for (let x = 0; x < fruits.length; x++) {
+    if (fruits[x].grownIn.length > n) {
+      return true
+    }
+  }
+  return false
+}
