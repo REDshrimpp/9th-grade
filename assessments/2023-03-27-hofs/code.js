@@ -154,8 +154,7 @@ const names = (fruits) => {
 const averageInconvenience = (fruits) => {
   let total = 0
   for (let x = 0; x < fruits.length; x++) {
-    console.log('test')
-    total+= fruits[x]
+    total = total + fruits[x]
   }
   return total / fruits.length
 }
