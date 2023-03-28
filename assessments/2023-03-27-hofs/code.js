@@ -124,3 +124,7 @@ const heaviest = (fruits) => {
 const allColors = (fruits) => {
   return fruits.flatMap((fruit) => fruit.colors)
 }
+
+const areAllTasty = (fruits) => {
+  return fruits.every((fruit) => isTasty(fruit))
+}
