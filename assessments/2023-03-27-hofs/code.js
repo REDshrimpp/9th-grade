@@ -122,5 +122,5 @@ const heaviest = (fruits) => {
 }
 
 const allColors = (fruits) => {
-  return fruits.flatMap((fruit) => fruit.color)
+  return fruits.flatMap((fruit) => fruit.colors)
 }
