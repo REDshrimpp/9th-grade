@@ -164,6 +164,7 @@ const allCountries = (fruits) => {
   for (let x = 0; x < fruits.length; x++) {
     const countries = fruits[x].grownIn
     for (let y = 0; y < fruits[x].length; y++) {
+      console.log(countries[y])
       result.push(countries[y])
     }
   }
