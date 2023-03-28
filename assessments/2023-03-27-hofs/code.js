@@ -150,3 +150,11 @@ const names = (fruits) => {
   }
   return result
 }
+
+const averageInconvenience = (fruits) => {
+  let total = 0
+  for (let x = 0; x < fruits.length; x++) {
+    total+= fruits[x]
+  }
+  return total / fruits.length
+}
