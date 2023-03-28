@@ -110,5 +110,6 @@ const isTasty = (fruit) => fruit.tastiness >= 5;
 const isInconvenient = (fruit) => fruit.inconvenience >= 5;
 
 const redFruits = (fruits) => {
+  console.log(fruits[0])
   return fruits.filter((fruit) => fruit.color.includes('red'))
 }
