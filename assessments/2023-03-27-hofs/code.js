@@ -113,6 +113,10 @@ const redFruits = (fruits) => { //NOTE
   return fruits.filter((fruit) => fruit.color.includes('red'))
 }
 
-const weights = (fruits) => {
+const weights = (fruits) => { 
   return fruits.map((fruit) => fruit.grams)
+}
+
+const heaviest = (fruits) => {
+  return fruits.reduce((heaviest, fruit) => heaviest = Math.max(heaviest, fruit))
 }
