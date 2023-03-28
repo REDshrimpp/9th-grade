@@ -159,7 +159,7 @@ const averageInconvenience = (fruits) => {
   return total / fruits.length
 }
 
-const allCountries = (fruits) => {
+const allCountries = (fruits) => { //NOTE
   console.log(fruits)
   let result = []
   for (let x = 0; x < fruits.length; x++) {
@@ -173,3 +173,4 @@ const allCountries = (fruits) => {
   }
   return result
 }
+
