@@ -134,6 +134,7 @@ const notAllInvonvenient = (fruits) => {
 }
 
 const tasty = (fruits) => {
+  console.log(fruits)
   let result = []
   for (let x = 0; x < fruits.length; x++) {
     if (isTasty(fruits[x])) {
