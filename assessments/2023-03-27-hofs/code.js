@@ -120,3 +120,7 @@ const weights = (fruits) => {
 const heaviest = (fruits) => {
   return fruits.reduce((heaviest, fruit) => Math.max(heaviest, fruit.grams), 0)
 }
+
+const allColors = (fruits) => {
+  return fruits.flatMap((fruit) => fruit.color)
+}
