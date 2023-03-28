@@ -142,3 +142,11 @@ const tasty = (fruits) => {
   }
   return result
 }
+
+const names = (fruits) => {
+  let result = []
+  for (let x = 0; x < fruits.length; x++) {
+    result[x] = fruits[x].name
+  }
+  return result
+}
