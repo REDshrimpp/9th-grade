@@ -130,5 +130,5 @@ const areAllTasty = (fruits) => {
 }
 
 const notAllInvonvenient = (fruits) => {
-  return fruits.every((fruit) => !isInconvenient(fruit))
+  return fruits.some((fruit) => !isInconvenient(fruit))
 }
