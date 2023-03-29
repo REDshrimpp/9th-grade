@@ -3,22 +3,21 @@ let questionNumber = 0
 let score = 0
 let currentQuestion;
 const questions = [
-  { vibe: 'badVibes', question: 'do you pour the milk first?', influence: 5, asked: 'no' },
-  /*{ vibe: 'badVibes', question: 'do you like the sun?', influence: 1, asked: 'no' },
-  { vibe: 'badVibes', question: 'do snakes intimidate you?', influence: 6, asked: 'no' },
-  { vibe: 'goodVibes', question: 'thoughts on boulders?', influence: 1, asked: 'no' },
-  { vibe: 'goodVibes', question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: 'no' },
-  { vibe: 'goodVibes', question: 'have you ever broken any bones?', influence: 3, asked: 'no' },
-  { vibe: 'badVibes', question: 'do you like beige?', influence: 1, asked: 'no' },
-  { vibe: 'goodVibes', question: 'cats or dogs', influence: 1, asked: 'no' },
-  { vibe: 'goodVibes', question: 'do you like hoodies?', influence: 4, asked: 'no' },
-  { vibe: 'badVibes', question: 'are you a morning person', influence: 3, asked: 'no' },
-  { vibe: 'badVibes', question: 'dont you not own an air fryer?', influence: 2, asked: 'no' },
-  { vibe: 'badVibes', question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: 'no' },
-  { vibe: 'goodVibes', question: 'is long hair unnatractive?', influence: 7, asked: 'no' },
-  */
-  { vibe: 'goodVibes', question: 'is the ocean annoying?', influence: 4, asked: 'no' }
-  { vibe: 'goodVibes', question1: 'question1', question2: 'question2', influence: 5, asked: 'no'}
+  { desiredAnswer: false, question: 'do you pour the milk first?', influence: 5, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: false, question: 'do you like the sun?', influence: 1, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: false, question: 'do snakes intimidate you?', influence: 6, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'thoughts on boulders?', influence: 1, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'tu tienes que bebir la jugo sandia?', influence: 4, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'have you ever broken any bones?', influence: 3, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: false, question: 'do you like beige?', influence: 1, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'cats or dogs', influence: 1, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'do you like hoodies?', influence: 4, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: false, question: 'are you a morning person', influence: 3, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: false, question: 'dont you not own an air fryer?', influence: 2, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: false, question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'is long hair unnatractive?', influence: 7, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'is the ocean annoying?', influence: 4, asked: false, questionType: 'yes/no' }
+ // { desiredAnswer: true, question1: 'question1', question2: 'question2', influence: 5, asked: false, questionType: 'rather'}
 ]
 
 
@@ -55,44 +54,53 @@ const displayAnswer = (score) => {
 //RANDOM QUESTION FUNCTION
 
 const randomQuestion = () => {
-  const notAskedQuestions = (questions.filter((q) => q.asked === 'no'))
+  const notAskedQuestions = (questions.filter((q) => q.asked === false))
+  console.log(notAskedQuestions)
   return notAskedQuestions[Math.floor(Math.random() * notAskedQuestions.length)]
 }
 
 //RECORD ANSWER FUNCTIONS
 
 const recordYesAnswer = (currentQuestion) => {
-  currentQuestion.asked = 'yes'
-  if (currentQuestion.vibe === 'goodVibes') {
+  currentQuestion.asked = true
+  if (currentQuestion.desiredAnswer) {
     score += currentQuestion.influence
   }
-  else if (currentQuestion.vibe === 'badVibes') {
+  else if (!currentQuestion.desiredAnswer) {
     score -= currentQuestion.influence
   }
 }
 
 const recordNoAnswer = (currentQuestion) => {
-  currentQuestion.asked = 'yes'
-  if (currentQuestion.vibe = 'goodVibes') {
+  currentQuestion.asked = true
+  if (currentQuestion.desiredAnswer) {
     score -= currentQuestion.influence
   }
-  else if (currentQuestion.vibe = 'badVibes') {
+  else if (!currentQuestion.desiredAnswer) {
     score += currentQuestion.influence
   }
 }
 
-const changeQuestion = () => {
-  currentQuestion = randomQuestion()
-  if (currentQuestion.type = 'yes/no') {
+const displayYesNoQuestion = (currentQuestion) => {
   question.replaceChildren(currentQuestion.question)
 }
-else if (currentQuestion.type = 'rather') {
+
+const displayRatherQuestion = (currentQuestion) => {
   question.replaceChildren('wouldYouRather')
   wouldYouRather1.replaceChildren(currentQuestion.question1)
   wouldYouRather2.replaceChildren(currentQuestion.question2)
   wouldYouRather1.display = 'block'
   wouldYouRather2.display = 'block'
+}
 
+const changeQuestion = () => {
+  currentQuestion = randomQuestion()
+  //console.log(currentQuestion)
+  if (currentQuestion.questionType = 'yes/no') {
+    displayYesNoQuestion(currentQuestion)
+}
+else if (currentQuestion.questionType = 'rather') {
+  displayRatherQuestion(currentQuestion)
 }
 }
 
@@ -101,12 +109,11 @@ const quizIsDone = () => {
 }
 
 const startQuiz = () => {
-  console.log('test')
   questionNumber = 0
   answerButtons.style.display = 'block'
   start.style.display = 'none'
   restart.style.display = 'none'
-  questions.map((q) => q.asked = 'no')
+  questions.map((q) => q.asked = false)
   changeQuestion()
   yes.replaceChildren('yes')
   no.replaceChildren('no')
