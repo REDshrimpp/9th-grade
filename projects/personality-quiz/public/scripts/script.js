@@ -55,7 +55,6 @@ const displayAnswer = (score) => {
 
 const randomQuestion = () => {
   const notAskedQuestions = (questions.filter((q) => q.asked === false))
-  console.log(notAskedQuestions)
   return notAskedQuestions[Math.floor(Math.random() * notAskedQuestions.length)]
 }
 
