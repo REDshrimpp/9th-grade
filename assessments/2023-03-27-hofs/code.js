@@ -109,31 +109,31 @@ const isTasty = (fruit) => fruit.tastiness >= 5;
 
 const isInconvenient = (fruit) => fruit.inconvenience >= 5;
 
-const redFruits = (fruits) => { //NOTE
+const redFruits = (fruits) => { // correct
   return fruits.filter((fruit) => fruit.color.includes('red'))
 }
 
-const weights = (fruits) => { 
+const weights = (fruits) => { // correct
   return fruits.map((fruit) => fruit.grams)
 }
 
-const heaviest = (fruits) => {
+const heaviest = (fruits) => { // correct
   return fruits.reduce((heaviest, fruit) => Math.max(heaviest, fruit.grams), 0)
 }
 
-const allColors = (fruits) => {
+const allColors = (fruits) => { // correct
   return fruits.flatMap((fruit) => fruit.colors)
 }
 
-const areAllTasty = (fruits) => {
+const areAllTasty = (fruits) => { // correct
   return fruits.every((fruit) => isTasty(fruit))
 }
 
-const notAllInvonvenient = (fruits) => {
+const notAllInvonvenient = (fruits) => { // correct
   return fruits.some((fruit) => !isInconvenient(fruit))
 }
 
-const tasty = (fruits) => {
+const tasty = (fruits) => { // correct
   let result = []
   for (let x = 0; x < fruits.length; x++) {
     if (isTasty(fruits[x])) {
@@ -143,7 +143,7 @@ const tasty = (fruits) => {
   return result
 }
 
-const names = (fruits) => {
+const names = (fruits) => { // almost
   let result = []
   for (let x = 0; x < fruits.length; x++) {
     result[x] = fruits[x].name
@@ -151,7 +151,7 @@ const names = (fruits) => {
   return result
 }
 
-const averageInconvenience = (fruits) => {
+const averageInconvenience = (fruits) => { // correct
   let total = 0
   for (let x = 0; x < fruits.length; x++) {
     total+= fruits[x].inconvenience
@@ -159,7 +159,7 @@ const averageInconvenience = (fruits) => {
   return total / fruits.length
 }
 
-const allCountries = (fruits) => { //NOTE
+const allCountries = (fruits) => { // almost
   console.log(fruits)
   let result = []
   for (let x = 0; x < fruits.length; x++) {
@@ -174,7 +174,7 @@ const allCountries = (fruits) => { //NOTE
   return result
 }
 
-const allGrownInMoreThanNCountries = (fruits, n) => {
+const allGrownInMoreThanNCountries = (fruits, n) => { // almost
   for (let x = 0; x < fruits.length; x++) {
     if (fruits[x].grownIn.length > n) {
       return true
@@ -183,7 +183,7 @@ const allGrownInMoreThanNCountries = (fruits, n) => {
   return false
 }
 
-const someMoreThanNColors = (fruits, n) => {
+const someMoreThanNColors = (fruits, n) => { // correct
   for (let x = 0; x < fruits.length; x++) {
     if (fruits[x].colors.length > n) {
       return true
