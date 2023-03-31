@@ -33,16 +33,11 @@ button {
   margin: 4px 2px;
 }
 
-.answerButtons {
+.yesNoButtons {
   padding-left: 2em;
   height: 100px;
   width: 400px;
   display: none;
-}
-
-.answerButtons button {
-  height: 100px;
-  width: 200px;
 }
 
 #start {
@@ -59,10 +54,20 @@ button {
   display: none;
 }
 
-#wouldYouRather1 {
+.wouldYouRather {
   display: none;
 }
 
+#wouldYouRather1 {
+  width: 100px;
+  height: 200px;
+}
+
 #wouldYouRather2 {
+  width: 100px;
+  height: 200px;
+}
+
+#output {
   display: none;
 }
