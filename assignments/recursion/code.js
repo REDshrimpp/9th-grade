@@ -12,6 +12,6 @@ const triangular = (n) => {
     return 0
   }
   else {
-    return n + factorial(n - 1)
+    return n + triangular(n - 1)
   }
 }
