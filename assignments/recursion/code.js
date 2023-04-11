@@ -15,3 +15,7 @@ const triangular = (n) => {
     return n + triangular(n - 1)
   }
 }
+
+const fibonacci = (n) => {
+  return fibonacci(n - 1) + fibbonacci(n - 2)
+}
