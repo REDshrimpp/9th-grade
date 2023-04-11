@@ -30,7 +30,18 @@ const gcd = (a, b) => {
     return a
   }
   else {
-    console.log(b)
     return gcd(b, a % b)
+  }
+}
+
+const sum = (array) => {
+  if (array.length === 0) {
+    return 0
+  }
+  if (array.length === 1) {
+    return array(0)
+  }
+  else {
+    return sum(array)
   }
 }
