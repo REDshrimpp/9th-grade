@@ -24,3 +24,12 @@ const fibonacci = (n) => {
   return fibonacci(n - 1) + fibonacci(n - 2)
   }
 }
+
+const gcd = (a, b) => {
+  if (b === 0) {
+    return a
+  }
+  else {
+    return gcd(b, a * b)
+  }
+}
