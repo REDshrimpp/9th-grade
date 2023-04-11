@@ -30,6 +30,7 @@ const gcd = (a, b) => {
     return a
   }
   else {
+    console.log(b)
     return gcd(b, a % b)
   }
 }
