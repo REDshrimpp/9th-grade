@@ -30,6 +30,6 @@ const gcd = (a, b) => {
     return a
   }
   else {
-    return gcd(a * b, b)
+    return gcd(b, a % b)
   }
 }
