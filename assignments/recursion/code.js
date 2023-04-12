@@ -53,4 +53,5 @@ const search = (array, value) => {
   else {
     return search(array.slice(1), value)
   }
+  return false
 }
