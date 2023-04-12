@@ -48,10 +48,9 @@ const sum = (array) => {
 
 const search = (array, value) => {
   if (array[0] === value) {
-    return true
+    return array[0] === value
   }
   else {
     return search(array.slice(1), value)
   }
-  return false
 }
