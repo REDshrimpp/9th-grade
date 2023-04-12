@@ -46,7 +46,7 @@ const sum = (array) => {
   }
 }
 
-const search = (value, array) => {
+const search = (array, value) => {
   if (array[0] === value) {
     return true
   }
