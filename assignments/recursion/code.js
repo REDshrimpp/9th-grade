@@ -51,6 +51,6 @@ const search = (array, value) => {
     return true
   }
   else {
-    return search(value, array.slice(1))
+    return search(array.slice(1), value)
   }
 }
