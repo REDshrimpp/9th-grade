@@ -45,3 +45,12 @@ const sum = (array) => {
     return array[0] + sum(array.slice(1))
   }
 }
+
+const search = (value, array) => {
+  if (array[0] === value) {
+    return true
+  }
+  else {
+    return search(value, array.slice(1))
+  }
+}
