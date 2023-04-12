@@ -42,6 +42,6 @@ const sum = (array) => {
     return array[0]
   }
   else {
-    return array[array.length] + sum(array.slice)
+    return array[0] + sum(array.slice(1))
   }
 }
