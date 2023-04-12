@@ -39,6 +39,6 @@ const sum = (array) => {
     return array.length
   }
   else {
-    return sum(array.slice)
+    return array[array.length] + sum(array.slice)
   }
 }
