@@ -35,14 +35,10 @@ const gcd = (a, b) => {
 }
 
 const sum = (array) => {
-  let result = 0
-  if (array.length === 0) {
-    return 0
-  }
-  if (array.length === 1) {
-    return array(0)
+  if (array.length < 2) {
+    return array.length
   }
   else {
-    return result + sum(array.slice(1))
+    return sum(array.slice)
   }
 }
