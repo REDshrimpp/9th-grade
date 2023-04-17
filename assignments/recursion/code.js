@@ -47,10 +47,18 @@ const search = (array, value) => {
   if (array[0] === value) {
     return true
   }
-  if (array.length === 0) {
+  else if (array.length === 0) {
     return false
   }
   else {
     return search(array.slice(1), value)
   }
+}
+
+const reverseString = (string) => {
+  if (string.length === 0) {
+    return ''
+  }
+  else 
+  return string.slice(1) + string.substring(0)
 }
