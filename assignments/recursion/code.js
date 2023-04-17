@@ -60,8 +60,12 @@ const reverseString = (string) => {
     return ''
   }
   else if (string.length === 1) {
-    return string.substring[0]
+    return string[0]
   }
   else 
   return string.substring(string.length - 1) + reverseString(string.slice(1))
+}
+
+const treeMap = (tree, func) => {
+  if ()
 }
