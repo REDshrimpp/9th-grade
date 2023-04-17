@@ -60,5 +60,5 @@ const reverseString = (string) => {
     return ''
   }
   else 
-  return string.slice(1) + string.substring(0)
+  return string.slice(1)
 }
