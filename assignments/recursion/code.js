@@ -59,6 +59,9 @@ const reverseString = (string) => {
   if (string.length === 0) {
     return ''
   }
+  else if (string.length === 1) {
+    return string.substring[0]
+  }
   else 
-  return string.slice(1)
+  return reverseString(string.slice(1))
 }
