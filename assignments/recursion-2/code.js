@@ -11,6 +11,9 @@ const multiply = (a, b) => {
   if (b === 0) {
     return 0
   }
+  if (a === 0) {
+    return 0
+  }
   else {
     return a + (a, b - 1)
   }
