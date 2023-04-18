@@ -36,7 +36,7 @@ const triple = (a, b) => {
 
 const power = (a, b) => {
   if (b === 0) {
-    return 0
+    return 1
   }
   else {
     return power(a * b, b - 1)
