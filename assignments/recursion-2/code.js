@@ -16,4 +16,11 @@ const multiply = (a, b) => {
   }
 }
 
-1 + 
+const double = (a, b) => {
+  if (b === 0) {
+    return a
+  }
+  else {
+    return double(a * 2, b - 1)
+  }
+}
