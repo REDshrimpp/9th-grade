@@ -38,6 +38,9 @@ const power = (a, b) => {
   if (b === 1) {
     return a
   }
+  if (b === 0) {
+    return a/a
+  }
   else {
     return power(a * a, b - 1)
   }
