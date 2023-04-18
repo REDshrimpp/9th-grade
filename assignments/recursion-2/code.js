@@ -33,3 +33,12 @@ const triple = (a, b) => {
     return triple(a * 3, b - 1)
   }
 }
+
+const power = (a, b) => {
+  if (b === 0) {
+    return 0
+  }
+  else {
+    return power(a * b, b - 1)
+  }
+}
