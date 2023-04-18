@@ -12,6 +12,7 @@ const multiply = (a, b) => {
     return 0
   }
   else {
+    console.log(a + multiply(a, b-1))
     return a + multiply(a, b - 1)
   }
 }
