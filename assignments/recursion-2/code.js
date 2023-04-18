@@ -30,6 +30,6 @@ const triple = (a, b) => {
     return a
   }
   else {
-    return double(a * 3, b - 1)
+    return triple(a * 3, b - 1)
   }
 }
