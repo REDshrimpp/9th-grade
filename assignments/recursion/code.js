@@ -21,7 +21,7 @@ const fibonacci = (n) => {
     return n
   }
   else {
-  return fibonacci(n - 1) + fibonacci(n - 2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
   }
 }
 
@@ -62,8 +62,8 @@ const reverseString = (string) => {
   else if (string.length === 1) {
     return string[0]
   }
-  else 
-  return string.substring(string.length - 1) + reverseString(string.slice(0, string.length -1))
+  else
+    return string.substring(string.length - 1) + reverseString(string.slice(0, string.length - 1))
 }
 
 const treeMap = (tree, func) => {
@@ -72,6 +72,5 @@ const treeMap = (tree, func) => {
   }
   else {
     return treeMap(tree.left, func)
-    return treeMap(tree.right, func)
   }
 }
