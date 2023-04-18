@@ -3,6 +3,6 @@ const add = (a, b) => {
     return a
   }
   else {
-    return 1 + add(a, b)
+    return 1 + add(a, b - 1)
   }
 }
