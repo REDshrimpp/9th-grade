@@ -21,7 +21,7 @@ const double = (a, b) => {
     return a
   }
   else {
-    return double(a * 2, b - 1)
+    return 2 * double(a, b - 1)
   }
 }
 
@@ -39,9 +39,9 @@ const power = (a, b) => {
     return a
   }
   if (b === 0) {
-    return a/a
+    return 1
   }
   else {
-    return power(a * a, b - 1)
+    return a * power(a, b - 1)
   }
 }
