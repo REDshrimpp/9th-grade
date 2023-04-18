@@ -8,11 +8,15 @@ const add = (a, b) => {
 }
 
 const multiply = (a, b) => {
-  if (b || a === 0) {
+  if (a === 0) {
+    return 0
+  }
+  else if ( b === 0) {
     return 0
   }
   else {
-    console.log(a + multiply(a, b-1))
     return a + multiply(a, b - 1)
   }
 }
+
+1 + 
