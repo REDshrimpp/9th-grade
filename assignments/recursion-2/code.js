@@ -39,6 +39,6 @@ const power = (a, b) => {
     return a
   }
   else {
-    return power(a * b, b - 1)
+    return power(a * a, b - 1)
   }
 }
