@@ -64,8 +64,13 @@ const reverseString = (string) => {
   }
   else 
   return string.substring(string.length - 1) + reverseString(string.slice(0, string.length -1))
-}/*
-const treeMap = (tree, func) => {
-  if ()
 }
-*/
+
+const treeMap = (tree, func) => {
+  if (isLeaf(tree)) {
+    return func(tree)
+  }
+  else {
+    return treeMap(tree, func)
+  }
+}
