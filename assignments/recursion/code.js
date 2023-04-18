@@ -44,11 +44,11 @@ const sum = (array) => {
 }
 
 const search = (array, value) => {
-  if (array[0] === value) {
-    return true
-  }
-  else if (array.length === 0) {
+  if (array.length === 0) {
     return false
+  }
+  else if (array[0] === value) {
+    return true
   }
   else {
     return search(array.slice(1), value)
@@ -71,6 +71,6 @@ const treeMap = (tree, func) => {
     return func(tree)
   }
   else {
-    return {left: treeMap(tree.left, func), right: treeMap(tree.right, func)}
+    return { left: treeMap(tree.left, func), right: treeMap(tree.right, func) }
   }
 }
