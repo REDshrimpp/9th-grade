@@ -71,6 +71,7 @@ const treeMap = (tree, func) => {
     return func(tree)
   }
   else {
-    return treeMap(tree, func)
+    return treeMap(tree.left, func)
+    return treeMap(tree.right, func)
   }
 }
