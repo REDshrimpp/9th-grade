@@ -56,14 +56,11 @@ const deleteXs = (string) => {
 }
 
 const countXs = (string) => {
-  let result = 0
   if (string.length === 0) {
-    return result
+    return 0
   }
   else if (string[0] === 'x') {
-    result+= 1
-    console.log(string.slice(1))
-    return countXs(string.slice(1))
+    return countXs(string.slice + string[0])
   }
   else {
     return countXs(string.slice(1))
