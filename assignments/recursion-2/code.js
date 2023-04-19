@@ -66,3 +66,12 @@ const countXs = (string) => {
     return countXs(string.slice(1))
   }
 }
+
+const maximum = (array) => {
+  if (array.length < 2) {
+    return array[0]
+  }
+  if (array[0] > maximum(array.slice(1))) {
+    return array[0]
+  }
+}
