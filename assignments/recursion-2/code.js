@@ -75,6 +75,6 @@ const maximum = (array) => {
     return array[0]
   }
   else if (array[0] > maximum(array.slice(1))) {
-    return array[0]
+    return maximum(array.slice(1))
   }
 }
