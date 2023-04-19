@@ -47,10 +47,10 @@ const deleteXs = (string) => {
   if (string.length === 0) {
     return ''
   }
-  if (string[0] === x) {
+  if (string[0] === 'x') {
     return string.slice(1)
   }
-  else if (string[0] !== x) {
+  else if (string[0] !== 'x') {
     return string[0] + string.slice(1)
   }
 }
