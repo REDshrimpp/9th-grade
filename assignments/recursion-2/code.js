@@ -64,4 +64,7 @@ const countXs = (string) => {
     result = result + 1
     countXs(string.slice(1))
   }
+  else {
+    return countXs(string.slice(1))
+  }
 }
