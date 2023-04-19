@@ -8,7 +8,7 @@ const add = (a, b) => {
 }
 
 const multiply = (a, b) => {
-  if (a === 0 || b === 0) {
+  if (b === 0) {
     return 0
   }
   else {
@@ -74,7 +74,7 @@ const maximum = (array) => {
   else if (array.length === 1) {
     return array[0]
   }
-  else if (array[0] > array[1]) {
+  else if (array[0] > ) {
     return maximum(array.slice(1))
   }
 }
