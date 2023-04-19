@@ -71,10 +71,7 @@ const maximum = (array) => {
   if (array.length === 0) {
     return -Infinity
   }
-  else if (array.length === 1) {
-    return array[0]
-  }
-  else if (array[0] > 5) {
+  else {
     return maximum(array.slice(1))
   }
 }
