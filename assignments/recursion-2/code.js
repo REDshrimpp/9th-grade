@@ -75,3 +75,15 @@ const maximum = (array) => {
     return Math.max(array[0], maximum(array.slice(1)))
   }
 }
+
+const every = (array, predicate) => {
+  if (array.length === 0) {
+    return 0
+  }
+  if (array.length === 1) {
+    return predicate(array[0])
+  }
+  else {
+    return predicate(array.slice(1))
+  }
+}
