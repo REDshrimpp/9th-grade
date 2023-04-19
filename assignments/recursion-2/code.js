@@ -62,7 +62,7 @@ const countXs = (string) => {
   }
   else if (string[0] === 'x') {
     result+= 1
-    console.log(result)
+    console.log(string.slice(1))
     return countXs(string.slice(1))
   }
   else {
