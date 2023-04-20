@@ -93,10 +93,9 @@ const some = (array, predicate) => {
     return false
   }
   else if (array.length === 1) {
-    console.log(predicate(array[0]))
     return predicate(array[0])
   }
   else {
-    return predicate(array.slice(1))
+    return some(array.slice(1), predicate)
   }
 }
