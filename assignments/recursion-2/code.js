@@ -85,9 +85,11 @@ const every = (array, predicate) => {
   }
 }
 
+/*
 const some = (array, predicate) => {
   if (array.length === 0) {
     return false
   }
   if (array.len)
 }
+*/
