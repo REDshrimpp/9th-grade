@@ -84,7 +84,7 @@ const every = (array, predicate) => {
     return true
   }
   else {
-    return some(array.slice(1), predicate)
+    return every(array.slice(1), predicate)
   }
 }
 
