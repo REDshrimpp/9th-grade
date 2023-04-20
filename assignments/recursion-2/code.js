@@ -78,16 +78,16 @@ const maximum = (array) => {
 
 const every = (array, predicate) => {
   if (array.length === 0) {
-    return true
+    return false
   }
-  if (predicate(array.slice(1))) {
-    return true
-  }
-  else {
+  else if (predicate(array[0])) {
     return every(array.slice(1), predicate)
   }
+  else {
+    return false
 }
 
+/*
 const some = (array, predicate) => {
   if (array.length === 0) {
     return false
@@ -99,3 +99,4 @@ const some = (array, predicate) => {
     return false
   }
 }
+*/
