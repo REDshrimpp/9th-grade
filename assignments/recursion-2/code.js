@@ -80,10 +80,14 @@ const every = (array, predicate) => {
   if (array.length === 0) {
     return true
   }
-  if (array.length === 1) {
-    return predicate(array[0])
-  }
   else {
     return predicate(array.slice(1))
   }
+}
+
+const some = (array, predicate) => {
+  if (array.length === 0) {
+    return false
+  }
+  if (array.len)
 }
