@@ -93,7 +93,7 @@ const some = (array, predicate) => {
     return false
   }
   else if (predicate(array[0])) {
-    return some(array.slice, predicate)
+    return some(array.slice(1), predicate)
   }
   else {
     return some(array.slice(1), predicate)
