@@ -80,6 +80,9 @@ const every = (array, predicate) => {
   if (array.length === 0) {
     return true
   }
+  if (predicate(array.slilce(1))) {
+    return true
+  }
   else {
     return predicate(array.slice(1))
   }
