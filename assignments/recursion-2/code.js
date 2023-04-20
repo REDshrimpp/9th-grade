@@ -92,7 +92,7 @@ const some = (array, predicate) => {
   if (array.length === 0) {
     return false
   }
-  if (array.length === 1) {
+  else if (array.length === 1) {
     return predicate(array[0])
   }
   else {
