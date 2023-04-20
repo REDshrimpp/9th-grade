@@ -96,6 +96,6 @@ const some = (array, predicate) => {
     return some(array.slice(1), predicate)
   }
   else {
-    return true
+    return false
   }
 }
