@@ -78,7 +78,7 @@ const maximum = (array) => {
 
 const every = (array, predicate) => {
   if (array.length === 0) {
-    return 0
+    return true
   }
   if (array.length === 1) {
     return predicate(array[0])
