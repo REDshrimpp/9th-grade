@@ -85,18 +85,18 @@ const every = (array, predicate) => {
   }
   else {
     return false
-}
+  }
 }
 
 
- const some = (array, predicate) => {
-   if (array.length === 0) {
-     return false
-   }
-   else if (predicate(array[0])) {
-     return some(array.slice(1), predicate)
-   }
-   else {
-     return false
-   }
- }
+const some = (array, predicate) => {
+  if (array.length === 0) {
+    return false
+  }
+  else if (predicate(array[0])) {
+    return true
+  }
+  else {
+    return some(array.slice(1), predicate)
+  }
+}
