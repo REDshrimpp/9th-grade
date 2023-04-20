@@ -86,6 +86,7 @@ const every = (array, predicate) => {
   else {
     return false
 }
+}
 
 
 // const some = (array, predicate) => {
@@ -98,4 +99,3 @@ const every = (array, predicate) => {
 //   else {
 //     return false
 //   }
-// }
