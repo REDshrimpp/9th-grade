@@ -132,3 +132,12 @@ const toList = (array) => {
     return {first: array[0], rest: toList(array.slice(1))}
   }
 }
+
+const map = (list, func) => {
+  if (list.rest === null) {
+    return list
+  }
+  else {
+    return func(list.first) + map(list.first, func)
+  }
+}
