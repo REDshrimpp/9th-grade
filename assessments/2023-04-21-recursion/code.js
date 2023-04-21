@@ -39,3 +39,12 @@ const factorial = (n) => {
     return n * factorial(n - 1)
   }
 }
+
+const fibbonacci = (n) => {
+  if (n === 0) {
+    return 0
+  }
+  else {
+    return fibbonacci(n - 1) + fibbonacci(n - 2)
+  }
+}
