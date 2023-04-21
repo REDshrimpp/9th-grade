@@ -123,3 +123,12 @@ const caesar = (string, key) => {
     return rotate(string[0], key) + caesar(string.slice(1), key)
   }
 }
+
+const toList = (array) => {
+  if (array.length === 0) {
+    return null
+  }
+  else {
+    return {first: array[0], rest: toList(array.slice(1))}
+  }
+}
