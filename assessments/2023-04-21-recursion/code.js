@@ -60,3 +60,12 @@ const sumSquares = (n) => {
     return n**2 + sumSquares(n - 1)
   }
 }
+
+const maximum = (array) => {
+  if (array.length === 0) {
+    return -Infinity
+  }
+  else {
+    return Math.max(array[0], array.slice(1)[0])
+  }
+}
