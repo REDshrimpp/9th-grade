@@ -69,3 +69,4 @@ const maximum = (array) => {
     return Math.max(array[0], maximum(array.slice(1)))
   }
 }
+
