@@ -41,7 +41,7 @@ const factorial = (n) => {
 }
 
 const fibbonacci = (n) => {
-  if (n === 0) {
+  if (n < 2) {
     return 0
   }
   else {
