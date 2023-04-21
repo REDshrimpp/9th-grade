@@ -9,6 +9,17 @@
 // or understand these beyond understanding what they do which
 // is described in the appropriate questions.
 
+const vowels = 'aeiou'
+
+const isVowel = (letter) => {
+  for (let x = 0; x < vowels.length; x++) {
+    if (letter === vowels[x]) {
+      return true
+    }
+  }
+  return false
+}
+
 const isLeaf = (o) => typeof o !== 'object' || (!(('left' in o) && ('right' in o)));
 
 const isPrime = (n) => {
@@ -72,7 +83,12 @@ const maximum = (array) => {
 
 //NOTE
 const treeMap = (tree, func) => {
-
+  if (isLeaf(tree)) {
+    return 
+  }
+  else {
+    return treeMap
+  }
 }
 
 const sumPrimesBelow = (n) => {
@@ -86,3 +102,13 @@ const sumPrimesBelow = (n) => {
     return sumPrimesBelow(n - 1)
   }
 }
+
+const nvwls = (string) => {
+  if (string.length === 0) {
+    return ''
+  }
+  else {
+    return 
+  }
+}
+
