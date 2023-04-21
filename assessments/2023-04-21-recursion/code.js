@@ -107,8 +107,11 @@ const nvwls = (string) => {
   if (string.length === 0) {
     return ''
   }
+  else if (isVowel(string[0])) {
+    return string[0] + nvwls(string.slice(1))
+  }
   else {
-    return 
+    return nvwls(string.slice(1))
   }
 }
 
