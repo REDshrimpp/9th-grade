@@ -138,6 +138,6 @@ const map = (list, func) => {
     return list
   }
   else {
-    return func(list.first) + map(list.first, func)
+    return func(list.first) + map(list.rest, func)
   }
 }
