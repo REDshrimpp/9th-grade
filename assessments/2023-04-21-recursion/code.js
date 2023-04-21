@@ -70,3 +70,19 @@ const maximum = (array) => {
   }
 }
 
+//NOTE
+const treeMap = (tree, func) => {
+
+}
+
+const sumPrimesBelow = (n) => {
+  if (n === 2) {
+    return 0
+  }
+  else if (isPrime(n)) {
+    return n + sumPrimesBelow(n - 1)
+  }
+  else {
+    return sumPrimesBelow(n - 1)
+  }
+}
