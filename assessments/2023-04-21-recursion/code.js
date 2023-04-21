@@ -108,10 +108,10 @@ const nvwls = (string) => {
     return ''
   }
   else if (isVowel(string[0])) {
-    return string[0] + nvwls(string.slice(1))
+    return nvwls(string.slice(1))
   }
   else {
-    return nvwls(string.slice(1))
+    return string[0] + nvwls(string.slice(1))
   }
 }
 
