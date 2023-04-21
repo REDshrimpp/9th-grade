@@ -66,6 +66,6 @@ const maximum = (array) => {
     return -Infinity
   }
   else {
-    return Math.max(array[0], array.slice(1)[0])
+    return Math.max(array[0], maximum(array.slice(1))
   }
 }
