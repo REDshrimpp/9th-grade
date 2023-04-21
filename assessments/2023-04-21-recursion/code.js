@@ -51,3 +51,12 @@ const fibbonacci = (n) => {
     return fibbonacci(n - 1) + fibbonacci(n - 2)
   }
 }
+
+const sumSquares = (n) => {
+  if (n < 2) {
+    return n**2
+  }
+  else {
+    return n**2 + sumSquares(n - 1)
+  }
+}
