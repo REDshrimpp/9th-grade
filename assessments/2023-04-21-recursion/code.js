@@ -115,3 +115,11 @@ const nvwls = (string) => {
   }
 }
 
+const caeser = (string, key) => {
+  if (string.length === 0) {
+    return ''
+  }
+  else {
+    return rotate(string[0], key) + caeser(string.slice(1), key)
+  }
+}
