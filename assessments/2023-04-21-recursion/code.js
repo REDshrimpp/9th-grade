@@ -42,7 +42,7 @@ const rotate = (char, places) => {
   }
 }
 
-const factorial = (n) => {
+const factorial = (n) => { // correct
   if (n === 0) {
     return 1
   }
@@ -51,7 +51,7 @@ const factorial = (n) => {
   }
 }
 
-const fibbonacci = (n) => {
+const fibonacci = (n) => { // correct
   if (n === 0) {
     return 0
   }
@@ -59,11 +59,11 @@ const fibbonacci = (n) => {
     return 1
   }
   else {
-    return fibbonacci(n - 1) + fibbonacci(n - 2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
   }
 }
 
-const sumSquares = (n) => {
+const sumSquares = (n) => { // correct
   if (n < 2) {
     return n**2
   }
@@ -72,7 +72,7 @@ const sumSquares = (n) => {
   }
 }
 
-const maximum = (array) => {
+const maximum = (array) => { // correct
   if (array.length === 0) {
     return -Infinity
   }
@@ -82,16 +82,16 @@ const maximum = (array) => {
 }
 
 //NOTE
-const treeMap = (tree, func) => {
+const treeMap = (tree, func) => { // something
   if (isLeaf(tree)) {
-    return 
+    return
   }
   else {
     return treeMap
   }
 }
 
-const sumPrimesBelow = (n) => {
+const sumPrimesBelow = (n) => { // correct
   if (n === 2) {
     return 2
   }
@@ -103,7 +103,7 @@ const sumPrimesBelow = (n) => {
   }
 }
 
-const nvwls = (string) => {
+const nvwls = (string) => { // correct
   if (string.length === 0) {
     return ''
   }
@@ -115,7 +115,7 @@ const nvwls = (string) => {
   }
 }
 
-const caesar = (string, key) => {
+const caesar = (string, key) => { // correct
   if (string.length === 0) {
     return ''
   }
@@ -124,7 +124,7 @@ const caesar = (string, key) => {
   }
 }
 
-const toList = (array) => {
+const toList = (array) => { // correct
   if (array.length === 0) {
     return null
   }
@@ -133,7 +133,7 @@ const toList = (array) => {
   }
 }
 
-const map = (list, func) => {
+const map = (list, func) => { // something
   if (list.rest === null) {
     return list
   }
