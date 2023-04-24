@@ -30,13 +30,12 @@ const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const output = document.getElementById('output');
 const eh = document.getElementById('eh');
-const yesNoButtons = document.querySelector('yesNoButtons');
+const yesNoButtons = document.querySelectorAll('.yesNoButtons button');
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
-const startButtons = document.querySelector('startButtons');
-const wouldYouRather = document.querySelector('wouldYouRather');
-const wouldYouRather1 = document.getElementById('wouldYouRather1');
-const wouldYouRather2 = document.getElementById('wouldYouRather2');
+const startButtons = document.querySelector('#startButtons button');
+const wouldYouRather = document.getElementById('wouldYouRather');
+const ratherQuestions = document.querySelectorAll('.wouldYouRather button')
 
 //DISPLAY ANSWER
 
@@ -93,8 +92,9 @@ const displayYesNoQuestion = (currentQuestion) => {
 const displayRatherQuestion = (currentQuestion) => {
   question.replaceChildren('wouldYouRather')
   wouldYouRather.style.display = 'block'
-  wouldYouRather1.replaceChildren(currentQuestion.answer1)
-  wouldYouRather2.replaceChildren(currentQuestion.answer2)
+  console.log('test') //doesn't get this far
+  ratherQuestions[0].replaceChildren(currentQuestion.answer1)
+  ratherQuestions[1].replaceChildren(currentQuestion.answer2)
 }
 
 const changeQuestion = () => {
@@ -124,7 +124,7 @@ start.onclick = (e) => { startQuiz() }
 
 restart.onclick = (e) => { startQuiz() }
 
-yes.onclick = (e) => {
+yesNoButtons[0].onclick = (e) => {
   if (quizIsDone()) {
     displayAnswer(score)
   }
@@ -135,22 +135,22 @@ yes.onclick = (e) => {
   }
 }
 
-no.onclick = (e) => {
+yesNoButtons[1].onclick = (e) => {
   if (quizIsDone()) {
     displayAnswer(score)
   }
   else {
-    recordNoAnswer(currentQuestion)
     changeQuestion()
     questionNumber++
   }
 }
 
-eh.onclick = (e) => {
+yesNoButtons[2].onclick = (e) => {
   if (quizIsDone()) {
     displayAnswer(score)
   }
   else {
+    recordNoAnswer(currentQuestion)
     changeQuestion()
     questionNumber++
   }

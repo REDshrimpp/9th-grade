@@ -58,12 +58,7 @@ button {
   display: none;
 }
 
-#wouldYouRather1 {
-  width: 100px;
-  height: 200px;
-}
-
-#wouldYouRather2 {
+#wouldYouRather1, #wouldYouRather2  {
   width: 100px;
   height: 200px;
 }
