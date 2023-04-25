@@ -1,4 +1,5 @@
 body {
+  background-color: lavender;
   width: 40em;
   margin: 1in auto;
 }
@@ -24,33 +25,44 @@ p {
 }
 
 button {
-  border: 10px darkblue;
-  color: silver;
-  background: lightgreen;
-  padding: 15px 32px;
+  border: 2px solid darkblue;
+  color: darkblue;
+  background-color: lightgreen;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 60px;
+  font-size: 50px;
   margin: 4px 2px;
-  cursor: pointer;
 }
 
-.answerButtons {
+.yesNoButtons {
+  padding-left: 2em;
+  height: 100px;
+  width: 400px;
   display: none;
 }
 
-#yes {
-  width: 750px;
+#start {
+  width: 800px;
+  height: 400px;
+}
+
+#restart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 100px;
+  display: none;
+}
+
+.wouldYouRather {
+  display: none;
+}
+
+#wouldYouRather1, #wouldYouRather2  {
+  width: 100px;
   height: 200px;
 }
 
-#no {
-  width: 750px;
-  height: 200px;
-}
-
-#eh {
-  width: 750px;
-  height: 200px;
+#output {
+  display: none;
 }
