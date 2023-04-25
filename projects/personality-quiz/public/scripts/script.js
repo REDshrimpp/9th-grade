@@ -20,17 +20,18 @@ const questions = [
 
   */
   { desiredAnswer: true, question: 'is the ocean annoying?', influence: 4, asked: false, questionType: 'yes/no' },
- { desiredAnswer: true, answer1: 'answer1', answer2: 'answer2', influence: 5, asked: false, questionType: 'rather'}
+ { desiredAnswer: '1', answer1: 'answer1', answer2: 'answer2', influence: 5, asked: false, questionType: 'rather'}
 ]
 
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
-const yes = document.getElementById('yes');
-const no = document.getElementById('no');
+//const yes = document.getElementById('yes');
+//const no = document.getElementById('no');
 const output = document.getElementById('output');
-const eh = document.getElementById('eh');
-const yesNoButtons = document.querySelectorAll('.yesNoButtons button');
+//const eh = document.getElementById('eh');
+const yesNoButtonList = document.querySelectorAll('.yesNoButtons button');
+const yesNoButtons = document.querySelector('.yesNoButtons');
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
 const startButtons = document.querySelector('#startButtons button');
@@ -84,16 +85,26 @@ const recordNoAnswer = (currentQuestion) => {
   }
 }
 
+const recordRatherQuestion1 = (currentQuestion) => {
+  currentQuestion,asked = true
+  if (currentQuestion.desiredAnswer === '1') {
+    score += currentQuestion.influence
+  }
+  else {
+    score -= currentQuestion.influence
+  }
+}
+
 const displayYesNoQuestion = (currentQuestion) => {
   yesNoButtons.style.display = 'block'
+  console.log('test')
   question.replaceChildren(currentQuestion.question)
 }
 
 const displayRatherQuestion = (currentQuestion) => {
   question.replaceChildren('wouldYouRather')
-  wouldYouRather.style.display = 'block'
-  console.log('test') //doesn't get this far
-  ratherQuestions[0].replaceChildren(currentQuestion.answer1)
+  wouldYouRather.style.display = 'block' //the code messes. up here
+  ratherQuestions[0].value = (currentQuestion.answer1)
   ratherQuestions[1].replaceChildren(currentQuestion.answer2)
 }
 
@@ -124,7 +135,7 @@ start.onclick = (e) => { startQuiz() }
 
 restart.onclick = (e) => { startQuiz() }
 
-yesNoButtons[0].onclick = (e) => {
+yesNoButtonList[0].onclick = (e) => {
   if (quizIsDone()) {
     displayAnswer(score)
   }
@@ -135,7 +146,7 @@ yesNoButtons[0].onclick = (e) => {
   }
 }
 
-yesNoButtons[1].onclick = (e) => {
+yesNoButtonList[1].onclick = (e) => {
   if (quizIsDone()) {
     displayAnswer(score)
   }
@@ -145,13 +156,24 @@ yesNoButtons[1].onclick = (e) => {
   }
 }
 
-yesNoButtons[2].onclick = (e) => {
+yesNoButtonList[2].onclick = (e) => {
   if (quizIsDone()) {
     displayAnswer(score)
   }
   else {
     recordNoAnswer(currentQuestion)
     changeQuestion()
+    questionNumber++
+  }
+}
+
+ratherQuestions[0].onclick = (e) => {
+  if (quizIsDone()) {
+    displayAnswer(score)
+  }
+  else {
+    recordRatherQuestion1(currentQuestion)
+    changeQuestion
     questionNumber++
   }
 }
