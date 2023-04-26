@@ -36,12 +36,13 @@ const start = document.getElementById('start');
 const restart = document.getElementById('restart');
 const startButtons = document.querySelector('#startButtons button');
 const wouldYouRather = document.getElementById('wouldYouRather');
-const ratherQuestions = document.querySelectorAll('.wouldYouRather button')
+const ratherQuestions = document.querySelectorAll('#wouldYouRather button')
 
 //DISPLAY ANSWER
 
 const displayAnswer = (score) => {
-  answerButtons.style.display = 'none'
+  console.log(yesNoButtons)
+  yesNoButtons.style.display = 'none'
   question.replaceChildren('')
   restart.style.display = 'block'
   output.style.display = 'block'
@@ -86,7 +87,7 @@ const recordNoAnswer = (currentQuestion) => {
 }
 
 const recordRatherQuestion1 = (currentQuestion) => {
-  currentQuestion,asked = true
+  currentQuestion.asked = true
   if (currentQuestion.desiredAnswer === '1') {
     score += currentQuestion.influence
   }
@@ -97,15 +98,15 @@ const recordRatherQuestion1 = (currentQuestion) => {
 
 const displayYesNoQuestion = (currentQuestion) => {
   yesNoButtons.style.display = 'block'
-  console.log('test')
   question.replaceChildren(currentQuestion.question)
 }
 
 const displayRatherQuestion = (currentQuestion) => {
   question.replaceChildren('wouldYouRather')
-  wouldYouRather.style.display = 'block' //the code messes. up here
-  ratherQuestions[0].value = (currentQuestion.answer1)
-  ratherQuestions[1].replaceChildren(currentQuestion.answer2)
+  wouldYouRather.style.display = 'block'
+  console.log(ratherQuestions)
+  ratherQuestions[0].innerHTML = (currentQuestion.answer1)
+  ratherQuestions[1].innerHTML = (currentQuestion.answer2)
 }
 
 const changeQuestion = () => {
@@ -136,6 +137,7 @@ start.onclick = (e) => { startQuiz() }
 restart.onclick = (e) => { startQuiz() }
 
 yesNoButtonList[0].onclick = (e) => {
+  console.log('test')
   if (quizIsDone()) {
     displayAnswer(score)
   }
