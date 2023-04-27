@@ -35,26 +35,29 @@ const yesNoButtons = document.querySelector('.yesNoButtons');
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
 const startButtons = document.querySelector('#startButtons button');
-const wouldYouRather = document.getElementById('wouldYouRather');
-const ratherQuestions = document.querySelectorAll('#wouldYouRather button')
+const wouldYouRather = document.querySelector('.wouldYouRather');
+const ratherQuestions = document.querySelectorAll('.wouldYouRather button')
 
 //DISPLAY ANSWER
 
-const displayAnswer = (score) => {
-  console.log(yesNoButtons)
+const calculateAnswer = (score) => {
+  if (score > 0) {
+    return 'YOU PASSED'
+  }
+  else if (score < 0) {
+    return 'YOU DIDNT PASS'
+  }
+  else {
+    return 'YOU ARE BALANCED'
+  }
+}
+
+const displayAnswer = () => {
   yesNoButtons.style.display = 'none'
   question.replaceChildren('')
   restart.style.display = 'block'
   output.style.display = 'block'
-  if (score > 0) {
-    output.replaceChildren('you passed')
-  }
-  else if (score < 0) {
-    output.replaceChildren('you didnt pass')
-  }
-  else {
-    output.replaceChildren('YOU ARE BALANCED')
-  }
+  output.replaceChildren(calculateAnswer(score))
 }
 
 //RANDOM QUESTION FUNCTION
@@ -96,6 +99,8 @@ const recordRatherQuestion1 = (currentQuestion) => {
   }
 }
 
+//DISPLAY QUESTIONS
+
 const displayYesNoQuestion = (currentQuestion) => {
   yesNoButtons.style.display = 'block'
   question.replaceChildren(currentQuestion.question)
@@ -103,10 +108,9 @@ const displayYesNoQuestion = (currentQuestion) => {
 
 const displayRatherQuestion = (currentQuestion) => {
   question.replaceChildren('wouldYouRather')
-  wouldYouRather.style.display = 'block'
-  console.log(ratherQuestions)
   ratherQuestions[0].innerHTML = (currentQuestion.answer1)
   ratherQuestions[1].innerHTML = (currentQuestion.answer2)
+  wouldYouRather.style.display = 'block'
 }
 
 const changeQuestion = () => {
@@ -120,7 +124,7 @@ else if (currentQuestion.questionType === 'rather') {
 }
 
 const quizIsDone = () => {
-  return questionNumber + 1 === questions.length
+  return questionNumber === questions.length
 }
 
 const startQuiz = () => {
@@ -137,13 +141,13 @@ start.onclick = (e) => { startQuiz() }
 restart.onclick = (e) => { startQuiz() }
 
 yesNoButtonList[0].onclick = (e) => {
-  console.log('test')
   if (quizIsDone()) {
-    displayAnswer(score)
+    displayAnswer()
   }
   else {
     recordYesAnswer(currentQuestion)
     changeQuestion()
+    yesNoButtons.style.display = 'none'
     questionNumber++
   }
 }
@@ -175,7 +179,21 @@ ratherQuestions[0].onclick = (e) => {
   }
   else {
     recordRatherQuestion1(currentQuestion)
-    changeQuestion
+    wouldYouRather.style.display = 'none'
+    changeQuestion()
+    questionNumber++
+  }
+}
+
+ratherQuestions[1].onclick = (e) => {
+  if (quizIsDone()) {
+    displayAnswer(score)
+  }
+  else {
+    recordRatherQuestion2(currentQuestion)
+    wouldYouRather.style.display = 'none'
+    console.log(wouldYouRather)
+    changeQuestion()
     questionNumber++
   }
 }
