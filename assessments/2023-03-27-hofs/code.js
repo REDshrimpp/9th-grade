@@ -151,14 +151,6 @@ const names = (fruits) => { // almost
   return result
 }
 
-const names1 = (fruits) => {
-  const r = [];
-  for (let i = 0; i < fruits.length; i++) {
-    r.push(fruits[i].name);
-  }
-  return r;
-};
-
 const averageInconvenience = (fruits) => { // correct
   let total = 0
   for (let x = 0; x < fruits.length; x++) {
@@ -168,12 +160,11 @@ const averageInconvenience = (fruits) => { // correct
 }
 
 const allCountries = (fruits) => { // almost
-  console.log(fruits)
   let result = []
   for (let x = 0; x < fruits.length; x++) {
    // console.log(fruits)
    // console.log(fruits[0])
-    //const countries = fruits[x].grownIn;
+    const countries = fruits[x].grownIn;
     for (let y = 0; y < fruits[x].length; y++) {
       console.log('test')
       result.push(countries[y])
@@ -181,6 +172,17 @@ const allCountries = (fruits) => { // almost
   }
   return result
 }
+
+const allCountries1 = (fruits) => {
+  const r = [];
+  for (let i = 0; i < fruits.length; i++) {
+    const countries = fruits[i].grownIn;
+    for (let j = 0; j < countries.length; j++) {
+      r.push(countries[j]);
+    }
+  }
+  return r;
+};
 
 const allGrownInMoreThanNCountries = (fruits, n) => { // almost
   for (let x = 0; x < fruits.length; x++) {
