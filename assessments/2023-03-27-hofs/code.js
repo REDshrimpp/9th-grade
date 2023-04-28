@@ -160,13 +160,10 @@ const averageInconvenience = (fruits) => { // correct
 }
 
 const allCountries = (fruits) => { // almost
-  let result = []
+  const result = []
   for (let x = 0; x < fruits.length; x++) {
-   // console.log(fruits)
-   // console.log(fruits[0])
     const countries = fruits[x].grownIn;
-    for (let y = 0; y < fruits[x].length; y++) {
-      console.log('test')
+    for (let y = 0; y < countries; y++) {
       result.push(countries[y])
     }
   }
