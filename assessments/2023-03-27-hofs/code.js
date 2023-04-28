@@ -151,6 +151,14 @@ const names = (fruits) => { // almost
   return result
 }
 
+const names1 = (fruits) => {
+  const r = [];
+  for (let i = 0; i < fruits.length; i++) {
+    r.push(fruits[i].name);
+  }
+  return r;
+};
+
 const averageInconvenience = (fruits) => { // correct
   let total = 0
   for (let x = 0; x < fruits.length; x++) {
