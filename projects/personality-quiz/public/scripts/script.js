@@ -114,11 +114,12 @@ const displayRatherQuestion = (currentQuestion) => {
 }
 
 const changeQuestion = () => {
-  currentQuestion = randomQuestion()
   if (currentQuestion.questionType === 'yes/no') {
+    console.log('test1')
     displayYesNoQuestion(currentQuestion)
 }
 else if (currentQuestion.questionType === 'rather') {
+  console.log('test2')
   displayRatherQuestion(currentQuestion)
 }
 }
@@ -132,7 +133,7 @@ const startQuiz = () => {
   start.style.display = 'none'
   restart.style.display = 'none'
   questions.forEach((q) => q.asked = false)
-  changeQuestion()
+  changeQuestion() //problem area
 }
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
@@ -187,7 +188,7 @@ ratherQuestions[0].onclick = (e) => {
 
 ratherQuestions[1].onclick = (e) => {
   if (quizIsDone()) {
-    displayAnswer(score)
+    displayAnswer()
   }
   else {
     recordRatherQuestion2(currentQuestion)
