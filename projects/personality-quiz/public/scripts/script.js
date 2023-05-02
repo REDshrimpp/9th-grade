@@ -1,5 +1,4 @@
 //DEFINING THE VARIABLES
-let questionNumber = 0
 let score = 0
 let currentQuestion;
 const questions = [
@@ -20,7 +19,7 @@ const questions = [
 
   */
   { desiredAnswer: true, question: 'is the ocean annoying?', influence: 4, asked: false, questionType: 'yes/no' },
- { desiredAnswer: '1', answer1: 'answer1', answer2: 'answer2', influence: 5, asked: false, questionType: 'rather'}
+  { desiredAnswer: '1', answer1: 'answer1', answer2: 'answer2', influence: 5, asked: false, questionType: 'rather' }
 ]
 
 
@@ -54,7 +53,7 @@ const calculateAnswer = (score) => {
 
 const displayAnswer = () => {
   yesNoButtons.style.display = 'none'
-  question.replaceChildren('')
+  question.style.display = 'none'
   restart.style.display = 'block'
   output.style.display = 'block'
   output.replaceChildren(calculateAnswer(score))
@@ -114,24 +113,29 @@ const displayRatherQuestion = (currentQuestion) => {
 }
 
 const changeQuestion = () => {
-  if (currentQuestion.questionType === 'yes/no') {
-    console.log('test1')
-    displayYesNoQuestion(currentQuestion)
-}
-else if (currentQuestion.questionType === 'rather') {
-  console.log('test2')
-  displayRatherQuestion(currentQuestion)
-}
+  currentQuestion = randomQuestion()
+  if (quizIsDone()) {
+    displayAnswer()
+  }
+  else {
+    if (currentQuestion.questionType === 'yes/no') {
+      displayYesNoQuestion(currentQuestion)
+    }
+    else if (currentQuestion.questionType === 'rather') {
+      displayRatherQuestion(currentQuestion)
+    }
+  }
 }
 
 const quizIsDone = () => {
-  return questionNumber === questions.length
+  return currentQuestion === undefined
 }
 
 const startQuiz = () => {
-  questionNumber = 0
+  output.style.display = 'none'
   start.style.display = 'none'
   restart.style.display = 'none'
+  question.style.display = 'block'
   questions.forEach((q) => q.asked = false)
   changeQuestion() //problem area
 }
@@ -149,7 +153,6 @@ yesNoButtonList[0].onclick = (e) => {
     recordYesAnswer(currentQuestion)
     changeQuestion()
     yesNoButtons.style.display = 'none'
-    questionNumber++
   }
 }
 
@@ -175,26 +178,13 @@ yesNoButtonList[2].onclick = (e) => {
 }
 
 ratherQuestions[0].onclick = (e) => {
-  if (quizIsDone()) {
-    displayAnswer(score)
-  }
-  else {
     recordRatherQuestion1(currentQuestion)
     wouldYouRather.style.display = 'none'
     changeQuestion()
-    questionNumber++
-  }
 }
 
 ratherQuestions[1].onclick = (e) => {
-  if (quizIsDone()) {
-    displayAnswer()
-  }
-  else {
     recordRatherQuestion2(currentQuestion)
     wouldYouRather.style.display = 'none'
-    console.log(wouldYouRather)
     changeQuestion()
-    questionNumber++
-  }
 }
