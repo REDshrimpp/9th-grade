@@ -2,7 +2,6 @@
 let score = 0
 let currentQuestion;
 const questions = [
-  /*
   { desiredAnswer: false, question: 'do you pour the milk first?', influence: 5, asked: false, questionType: 'yes/no' },
   { desiredAnswer: false, question: 'do you like the sun?', influence: 1, asked: false, questionType: 'yes/no' },
   { desiredAnswer: false, question: 'do snakes intimidate you?', influence: 6, asked: false, questionType: 'yes/no' },
@@ -16,10 +15,8 @@ const questions = [
   { desiredAnswer: false, question: 'dont you not own an air fryer?', influence: 2, asked: false, questionType: 'yes/no' },
   { desiredAnswer: false, question: 'would you be scared to pet a spikey lizard?', influence: 4, asked: false, questionType: 'yes/no' },
   { desiredAnswer: true, question: 'is long hair unnatractive?', influence: 7, asked: false, questionType: 'yes/no' },
-
-  */
   { desiredAnswer: true, question: 'is the ocean annoying?', influence: 4, asked: false, questionType: 'yes/no' },
-  { desiredAnswer: '1', answer1: 'answer1', answer2: 'answer2', influence: 5, asked: false, questionType: 'rather' }
+  { desiredAnswer: '2', answer1: 'jump into a freezing lake', answer2: 'climb to the top of an 100 story building using the stairs', influence: 5, asked: false, questionType: 'rather' }
 ]
 
 
@@ -98,6 +95,16 @@ const recordRatherQuestion1 = (currentQuestion) => {
   }
 }
 
+const recordRatherQuestion2 = (currentQuestion) => {
+  currentQuestion.asked = true
+  if (currentQuestion.desiredAnswer === '2') {
+    score += currentQuestion.influence
+  }
+  else {
+    score -= currentQuestion.influence
+  }
+}
+
 //DISPLAY QUESTIONS
 
 const displayYesNoQuestion = (currentQuestion) => {
@@ -119,6 +126,7 @@ const changeQuestion = () => {
   }
   else {
     if (currentQuestion.questionType === 'yes/no') {
+      console.log('test')
       displayYesNoQuestion(currentQuestion)
     }
     else if (currentQuestion.questionType === 'rather') {
@@ -151,8 +159,8 @@ yesNoButtonList[0].onclick = (e) => {
   }
   else {
     recordYesAnswer(currentQuestion)
-    changeQuestion()
     yesNoButtons.style.display = 'none'
+    changeQuestion()
   }
 }
 
@@ -161,8 +169,9 @@ yesNoButtonList[1].onclick = (e) => {
     displayAnswer(score)
   }
   else {
+    currentQuestion.asked = true
+    yesNoButtons.style.display = 'none'
     changeQuestion()
-    questionNumber++
   }
 }
 
@@ -172,8 +181,8 @@ yesNoButtonList[2].onclick = (e) => {
   }
   else {
     recordNoAnswer(currentQuestion)
+    yesNoButtons.style.display = 'none'
     changeQuestion()
-    questionNumber++
   }
 }
 
