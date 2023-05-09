@@ -1,6 +1,8 @@
 //DEFINING THE VARIABLES
 let score = 0
+let firstClickTime;
 let currentQuestion;
+let timeTaken;
 const questions = [
   { desiredAnswer: false, question: 'do you pour the milk first?', influence: 5, asked: false, questionType: 'yes/no' },
   { desiredAnswer: false, question: 'do you like the sun?', influence: 1, asked: false, questionType: 'yes/no' },
@@ -22,15 +24,11 @@ const questions = [
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
-//const yes = document.getElementById('yes');
-//const no = document.getElementById('no');
 const output = document.getElementById('output');
-//const eh = document.getElementById('eh');
 const yesNoButtonList = document.querySelectorAll('.yesNoButtons button');
 const yesNoButtons = document.querySelector('.yesNoButtons');
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
-const startButtons = document.querySelector('#startButtons button');
 const wouldYouRather = document.querySelector('.wouldYouRather');
 const ratherQuestions = document.querySelectorAll('.wouldYouRather button')
 
@@ -68,7 +66,7 @@ const randomQuestion = () => {
 const recordYesAnswer = (currentQuestion) => {
   currentQuestion.asked = true
   if (currentQuestion.desiredAnswer) {
-    score += currentQuestion.influence
+    score += (currentQuestion.influence + timeInfluence) 
   }
   else {
     score -= currentQuestion.influence
@@ -126,13 +124,13 @@ const changeQuestion = () => {
   }
   else {
     if (currentQuestion.questionType === 'yes/no') {
-      console.log('test')
       displayYesNoQuestion(currentQuestion)
     }
     else if (currentQuestion.questionType === 'rather') {
       displayRatherQuestion(currentQuestion)
     }
   }
+  firstClickTime = Date.now()
 }
 
 const quizIsDone = () => {
@@ -145,7 +143,7 @@ const startQuiz = () => {
   restart.style.display = 'none'
   question.style.display = 'block'
   questions.forEach((q) => q.asked = false)
-  changeQuestion() //problem area
+  changeQuestion()
 }
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
@@ -158,8 +156,10 @@ yesNoButtonList[0].onclick = (e) => {
     displayAnswer()
   }
   else {
-    recordYesAnswer(currentQuestion)
     yesNoButtons.style.display = 'none'
+    timeTaken = Date.now() - firstClickTime
+    recordYesAnswer(currentQuestion)
+    console.log(score)
     changeQuestion()
   }
 }
