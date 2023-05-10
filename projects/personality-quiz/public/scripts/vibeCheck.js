@@ -3,6 +3,8 @@ let score = 0
 let firstClickTime;
 let currentQuestion;
 let timeTaken;
+
+/*
 const questions = [
   { desiredAnswer: false, question: 'do you pour the milk first?', influence: 5, asked: false, questionType: 'yes/no' },
   { desiredAnswer: false, question: 'do you like the sun?', influence: 1, asked: false, questionType: 'yes/no' },
@@ -20,7 +22,12 @@ const questions = [
   { desiredAnswer: true, question: 'is the ocean annoying?', influence: 4, asked: false, questionType: 'yes/no' },
   { desiredAnswer: '2', answer1: 'jump into a freezing lake', answer2: 'climb to the top of an 100 story building using the stairs', influence: 5, asked: false, questionType: 'rather' }
 ]
+*/
 
+const questions = [
+  { desiredAnswer: false, question: 'no question', influence: 10, asked: false, questionType: 'yes/no' },
+  { desiredAnswer: true, question: 'yes question', influence: 10, asked: false, questionType: 'yes/no' }
+]
 
 //ASSIGNING NAMES TO ELEMENTS
 const question = document.getElementById('question');
@@ -61,25 +68,31 @@ const randomQuestion = () => {
   return notAskedQuestions[Math.floor(Math.random() * notAskedQuestions.length)]
 }
 
+const calculatedInfluence = (timeTaken, questionInfluence) => {
+  return Math.max(1, questionInfluence - timeTaken / 1000)
+}
+
 //RECORD ANSWER FUNCTIONS
 
 const recordYesAnswer = (currentQuestion) => {
   currentQuestion.asked = true
+  console.log(calculatedInfluence(timeTaken, currentQuestion.influence))
   if (currentQuestion.desiredAnswer) {
-    score += (currentQuestion.influence + timeInfluence) 
+    score += calculatedInfluence(timeTaken, currentQuestion.influence)
   }
   else {
-    score -= currentQuestion.influence
+    score -= calculatedInfluence(timeTaken, currentQuestion.influence)
   }
 }
 
 const recordNoAnswer = (currentQuestion) => {
   currentQuestion.asked = true
+  console.log(calculatedInfluence(timeTaken, currentQuestion.influence))
   if (currentQuestion.desiredAnswer) {
-    score -= currentQuestion.influence
+    score -= calculatedInfluence(timeTaken, currentQuestion.influence)
   }
   else {
-    score += currentQuestion.influence
+    score += calculatedInfluence(timeTaken, currentQuestion.influence)
   }
 }
 
@@ -159,7 +172,6 @@ yesNoButtonList[0].onclick = (e) => {
     yesNoButtons.style.display = 'none'
     timeTaken = Date.now() - firstClickTime
     recordYesAnswer(currentQuestion)
-    console.log(score)
     changeQuestion()
   }
 }
@@ -169,8 +181,9 @@ yesNoButtonList[1].onclick = (e) => {
     displayAnswer(score)
   }
   else {
-    currentQuestion.asked = true
     yesNoButtons.style.display = 'none'
+    timeTaken = Date.now() - firstClickTime
+    recordYesAnswer(currentQuestion)
     changeQuestion()
   }
 }
@@ -180,20 +193,21 @@ yesNoButtonList[2].onclick = (e) => {
     displayAnswer(score)
   }
   else {
-    recordNoAnswer(currentQuestion)
     yesNoButtons.style.display = 'none'
+    timeTaken = Date.now() - firstClickTime
+    recordNoAnswer(currentQuestion)
     changeQuestion()
   }
 }
 
 ratherQuestions[0].onclick = (e) => {
-    recordRatherQuestion1(currentQuestion)
-    wouldYouRather.style.display = 'none'
-    changeQuestion()
+  recordRatherQuestion1(currentQuestion)
+  wouldYouRather.style.display = 'none'
+  changeQuestion()
 }
 
 ratherQuestions[1].onclick = (e) => {
-    recordRatherQuestion2(currentQuestion)
-    wouldYouRather.style.display = 'none'
-    changeQuestion()
+  recordRatherQuestion2(currentQuestion)
+  wouldYouRather.style.display = 'none'
+  changeQuestion()
 }
