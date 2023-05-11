@@ -25,8 +25,10 @@ const questions = [
 */
 
 const questions = [
-  { desiredAnswer: false, question: 'no question', influence: 10, asked: false, questionType: 'yes/no' },
-  { desiredAnswer: true, question: 'yes question', influence: 10, asked: false, questionType: 'yes/no' }
+  //{ desiredAnswer: false, question: 'no question', influence: 10, asked: false, questionType: 'yes/no' },
+  //{ desiredAnswer: true, question: 'yes question', influence: 10, asked: false, questionType: 'yes/no' }
+  {desiredAnswer: '2', answer1: 'wrong answer', answer2: 'right answer', influence: 10, asked: false, questionType: 'rather'},
+  {desiredAnswer: '1', answer1: 'right answer', answer2: 'wrong answer', influence: 10, asked: false, questionType: 'rather'}
 ]
 
 //ASSIGNING NAMES TO ELEMENTS
@@ -76,7 +78,6 @@ const calculatedInfluence = (timeTaken, questionInfluence) => {
 
 const recordYesAnswer = (currentQuestion) => {
   currentQuestion.asked = true
-  console.log(calculatedInfluence(timeTaken, currentQuestion.influence))
   if (currentQuestion.desiredAnswer) {
     score += calculatedInfluence(timeTaken, currentQuestion.influence)
   }
@@ -87,7 +88,6 @@ const recordYesAnswer = (currentQuestion) => {
 
 const recordNoAnswer = (currentQuestion) => {
   currentQuestion.asked = true
-  console.log(calculatedInfluence(timeTaken, currentQuestion.influence))
   if (currentQuestion.desiredAnswer) {
     score -= calculatedInfluence(timeTaken, currentQuestion.influence)
   }
@@ -99,20 +99,20 @@ const recordNoAnswer = (currentQuestion) => {
 const recordRatherQuestion1 = (currentQuestion) => {
   currentQuestion.asked = true
   if (currentQuestion.desiredAnswer === '1') {
-    score += currentQuestion.influence
+    score += calculatedInfluence(timeTaken, currentQuestion.influence)
   }
   else {
-    score -= currentQuestion.influence
+    score -= calculatedInfluence(timeTaken, currentQuestion.influence)
   }
 }
 
 const recordRatherQuestion2 = (currentQuestion) => {
   currentQuestion.asked = true
   if (currentQuestion.desiredAnswer === '2') {
-    score += currentQuestion.influence
+    score += calculatedInfluence(timeTaken, currentQuestion.influence)
   }
   else {
-    score -= currentQuestion.influence
+    score -= calculatedInfluence(timeTaken, currentQuestion.influence)
   }
 }
 
@@ -157,7 +157,9 @@ const startQuiz = () => {
   restart.style.display = 'none'
   question.style.display = 'block'
   questions.forEach((q) => q.asked = false)
+  firstClickTime = Date.now
   changeQuestion()
+  console.log(score)
 }
 
 //ASSIGNING CLICKING ELEMENTS TO FUNCTIONS
@@ -174,7 +176,6 @@ yesNoButtonList[0].onclick = (e) => {
     timeTaken = Date.now() - firstClickTime
     recordYesAnswer(currentQuestion)
     changeQuestion()
-    console.log(score)
   }
 }
 
@@ -203,13 +204,18 @@ yesNoButtonList[2].onclick = (e) => {
 }
 
 ratherQuestions[0].onclick = (e) => {
-  recordRatherQuestion1(currentQuestion)
   wouldYouRather.style.display = 'none'
+  timeTaken = Date.now() - firstClickTime
+  recordRatherQuestion1(currentQuestion)
+  console.log(score)
   changeQuestion()
 }
 
 ratherQuestions[1].onclick = (e) => {
   recordRatherQuestion2(currentQuestion)
   wouldYouRather.style.display = 'none'
+  timeTaken = Date.now() - firstClickTime
+  recordRatherQuestion2(currentQuestion)
+  console.log(score)
   changeQuestion()
 }
