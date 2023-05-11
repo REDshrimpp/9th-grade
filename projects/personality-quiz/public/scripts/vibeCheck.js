@@ -151,6 +151,7 @@ const quizIsDone = () => {
 }
 
 const startQuiz = () => {
+  score = 0
   output.style.display = 'none'
   start.style.display = 'none'
   restart.style.display = 'none'
@@ -173,6 +174,7 @@ yesNoButtonList[0].onclick = (e) => {
     timeTaken = Date.now() - firstClickTime
     recordYesAnswer(currentQuestion)
     changeQuestion()
+    console.log(score)
   }
 }
 
@@ -183,7 +185,7 @@ yesNoButtonList[1].onclick = (e) => {
   else {
     yesNoButtons.style.display = 'none'
     timeTaken = Date.now() - firstClickTime
-    recordYesAnswer(currentQuestion)
+    currentQuestion.asked = true
     changeQuestion()
   }
 }
