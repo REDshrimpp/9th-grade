@@ -1,3 +1,5 @@
+import { calculateAnswer } from "./quiz.js";
+
 //DEFINING THE VARIABLES
 let score = 0
 let firstClickTime;
@@ -42,18 +44,6 @@ const wouldYouRather = document.querySelector('.wouldYouRather');
 const ratherQuestions = document.querySelectorAll('.wouldYouRather button')
 
 //DISPLAY ANSWER
-
-const calculateAnswer = (score) => {
-  if (score > 0) {
-    return 'YOU PASSED'
-  }
-  else if (score < 0) {
-    return 'YOU DIDNT PASS'
-  }
-  else {
-    return 'YOU ARE BALANCED'
-  }
-}
 
 const displayAnswer = () => {
   yesNoButtons.style.display = 'none'
