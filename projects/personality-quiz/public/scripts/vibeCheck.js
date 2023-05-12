@@ -1,4 +1,4 @@
-import { calculateAnswer } from "./quiz.js";
+import { calculateAnswer, randomQuestion, quizIsDone, calculatedInfluence} from "./quiz.js";
 
 //DEFINING THE VARIABLES
 let score = 0
@@ -51,17 +51,6 @@ const displayAnswer = () => {
   restart.style.display = 'block'
   output.style.display = 'block'
   output.replaceChildren(calculateAnswer(score))
-}
-
-//RANDOM QUESTION FUNCTION
-
-const randomQuestion = () => {
-  const notAskedQuestions = (questions.filter((q) => !q.asked))
-  return notAskedQuestions[Math.floor(Math.random() * notAskedQuestions.length)]
-}
-
-const calculatedInfluence = (timeTaken, questionInfluence) => {
-  return Math.max(1, questionInfluence - timeTaken / 1000)
 }
 
 //RECORD ANSWER FUNCTIONS
@@ -121,8 +110,8 @@ const displayRatherQuestion = (currentQuestion) => {
 }
 
 const changeQuestion = () => {
-  currentQuestion = randomQuestion()
-  if (quizIsDone()) {
+  currentQuestion = randomQuestion(questions)
+  if (quizIsDone(currentQuestion)) {
     displayAnswer()
   }
   else {
@@ -134,10 +123,6 @@ const changeQuestion = () => {
     }
   }
   firstClickTime = Date.now()
-}
-
-const quizIsDone = () => {
-  return currentQuestion === undefined
 }
 
 const startQuiz = () => {
@@ -158,7 +143,7 @@ start.onclick = (e) => { startQuiz() }
 restart.onclick = (e) => { startQuiz() }
 
 yesNoButtonList[0].onclick = (e) => {
-  if (quizIsDone()) {
+  if (quizIsDone(currentQuestion)) {
     displayAnswer()
   }
   else {
@@ -170,7 +155,7 @@ yesNoButtonList[0].onclick = (e) => {
 }
 
 yesNoButtonList[1].onclick = (e) => {
-  if (quizIsDone()) {
+  if (quizIsDone(currentQuestion)) {
     displayAnswer(score)
   }
   else {
@@ -182,7 +167,7 @@ yesNoButtonList[1].onclick = (e) => {
 }
 
 yesNoButtonList[2].onclick = (e) => {
-  if (quizIsDone()) {
+  if (quizIsDone(currentQuestion)) {
     displayAnswer(score)
   }
   else {
