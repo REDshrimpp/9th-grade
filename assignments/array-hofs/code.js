@@ -30,7 +30,7 @@ const grades = (array) => {
 
 //pairs
 const pairs = (array) => {
-  return array.map((n) => n = n, n)
+  return array.map((n) => n = [n, n])
 }
 
 //averageGrade
